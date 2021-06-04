@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7095847186523049537}
   - component: {fileID: 6359847074539544906}
   - component: {fileID: 2966573273767233113}
+  - component: {fileID: 4737656642167178103}
   m_Layer: 0
   m_Name: sprite_Tree
   m_TagString: Untagged
@@ -95,3 +96,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a72c538d662b48846946d06bc775bac4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useStaticBillboard: 1
+--- !u!65 &4737656642167178103
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3480079348808029225}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 0.1}
+  m_Center: {x: 0, y: 0, z: 0}
