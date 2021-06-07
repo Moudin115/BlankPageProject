@@ -5,14 +5,19 @@ using UnityEngine;
 public class InventoryMenu : MonoBehaviour
 {
     public static bool InventoryVis = false;
+    public static bool CameraVis = false;
+    string ItemInHand = "Camera";
     public GameObject InventoryUI;
-
-    string Keycode;
+    public GameObject CameraMenuUI;
 
     //public PlayerMovement playerMovement;
 
     void Update()
     {
+        if (ItemInHand == "Camera"){
+            CamMenu();
+        }
+        
         if (Input.GetKeyDown(KeyCode.E) && PauseMenu.GameIsPaused == false)
         {
 
@@ -24,8 +29,8 @@ public class InventoryMenu : MonoBehaviour
             }
             else
             {
-
-                Inventory();
+                    Inventory();
+                    
             }
         }
     }
@@ -43,5 +48,24 @@ public class InventoryMenu : MonoBehaviour
         InventoryUI.SetActive(true);
         InventoryVis = true;
 
+
     }
+    void CamMenu()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            if (CameraVis == false)
+            {
+                CameraMenuUI.SetActive(true);
+                CameraVis = true;
+            }
+            else
+            {
+                CameraMenuUI.SetActive(false);
+                CameraVis = false;
+            }
+
+        }
+    }
+            
 }
