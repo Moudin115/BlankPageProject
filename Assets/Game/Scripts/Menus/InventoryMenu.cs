@@ -18,7 +18,7 @@ public class InventoryMenu : MonoBehaviour
             CamMenu();
         }
         
-        if (Input.GetKeyDown(KeyCode.E) && PauseMenu.GameIsPaused == false)
+        if (Input.GetKeyDown(KeyCode.Q) && PauseMenu.GameIsPaused == false)
         {
 
 
