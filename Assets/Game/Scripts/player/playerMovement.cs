@@ -4,17 +4,27 @@ using UnityEngine;
 
 public class playerMovement : MonoBehaviour
 {
-    public CharacterController controller;
+    public CharacterController2D controller;
 
-    public float speed = 12f;
+    public float runSpeed = 40f;
 
-    void Update()
+    float horizontalMove = 0f;
+    bool jump = false;
+
+    private void Update()
     {
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
+        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
-        Vector3 move = transform.right * x + transform.forward * z;
+        if (Input.GetButtonDown("Jump"))
+        {
+            jump = true;
+        }
+    }
 
-        controller.Move(move * speed * Time.deltaTime);
+    private void FixedUpdate()
+    {
+        //Move Character
+        controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
+        jump = false;
     }
 }
