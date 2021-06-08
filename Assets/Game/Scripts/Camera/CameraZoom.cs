@@ -1,0 +1,34 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class CameraZoom : MonoBehaviour
+{
+    public static bool ZoomActive;
+
+    public Vector3[] Target;
+
+    public Camera cam;
+
+    public float speed;
+
+
+    private void Start()
+    {
+        cam = Camera.main;
+    }
+
+    public void LateUpdate()
+    {
+        if (ZoomActive)
+        {
+            cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, 3, speed);
+            cam.transform.position = Vector3.Lerp(cam.transform.position, Target[1], speed);
+        }
+        else
+        {
+            cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, 5, speed);
+            cam.transform.position = Vector3.Lerp(cam.transform.position, Target[0], speed);
+        }
+    }
+}

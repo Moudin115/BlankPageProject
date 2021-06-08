@@ -58,11 +58,13 @@ public class InventoryMenu : MonoBehaviour
             {
                 CameraMenuUI.SetActive(true);
                 CameraVis = true;
+                CameraZoom.ZoomActive = true;
             }
             else
             {
                 CameraMenuUI.SetActive(false);
                 CameraVis = false;
+                CameraZoom.ZoomActive = false;
             }
 
         }
