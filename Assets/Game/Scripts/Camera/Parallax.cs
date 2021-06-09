@@ -13,11 +13,11 @@ public class Parallax : MonoBehaviour
     {
         if (lockY)
         {
-            transform.position = new Vector2(cam.position.x * relativeMove, transform.position.y);
+            transform.position = new Vector3(cam.position.x * relativeMove, transform.position.y, transform.position.z);
         }
         else
         {
-            transform.position = new Vector2(cam.position.x * relativeMove, cam.position.y * relativeMove);
+            transform.position = new Vector3(cam.position.x * relativeMove, cam.position.y * relativeMove, transform.position.z);
         }
     }
 }
