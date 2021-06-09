@@ -8,6 +8,8 @@ public class playerMovement : MonoBehaviour
 
     public float runSpeed = 40f;
 
+    public float LayerMode = 1;
+
     float horizontalMove = 0f;
     bool jump = false;
 
@@ -21,12 +23,23 @@ public class playerMovement : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.W))
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y, 3);
+            if (LayerMode == 1)
+            {
+                LayerMode += 1;
+                transform.position = new Vector3(transform.position.x, transform.position.y, (transform.position.z + 3));
+            }
+            
         }
         if (Input.GetKeyDown(KeyCode.S))
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y, 0);
-        }
+            if (LayerMode == 2)
+            {
+                LayerMode -= 1;
+                transform.position = new Vector3(transform.position.x, transform.position.y, (transform.position.z - 3));
+                
+            }
+
+            }
     }
 
     private void FixedUpdate()
