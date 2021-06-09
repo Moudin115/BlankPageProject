@@ -19,6 +19,14 @@ public class playerMovement : MonoBehaviour
         {
             jump = true;
         }
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, 3);
+        }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+        }
     }
 
     private void FixedUpdate()
