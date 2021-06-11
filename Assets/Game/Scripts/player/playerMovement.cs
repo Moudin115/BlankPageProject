@@ -21,7 +21,7 @@ public class playerMovement : MonoBehaviour
         {
             jump = true;
         }
-        if (Input.GetKeyDown(KeyCode.W))
+        /*if (Input.GetKeyDown(KeyCode.W))
         {
             if (LayerMode == 1)
             {
@@ -39,7 +39,7 @@ public class playerMovement : MonoBehaviour
                 
             }
 
-            }
+            }*/
     }
 
     private void FixedUpdate()
