@@ -27,4 +27,5 @@ public class CamBar : MonoBehaviour
         healthText.text = Health.ToString();
         fill.color = gradient.Evaluate(slider.normalizedValue);
     }
+
 }
