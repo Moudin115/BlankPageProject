@@ -11,6 +11,7 @@ public class CameraMenu : MonoBehaviour
     public GameObject photoMenu;
     public GameObject whiteBlend;
 
+    private bool PhotoTaken = false;
 
     private void Start()
     {
@@ -29,6 +30,13 @@ public class CameraMenu : MonoBehaviour
                 {
                     whiteBlend.GetComponent<Image>().color = new Color32(255, 255, 255, i);
                     Debug.Log("Test");
+                    if (PhotoTaken == false)
+                    {
+                        PhotosCollected.currentPhotos += 1;
+                    }
+                    PhotoTaken = true;
+                    
+                    
                 }
             }
 

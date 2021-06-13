@@ -17,7 +17,7 @@ public class LightingManager : MonoBehaviour
         if (Preset == null)
             return;
 
-        if (Application.isPlaying)
+       /* if (Application.isPlaying)
         {
             TimeOfDay += Time.deltaTime;
             TimeOfDay %= 24;
@@ -26,7 +26,7 @@ public class LightingManager : MonoBehaviour
         else
         {
             UpdateLighting(TimeOfDay / 24f);
-        }
+        }*/
     }
 
     private void UpdateLighting(float timePercent)

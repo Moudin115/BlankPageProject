@@ -6,18 +6,20 @@ using UnityEngine.UI;
 public class PlayerVariables : MonoBehaviour
 {
     public int maxHealth = 20;
-    public int currentHealth;
+    public static int currentHealth = 20;
 
     public int maxPic = 10;
-    public int currentPics;
+    public static int currentPics = 0;
 
     public CamBar camBar;
+
     public PhotosCollected photosCollected;
 
     private void Start()
     {
-
-        currentHealth = maxHealth;
+        camBar.SetHealth(currentHealth);
+        photosCollected.SetPhotos(currentPics);
+        transform.gameObject.GetComponentInChildren<Text>().text = currentHealth.ToString();
         camBar.SetMaxHealth(maxHealth);
         
     }
