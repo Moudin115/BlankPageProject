@@ -7,6 +7,7 @@ public class ScreenshotHandler : MonoBehaviour
     private static ScreenshotHandler instance;
     private Camera Cam;
     private bool takeScreenshotOnNextFrame;
+    private int ScreenshotCounter = 1;
 
     private void Awake()
     {
@@ -27,7 +28,8 @@ public class ScreenshotHandler : MonoBehaviour
 
             //encoding to Screenshot
             byte[] byteArray = renderResult.EncodeToPNG();
-            System.IO.File.WriteAllBytes(Application.dataPath + "/PhotoAlbum/PolaroidShot.png", byteArray);
+            System.IO.File.WriteAllBytes(Application.dataPath + "/PhotoAlbum/PolaroidShot" + ScreenshotCounter.ToString() + ".png", byteArray);
+            ScreenshotCounter += 1;
             Debug.Log("saved Picture");
 
             RenderTexture.ReleaseTemporary(renderTexture);
