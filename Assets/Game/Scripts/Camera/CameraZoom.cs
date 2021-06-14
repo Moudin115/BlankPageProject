@@ -4,31 +4,23 @@ using UnityEngine;
 
 public class CameraZoom : MonoBehaviour
 {
-    public static bool ZoomActive;
-
-    public Vector3[] Target;
-
-    public Camera cam;
-
+    public Camera Polaroidcam;
     public float speed;
 
 
     private void Start()
     {
-        cam = Camera.main;
     }
 
-    public void LateUpdate()
+    public void Update()
     {
-        if (ZoomActive)
+        /*if ( Input.GetKeyDown(KeyCode.Z))
         {
-            cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, 3, speed);
-            cam.transform.position = Vector3.Lerp(cam.transform.position, Target[1], speed);
+            Polaroidcam.orthographicSize = Mathf.Lerp(Polaroidcam.orthographicSize, 1, speed);
         }
         else
         {
-            cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, 5, speed);
-            cam.transform.position = Vector3.Lerp(cam.transform.position, Target[0], speed);
-        }
+            Polaroidcam.orthographicSize = Mathf.Lerp(Polaroidcam.orthographicSize, 3, speed);
+        }*/
     }
 }

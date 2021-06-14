@@ -18,7 +18,7 @@ public class CameraMenu : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKey(KeyCode.F))
+        /*if (Input.GetKey(KeyCode.F))
         {
             photoMenu.SetActive(true);
             if (Input.GetKey(KeyCode.E))
@@ -49,7 +49,7 @@ public class CameraMenu : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene(prevScene);
-        }
+        }*/
         
     }
 }

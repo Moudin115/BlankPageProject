@@ -25,11 +25,11 @@ public class PlayerVariables : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        if (CameraHandler.PolaroidCamActive == true && Input.GetKeyDown(KeyCode.L))
         {
             TakePicture(1);
         }
-        if (Input.GetKeyDown(KeyCode.G))
+        if (CameraHandler.PolaroidCamActive == true && Input.GetKeyDown(KeyCode.Space))
         {
             RightPicture(1);
             TakePicture(1);

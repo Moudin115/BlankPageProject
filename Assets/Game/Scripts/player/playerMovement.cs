@@ -17,10 +17,12 @@ public class playerMovement : MonoBehaviour
     {
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
-        if (Input.GetButtonDown("Jump"))
+        /*if (Input.GetButtonDown("Jump"))
         {
             jump = true;
-        }
+        }*/
+
+
         /*if (Input.GetKeyDown(KeyCode.W))
         {
             if (LayerMode == 1)

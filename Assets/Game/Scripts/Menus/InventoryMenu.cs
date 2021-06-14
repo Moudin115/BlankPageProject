@@ -15,7 +15,6 @@ public class InventoryMenu : MonoBehaviour
     void Update()
     {
         if (ItemInHand == "Camera"){
-            CamMenu();
         }
         
         if (Input.GetKeyDown(KeyCode.Q) && PauseMenu.GameIsPaused == false)
@@ -49,25 +48,6 @@ public class InventoryMenu : MonoBehaviour
         InventoryVis = true;
 
 
-    }
-    void CamMenu()
-    {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            if (CameraVis == false)
-            {
-                CameraMenuUI.SetActive(true);
-                CameraVis = true;
-                CameraZoom.ZoomActive = true;
-            }
-            else
-            {
-                CameraMenuUI.SetActive(false);
-                CameraVis = false;
-                CameraZoom.ZoomActive = false;
-            }
-
-        }
     }
             
 }
