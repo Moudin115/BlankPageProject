@@ -15,14 +15,11 @@ public class AlbumMenu : MonoBehaviour
     public static bool Photo09;
     public static bool Photo10;
 
-    void Start()
+    private void Update()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if(Photo01 == true)
+        {
+            Debug.Log("Photo01");
+        }
     }
 }
