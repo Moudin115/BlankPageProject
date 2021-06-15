@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Yarn.Unity;
 
 public class playerMovement : MonoBehaviour
 {
@@ -12,6 +13,13 @@ public class playerMovement : MonoBehaviour
 
     float horizontalMove = 0f;
     bool jump = false;
+
+    private DialogueRunner dialogueRunner = null;
+
+    private void Start()
+    {
+        dialogueRunner = FindObjectOfType<DialogueRunner>();
+    }
 
     private void Update()
     {
@@ -42,6 +50,9 @@ public class playerMovement : MonoBehaviour
             }
 
             }*/
+
+        if (dialogueRunner.IsDialogueRunning == true)
+            return;
     }
 
     private void FixedUpdate()

@@ -462,8 +462,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61d7e2f54044bc544ad19b03eef751f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 700
-  m_CrouchSpeed: 0.4
+  m_JumpForce: 0
   m_MovementSmoothing: 0
   m_AirControl: 1
   m_WhatIsGround:
@@ -471,7 +470,6 @@ MonoBehaviour:
     m_Bits: 72
   m_GroundCheck: {fileID: 1347607941}
   m_CeilingCheck: {fileID: 54344906}
-  m_CrouchDisableCollider: {fileID: 0}
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -491,7 +489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 561360982}
-  runSpeed: 80
+  runSpeed: 35
   LayerMode: 1
 --- !u!114 &1350534276
 MonoBehaviour:
@@ -635,7 +633,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4491741379719737637}
   - component: {fileID: 3382480509708628233}
-  - component: {fileID: 2913805664224043489}
+  - component: {fileID: 1910398648}
   m_Layer: 8
   m_Name: Trigger
   m_TagString: PolaroidCamera
@@ -688,7 +686,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4, y: 4}
   m_EdgeRadius: 0
---- !u!114 &2913805664224043489
+--- !u!114 &1910398648
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -697,7 +695,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3684399773334655982}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eeb5114f25a0aaf45973fde722f2b11b, type: 3}
+  m_Script: {fileID: 11500000, guid: 8faa7a4c425c247448335dc7b3f3cd29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &4617559183365101037
@@ -713,6 +711,7 @@ GameObject:
   - component: {fileID: 7847759535570168869}
   - component: {fileID: 9005648973633287983}
   - component: {fileID: 46856035}
+  - component: {fileID: 7210910999559613928}
   m_Layer: 0
   m_Name: PolaroidCamera
   m_TagString: Untagged
@@ -765,7 +764,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 319
+    m_Bits: 1343
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -798,6 +797,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &46856035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4617559183365101037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bff73219e187cb34b8227aeee4ef6449, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Polaroidcam: {fileID: 6302921615387500655}
+  speed: 3
+--- !u!114 &7210910999559613928
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

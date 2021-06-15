@@ -55,12 +55,12 @@ public class DialogueControlls : MonoBehaviour
     private void ChangeOption()
     {
 
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.W))
         {
             currentOption = (currentOption + 1) % optionSize;
             dialogue.SetText(options[currentOption].text);
         }
-        else if (Input.GetKeyDown(KeyCode.D))
+        else if (Input.GetKeyDown(KeyCode.S))
         {
             //Move to the previous option
             if (currentOption == 0)
@@ -74,7 +74,7 @@ public class DialogueControlls : MonoBehaviour
 
     private void SkipDialogue()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             dialogueUI.MarkLineComplete();
         }
@@ -82,7 +82,7 @@ public class DialogueControlls : MonoBehaviour
 
     private void SelectOption()
     {
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.E))
         {
             dialogueUI.SelectOption(currentOption);
             ResetCurrentOption();

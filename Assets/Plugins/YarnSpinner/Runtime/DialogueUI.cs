@@ -49,6 +49,7 @@ namespace Yarn.Unity {
     public class DialogueUI : Yarn.Unity.DialogueUIBehaviour
     {
 
+        private string textUntrimmed;
         /// <summary>
         /// The object that contains the dialogue and the options.
         /// </summary>
@@ -272,13 +273,19 @@ namespace Yarn.Unity {
         }
 
         /// Show a line of dialogue, gradually        
-        private IEnumerator DoRunLine(Yarn.Line line, ILineLocalisationProvider localisationProvider, System.Action onComplete) {
-            onLineStart?.Invoke();
+        private IEnumerator DoRunLine(Yarn.Line line, ILineLocalisationProvider localisationProvider, System.Action onComplete) 
+        {
+
+            
 
             userRequestedNextLine = false;
             
             // The final text we'll be showing for this line.
             string text = localisationProvider.GetLocalisedTextForLine(line);
+
+            textUntrimmed = text;
+            onLineStart?.Invoke();
+            text = text.Substring(text.IndexOf(":") + 2);
 
             if (text == null) {
                 Debug.LogWarning($"Line {line.ID} doesn't have any localised text.");
@@ -325,6 +332,11 @@ namespace Yarn.Unity {
 
         }
 
+
+        public string GetLineText()
+        {
+            return textUntrimmed;
+        }
         /// Runs a set of options.
         /// <inheritdoc/>
         public override void RunOptions (Yarn.OptionSet optionSet, ILineLocalisationProvider localisationProvider, System.Action<int> onOptionSelected) {
@@ -356,6 +368,8 @@ namespace Yarn.Unity {
                 optionButtons [i].onClick.AddListener(() => SelectOption(optionString.ID));
 
                 var optionText = localisationProvider.GetLocalisedTextForLine(optionString.Line);
+
+                textUntrimmed = optionText;
 
                 if (optionText == null) {
                     Debug.LogWarning($"Option {optionString.Line.ID} doesn't have any localised text");
