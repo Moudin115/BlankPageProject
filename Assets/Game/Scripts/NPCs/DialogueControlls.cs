@@ -74,16 +74,19 @@ public class DialogueControlls : MonoBehaviour
 
     private void SkipDialogue()
     {
+        //change Keycodelater
         if (Input.GetKeyDown(KeyCode.Q))
         {
+            //Time.timeScale = 0f;
             dialogueUI.MarkLineComplete();
         }
     }
 
     private void SelectOption()
     {
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
+            Time.timeScale = 1f;
             dialogueUI.SelectOption(currentOption);
             ResetCurrentOption();
         }
