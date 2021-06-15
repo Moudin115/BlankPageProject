@@ -20,4 +20,12 @@ public class NPC : MonoBehaviour
             dialogueRunner.Add(scriptToLoad);
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player" )
+        {
+                Yarn.Unity.DialogueRunner dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
+                dialogueRunner.StartDialogue();
+        }
+    }
 }
