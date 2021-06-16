@@ -8,6 +8,7 @@ public class NPC : MonoBehaviour
     public string characterName = "";
 
     public string talkToNode = "";
+    public bool playerDetected;
 
     [Header("Optional")]
     public YarnProgram scriptToLoad;
@@ -22,10 +23,26 @@ public class NPC : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player" )
+            if (collision.tag == "Player")
+            {
+                 playerDetected = true;
+            }
+        
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
         {
-                Yarn.Unity.DialogueRunner dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
-                dialogueRunner.StartDialogue();
+            playerDetected = false;
+        }
+
+    }
+    private void Update()
+    {
+        if (playerDetected && Input.GetKeyDown(KeyCode.E)) {
+            playerDetected = false;
+            Yarn.Unity.DialogueRunner dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
+            dialogueRunner.StartDialogue();
         }
     }
 }

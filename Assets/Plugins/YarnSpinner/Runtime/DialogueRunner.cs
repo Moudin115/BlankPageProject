@@ -50,7 +50,7 @@ namespace Yarn.Unity
         /// </summary>
         public YarnProgram[] yarnScripts;
 
-         
+
 
         /// <summary>
         /// The language code used to select a string table.
@@ -86,7 +86,7 @@ namespace Yarn.Unity
         /// <remarks>
         /// The node specified by <see cref="startNode"/> will be used.
         /// </remarks>
-        public bool startAutomatically = true;
+        public bool startAutomatically = false;
 
         /// <summary>
         /// Gets a value that indicates if the dialogue is actively running.
@@ -113,7 +113,7 @@ namespace Yarn.Unity
         /// </remarks>
         /// <seealso cref="Dialogue.NodeStartHandler"/>
         public StringUnityEvent onNodeStart;
-        
+
         /// <summary>
         /// A Unity event that is called when a node is complete.
         /// </summary>
@@ -232,8 +232,8 @@ namespace Yarn.Unity
         /// Starts running dialogue. The node specified by <see
         /// cref="startNode"/> will start running.
         /// </summary>
+        /// 
         public void StartDialogue() => StartDialogue(startNode);
-
         /// <summary>
         /// Start the dialogue from a specific node.
         /// </summary>
@@ -241,23 +241,26 @@ namespace Yarn.Unity
         /// from.</param>
         public void StartDialogue(string startNode)
         {
-            // Stop any processes that might be running already
-            dialogueUI.StopAllCoroutines();
+            
+                // Stop any processes that might be running already
+                dialogueUI.StopAllCoroutines();
 
             // Get it going
-            RunDialogue();
-            void RunDialogue()
-            {
-                // Mark that we're in conversation.
-                IsDialogueRunning = true;
+                RunDialogue();
+            
+                void RunDialogue()
+                {
+                    // Mark that we're in conversation.
+                    IsDialogueRunning = true;
 
-                // Signal that we're starting up.
-                dialogueUI.DialogueStarted();
+                    // Signal that we're starting up.
+                    dialogueUI.DialogueStarted();
 
-                Dialogue.SetNode(startNode);
+                    Dialogue.SetNode(startNode);
 
-                ContinueDialogue();
-            }
+                    ContinueDialogue();
+                }
+            
         }
 
         /// <summary>

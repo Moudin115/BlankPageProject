@@ -6,4 +6,9 @@ public class Items : MonoBehaviour
 {
     public static bool Camera = false;
     public static bool Papersheet = false;
+
+    public void PickUpCamera()
+    {
+        Camera = true;
+    }
 }
