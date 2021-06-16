@@ -63,7 +63,7 @@ namespace Yarn.Unity {
         /// How quickly to show the text, in seconds per character
         /// </summary>
         [Tooltip("How quickly to show the text, in seconds per character")]
-        public float textSpeed = 0.025f;
+        public float textSpeed = 0.05f;
 
         /// <summary>
         /// The buttons that let the user choose an option.
@@ -91,7 +91,7 @@ namespace Yarn.Unity {
 
         // When true, the DialogueRunner is waiting for the user to press
         // one of the option buttons.
-        private bool waitingForOptionSelection = false;     
+        private bool waitingForOptionSelection = true;     
 
         /// <summary>
         /// A <see cref="UnityEngine.Events.UnityEvent"/> that is called
