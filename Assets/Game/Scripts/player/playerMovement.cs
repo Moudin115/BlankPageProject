@@ -14,6 +14,8 @@ public class playerMovement : MonoBehaviour
     float horizontalMove = 0f;
     bool jump = false;
 
+    public static bool StopMovement = false;
+
     private DialogueRunner dialogueRunner = null;
 
     private void Start()
@@ -52,13 +54,24 @@ public class playerMovement : MonoBehaviour
             }*/
 
         if (dialogueRunner.IsDialogueRunning == true)
+        {
+
+            StopMovement = true;
             return;
+        }
+        if (dialogueRunner.IsDialogueRunning == false)
+        {
+            StopMovement = false;
+        }
     }
 
     private void FixedUpdate()
     {
         //Move Character
-        controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
-        jump = false;
+        if (StopMovement == false)
+        {
+            controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
+            jump = false;
+        }
     }
 }

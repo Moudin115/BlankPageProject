@@ -548,6 +548,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &72188496 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1539506880916017979, guid: 561e2e7f108b7c54d84dc4237d48cb87, type: 3}
+  m_PrefabInstance: {fileID: 1212780539164939324}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &93741401
 GameObject:
   m_ObjectHideFlags: 0
@@ -1732,7 +1737,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: Joe
   talkToNode: Start
-  scriptToLoad: {fileID: 2480198943629176163, guid: 68a462d377b8f7e48a0ac6ddab5bbcfe, type: 3}
+  playerDetected: 0
+  yarnDialog: {fileID: 0}
 --- !u!114 &765411716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2992,6 +2998,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1350534283, guid: 2edab2f41f5f08c479814b28df739ed4, type: 3}
+      propertyPath: Blend
+      value: 
+      objectReference: {fileID: 72188496}
     - target: {fileID: 1350534283, guid: 2edab2f41f5f08c479814b28df739ed4, type: 3}
       propertyPath: PolaroidMenu
       value: 

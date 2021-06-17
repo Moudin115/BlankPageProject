@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CameraHandler : MonoBehaviour
 {
     public GameObject mainCam;
     public GameObject PolaroidCam;
     public GameObject PolaroidMenu;
+    public GameObject Blend;
 
     public Camera Polaroidcamera;
     public float speed;
@@ -25,7 +27,7 @@ public class CameraHandler : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
-            Time.timeScale = 0;
+            playerMovement.StopMovement = true;
             PolaroidCam.SetActive(true);
             PolaroidCamActive = true;
             PolaroidMenu.SetActive(true);
@@ -33,7 +35,7 @@ public class CameraHandler : MonoBehaviour
         }
         if (Input.GetKeyUp(KeyCode.F))
         {
-            Time.timeScale = 1;
+            playerMovement.StopMovement = false;
             Trigger.SetActive(false);
             PolaroidCam.SetActive(false);
             PolaroidMenu.SetActive(false);
@@ -45,7 +47,15 @@ public class CameraHandler : MonoBehaviour
         {
             Trigger.SetActive(true);
             ScreenshotHandler.TakeScreenshot_Static(500, 500);
+            Blend.SetActive(true);
+            //StartCoroutine(Waiter());
+            //SceneManager.LoadScene(sceneName: "PhotoWall");
         }
+
+        /*IEnumerator Waiter()
+        {
+            yield return new WaitForSecondsRealtime(5);
+        }*/
         /*if (PolaroidCamActive == true)
         {
             if (Input.GetKey(KeyCode.Z))

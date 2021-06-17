@@ -19,7 +19,7 @@ public class PlayerVariables : MonoBehaviour
     {
         camBar.SetHealth(currentHealth);
         photosCollected.SetPhotos(currentPics);
-        transform.gameObject.GetComponentInChildren<Text>().text = currentHealth.ToString();
+       // transform.gameObject.GetComponentInChildren<Text>().text = currentHealth.ToString();
         camBar.SetMaxHealth(maxHealth);
         
     }
