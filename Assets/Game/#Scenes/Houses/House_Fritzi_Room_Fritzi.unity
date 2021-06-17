@@ -692,7 +692,7 @@ MonoBehaviour:
   characterName: 
   talkToNode: LookAtMap
   playerDetected: 0
-  scriptToLoad: {fileID: 2480198943629176163, guid: 68a462d377b8f7e48a0ac6ddab5bbcfe, type: 3}
+  yarnDialog: {fileID: 2480198943629176163, guid: 68269db4cdfac454cbefd9d113e50fb7, type: 3}
 --- !u!114 &730841398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1134,72 +1134,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: {fileID: 69474411}
---- !u!1 &1146939024
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1146939025}
-  - component: {fileID: 1146939027}
-  - component: {fileID: 1146939026}
-  m_Layer: 7
-  m_Name: EventSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1146939025
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1146939024}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -23.761356, y: -39.953148, z: 175.56105}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1262802017}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1146939026
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1146939024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
---- !u!114 &1146939027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1146939024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 10
 --- !u!1001 &1178567725
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1621,7 +1555,6 @@ Transform:
   m_Children:
   - {fileID: 1528329137}
   - {fileID: 5728646}
-  - {fileID: 1146939025}
   m_Father: {fileID: 1265306863}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2050,7 +1983,7 @@ MonoBehaviour:
   characterName: 
   talkToNode: LookAtCalendar
   playerDetected: 0
-  scriptToLoad: {fileID: 2480198943629176163, guid: 68269db4cdfac454cbefd9d113e50fb7, type: 3}
+  yarnDialog: {fileID: 2480198943629176163, guid: 68269db4cdfac454cbefd9d113e50fb7, type: 3}
 --- !u!114 &1491155228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2265,6 +2198,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1528329137}
+  - component: {fileID: 1528329139}
   - component: {fileID: 1528329136}
   - component: {fileID: 1528329134}
   - component: {fileID: 1528329135}
@@ -2433,6 +2367,34 @@ Transform:
   m_Father: {fileID: 1262802017}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1528329139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528329133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bec29c0a230741bdac901dba8da47ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yarnScripts:
+  - {fileID: 2480198943629176163, guid: 68269db4cdfac454cbefd9d113e50fb7, type: 3}
+  textLanguage: 
+  variableStorage: {fileID: 1528329135}
+  dialogueUI: {fileID: 1528329134}
+  startNode: LookAtMap
+  startAutomatically: 0
+  onNodeStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onNodeComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  onDialogueComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1575980902
 GameObject:
   m_ObjectHideFlags: 0
@@ -2797,7 +2759,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1745168393}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.38745937, y: -0.47557497, z: 0.44199732}
+  m_LocalPosition: {x: -0.4, y: -0.47557497, z: 0.44199732}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 862635502}
@@ -2819,7 +2781,7 @@ MonoBehaviour:
   characterName: 
   talkToNode: PickUpCamera
   playerDetected: 0
-  scriptToLoad: {fileID: 2480198943629176163, guid: 68269db4cdfac454cbefd9d113e50fb7, type: 3}
+  yarnDialog: {fileID: 2480198943629176163, guid: 68269db4cdfac454cbefd9d113e50fb7, type: 3}
 --- !u!114 &1745168398
 MonoBehaviour:
   m_ObjectHideFlags: 0

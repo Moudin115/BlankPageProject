@@ -7,25 +7,29 @@ public class NPC : MonoBehaviour
 
     public string characterName = "";
 
-    public string talkToNode = "";
-    public bool playerDetected;
+    public static NPC ActiveNPC { get; private set; }
+    public string YarnStartNode { get { return talkToNode; } }
 
-    [Header("Optional")]
-    public YarnProgram scriptToLoad;
+    public string talkToNode = "Start";
+    public bool playerDetected;
+    [SerializeField] YarnProgram yarnDialog;
 
     void Start()
     {
-        if (scriptToLoad != null)
+        
+        if (yarnDialog != null)
         {
+            
             Yarn.Unity.DialogueRunner dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
-            dialogueRunner.Add(scriptToLoad);
+            dialogueRunner.Add(yarnDialog);
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
             if (collision.tag == "Player")
             {
-                 playerDetected = true;
+            SetActiveNPC(true);
+            playerDetected = true;
             }
         
     }
@@ -33,16 +37,21 @@ public class NPC : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+            SetActiveNPC(false);
             playerDetected = false;
         }
 
     }
     private void Update()
     {
+        Yarn.Unity.DialogueRunner dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
         if (playerDetected && Input.GetKeyDown(KeyCode.E)) {
             playerDetected = false;
-            Yarn.Unity.DialogueRunner dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
-            dialogueRunner.StartDialogue();
+            dialogueRunner.StartDialogue(talkToNode);
         }
+    }
+    void SetActiveNPC(bool set)
+    {
+        ActiveNPC = set ? this : null;
     }
 }
