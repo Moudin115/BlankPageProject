@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using UnityEditor;
 using UnityEngine;
 
 public class ScreenshotHandler : MonoBehaviour
@@ -29,9 +31,10 @@ public class ScreenshotHandler : MonoBehaviour
             //encoding to Screenshot
             byte[] byteArray = renderResult.EncodeToPNG();
             System.IO.File.WriteAllBytes(Application.dataPath + "/PhotoAlbum/PolaroidShot" + ScreenshotCounter.ToString() + ".png", byteArray);
+
             ScreenshotCounter += 1;
             Debug.Log("saved Picture");
-
+            AssetDatabase.Refresh();
             RenderTexture.ReleaseTemporary(renderTexture);
             Cam.targetTexture = null;
         }
