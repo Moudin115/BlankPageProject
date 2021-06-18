@@ -147,7 +147,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5807330}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -96.781006, y: -51.434296, z: -115.54843}
+  m_LocalPosition: {x: -96.781006, y: -51.434296, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 117437166}
@@ -275,6 +275,7 @@ GameObject:
   - component: {fileID: 91389026}
   - component: {fileID: 91389028}
   - component: {fileID: 91389027}
+  - component: {fileID: 91389029}
   m_Layer: 0
   m_Name: Polaroid 5
   m_TagString: Untagged
@@ -340,6 +341,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 91389025}
   m_CullTransparentMesh: 1
+--- !u!114 &91389029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91389025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ffcbe24615d9614b8dd20b566243856, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &117437165
 GameObject:
   m_ObjectHideFlags: 0
@@ -351,6 +364,7 @@ GameObject:
   - component: {fileID: 117437166}
   - component: {fileID: 117437168}
   - component: {fileID: 117437167}
+  - component: {fileID: 117437169}
   m_Layer: 0
   m_Name: Polaroid 1
   m_TagString: Untagged
@@ -416,6 +430,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 117437165}
   m_CullTransparentMesh: 1
+--- !u!114 &117437169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117437165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ffcbe24615d9614b8dd20b566243856, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &162713895
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,6 +453,7 @@ GameObject:
   - component: {fileID: 162713896}
   - component: {fileID: 162713898}
   - component: {fileID: 162713897}
+  - component: {fileID: 162713899}
   m_Layer: 0
   m_Name: Polaroid 2
   m_TagString: Untagged
@@ -492,6 +519,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 162713895}
   m_CullTransparentMesh: 1
+--- !u!114 &162713899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 162713895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ffcbe24615d9614b8dd20b566243856, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &241721955
 GameObject:
   m_ObjectHideFlags: 0
@@ -528,7 +567,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 178, y: 87}
+  m_AnchoredPosition: {x: 127, y: 87}
   m_SizeDelta: {x: 160, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &241721957
@@ -636,6 +675,7 @@ GameObject:
   - component: {fileID: 313815899}
   - component: {fileID: 313815901}
   - component: {fileID: 313815900}
+  - component: {fileID: 313815902}
   m_Layer: 0
   m_Name: Polaroid 4
   m_TagString: Untagged
@@ -701,6 +741,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 313815898}
   m_CullTransparentMesh: 1
+--- !u!114 &313815902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313815898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ffcbe24615d9614b8dd20b566243856, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &578018504
 GameObject:
   m_ObjectHideFlags: 0
@@ -712,6 +764,7 @@ GameObject:
   - component: {fileID: 578018505}
   - component: {fileID: 578018507}
   - component: {fileID: 578018506}
+  - component: {fileID: 578018508}
   m_Layer: 0
   m_Name: Polaroid 6
   m_TagString: Untagged
@@ -777,6 +830,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 578018504}
   m_CullTransparentMesh: 1
+--- !u!114 &578018508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578018504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ffcbe24615d9614b8dd20b566243856, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &630460361
 GameObject:
   m_ObjectHideFlags: 0
@@ -1824,6 +1889,7 @@ GameObject:
   - component: {fileID: 1738387245}
   - component: {fileID: 1738387247}
   - component: {fileID: 1738387246}
+  - component: {fileID: 1738387248}
   m_Layer: 0
   m_Name: Polaroid 3
   m_TagString: Untagged
@@ -1889,6 +1955,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1738387244}
   m_CullTransparentMesh: 1
+--- !u!114 &1738387248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738387244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ffcbe24615d9614b8dd20b566243856, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1739469989
 GameObject:
   m_ObjectHideFlags: 0
@@ -1900,6 +1978,7 @@ GameObject:
   - component: {fileID: 1739469990}
   - component: {fileID: 1739469992}
   - component: {fileID: 1739469991}
+  - component: {fileID: 1739469993}
   m_Layer: 0
   m_Name: Polaroid 7
   m_TagString: Untagged
@@ -1965,6 +2044,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1739469989}
   m_CullTransparentMesh: 1
+--- !u!114 &1739469993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739469989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ffcbe24615d9614b8dd20b566243856, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1996976421
 PrefabInstance:
   m_ObjectHideFlags: 0
