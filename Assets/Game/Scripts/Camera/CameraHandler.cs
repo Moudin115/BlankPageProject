@@ -17,6 +17,8 @@ public class CameraHandler : MonoBehaviour
 
     public static bool PolaroidCamActive;
 
+    public Animator BlendAnim;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,6 +50,7 @@ public class CameraHandler : MonoBehaviour
             Trigger.SetActive(true);
             ScreenshotHandler.TakeScreenshot_Static(500, 500);
             Blend.SetActive(true);
+            BlendAnim.SetTrigger("Start");
             //StartCoroutine(Waiter());
             //SceneManager.LoadScene(sceneName: "PhotoWall");
         }

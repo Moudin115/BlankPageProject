@@ -11,6 +11,7 @@ public class ScreenshotHandler : MonoBehaviour
     private bool takeScreenshotOnNextFrame;
     private int ScreenshotCounter = 1;
 
+
     private void Awake()
     {
         instance = this;
