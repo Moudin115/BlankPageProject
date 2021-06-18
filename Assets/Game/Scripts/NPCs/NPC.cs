@@ -48,6 +48,11 @@ public class NPC : MonoBehaviour
         if (playerDetected && Input.GetKeyDown(KeyCode.E)) {
             playerDetected = false;
             dialogueRunner.StartDialogue(talkToNode);
+            if (talkToNode == "PickUpCamera")
+            {
+                Items.PickUpCamera();
+                Destroy(gameObject);
+            }
         }
     }
     void SetActiveNPC(bool set)
