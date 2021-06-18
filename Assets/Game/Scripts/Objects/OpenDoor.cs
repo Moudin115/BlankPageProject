@@ -8,6 +8,7 @@ public class OpenDoor : MonoBehaviour
     public Transform doorPos;
     public float width;
     public float height;
+    public Animator Transition;
 
     public LayerMask whatIsPlayer;
 
@@ -29,7 +30,9 @@ public class OpenDoor : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
+                
                 sceneSwitch.SwitchScene(sceneName);
+                Transition.SetTrigger("Start");
             }
         }
     }

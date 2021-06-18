@@ -468,6 +468,7 @@ MonoBehaviour:
   doorPos: {fileID: 1575980903}
   width: 0.5
   height: 3
+  Transition: {fileID: 1891828812}
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 64
@@ -2022,6 +2023,7 @@ MonoBehaviour:
   doorPos: {fileID: 1905739870}
   width: 1
   height: 3
+  Transition: {fileID: 0}
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 64
@@ -3232,6 +3234,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1891828812 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8389939242848498424, guid: b7c7238645d574540b72c59881401ecf, type: 3}
+  m_PrefabInstance: {fileID: 242863922949608390}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1905739869
 GameObject:
   m_ObjectHideFlags: 0
