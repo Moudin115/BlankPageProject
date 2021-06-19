@@ -5,6 +5,7 @@ using UnityEngine;
 public class ObjIsInteractable : MonoBehaviour
 {
     public static bool isInteractable = false;
+    public GameObject Outline;
 
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -12,6 +13,7 @@ public class ObjIsInteractable : MonoBehaviour
         if (collision.gameObject.name.Equals("Player"))
         {
             isInteractable = true;
+            Outline.SetActive(true);
         }
     }
 
@@ -20,6 +22,7 @@ public class ObjIsInteractable : MonoBehaviour
         if (collision.gameObject.name.Equals("Player"))
         {
             isInteractable = false;
+            Outline.SetActive(false);
         }
     }
 
