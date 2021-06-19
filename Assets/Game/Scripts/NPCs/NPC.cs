@@ -14,14 +14,20 @@ public class NPC : MonoBehaviour
     public bool playerDetected;
     [SerializeField] YarnProgram yarnDialog;
 
+    private static bool StartWasPlayed = false;
     void Start()
     {
         
         if (yarnDialog != null)
         {
-            
             Yarn.Unity.DialogueRunner dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
+            if (StartWasPlayed == false)
+            {
+                dialogueRunner.StartDialogue("Start");
+                StartWasPlayed = true;
+            }
             dialogueRunner.Add(yarnDialog);
+            
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

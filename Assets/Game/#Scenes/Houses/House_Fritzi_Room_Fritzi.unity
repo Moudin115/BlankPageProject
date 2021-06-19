@@ -1357,65 +1357,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 561360977, guid: 2edab2f41f5f08c479814b28df739ed4, type: 3}
-      propertyPath: m_Mass
-      value: 1.7618017
-      objectReference: {fileID: 0}
-    - target: {fileID: 561360977, guid: 2edab2f41f5f08c479814b28df739ed4, type: 3}
-      propertyPath: m_BodyType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 561360977, guid: 2edab2f41f5f08c479814b28df739ed4, type: 3}
-      propertyPath: m_UseAutoMass
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 561360977, guid: 2edab2f41f5f08c479814b28df739ed4, type: 3}
-      propertyPath: m_GravityScale
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2812223712541585824, guid: 2edab2f41f5f08c479814b28df739ed4, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.024196625
-      objectReference: {fileID: 0}
-    - target: {fileID: 2812223712541585824, guid: 2edab2f41f5f08c479814b28df739ed4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.528764
-      objectReference: {fileID: 0}
-    - target: {fileID: 2812223712541585824, guid: 2edab2f41f5f08c479814b28df739ed4, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -9.960014
-      objectReference: {fileID: 0}
-    - target: {fileID: 2812223712541585824, guid: 2edab2f41f5f08c479814b28df739ed4, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.99910486
-      objectReference: {fileID: 0}
-    - target: {fileID: 2812223712541585824, guid: 2edab2f41f5f08c479814b28df739ed4, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.042302925
-      objectReference: {fileID: 0}
-    - target: {fileID: 2812223712541585824, guid: 2edab2f41f5f08c479814b28df739ed4, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.0000055370383
-      objectReference: {fileID: 0}
-    - target: {fileID: 2812223712541585824, guid: 2edab2f41f5f08c479814b28df739ed4, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.00013077304
-      objectReference: {fileID: 0}
     - target: {fileID: 2812223713148137650, guid: 2edab2f41f5f08c479814b28df739ed4, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 2812223713148137652, guid: 2edab2f41f5f08c479814b28df739ed4, type: 3}
-      propertyPath: m_Color.b
-      value: 0.6792453
-      objectReference: {fileID: 0}
-    - target: {fileID: 2812223713148137652, guid: 2edab2f41f5f08c479814b28df739ed4, type: 3}
-      propertyPath: m_Color.g
-      value: 0.6792453
-      objectReference: {fileID: 0}
-    - target: {fileID: 2812223713148137652, guid: 2edab2f41f5f08c479814b28df739ed4, type: 3}
-      propertyPath: m_Color.r
-      value: 0.6792453
       objectReference: {fileID: 0}
     - target: {fileID: 2812223713148137655, guid: 2edab2f41f5f08c479814b28df739ed4, type: 3}
       propertyPath: m_RootOrder
@@ -1461,8 +1405,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2812223712541585838, guid: 2edab2f41f5f08c479814b28df739ed4, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2edab2f41f5f08c479814b28df739ed4, type: 3}
 --- !u!1 &1194833705
 GameObject:
@@ -2881,7 +2824,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1647062832}
   - component: {fileID: 1647062835}
-  - component: {fileID: 1647062834}
   - component: {fileID: 1647062833}
   m_Layer: 0
   m_Name: Obj_Door
@@ -2920,19 +2862,6 @@ MonoBehaviour:
   talkToNode: ForgotCamera
   playerDetected: 0
   yarnDialog: {fileID: 2480198943629176163, guid: 68269db4cdfac454cbefd9d113e50fb7, type: 3}
---- !u!114 &1647062834
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1647062831}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 418d6a5859ceed444b8a45cd1a90011c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Outline: {fileID: 0}
 --- !u!61 &1647062835
 BoxCollider2D:
   m_ObjectHideFlags: 0
