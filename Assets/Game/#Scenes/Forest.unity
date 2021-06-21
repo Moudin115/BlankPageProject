@@ -32085,6 +32085,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 561e2e7f108b7c54d84dc4237d48cb87, type: 3}
+--- !u!1 &1186039622 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1539506880916017979, guid: 561e2e7f108b7c54d84dc4237d48cb87, type: 3}
+  m_PrefabInstance: {fileID: 1186039621}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1186039623 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 72188501, guid: 561e2e7f108b7c54d84dc4237d48cb87, type: 3}
+  m_PrefabInstance: {fileID: 1186039621}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1186039624 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2903735124247929039, guid: 561e2e7f108b7c54d84dc4237d48cb87, type: 3}
+  m_PrefabInstance: {fileID: 1186039621}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1190440907
 GameObject:
   m_ObjectHideFlags: 0
@@ -57477,6 +57492,18 @@ PrefabInstance:
       propertyPath: m_GravityScale
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1350534283, guid: 2edab2f41f5f08c479814b28df739ed4, type: 3}
+      propertyPath: Blend
+      value: 
+      objectReference: {fileID: 1186039622}
+    - target: {fileID: 1350534283, guid: 2edab2f41f5f08c479814b28df739ed4, type: 3}
+      propertyPath: BlendAnim
+      value: 
+      objectReference: {fileID: 1186039623}
+    - target: {fileID: 1350534283, guid: 2edab2f41f5f08c479814b28df739ed4, type: 3}
+      propertyPath: PolaroidMenu
+      value: 
+      objectReference: {fileID: 1186039624}
     - target: {fileID: 2812223712541585824, guid: 2edab2f41f5f08c479814b28df739ed4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.024196625

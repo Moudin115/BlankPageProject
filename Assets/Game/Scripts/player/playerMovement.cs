@@ -75,5 +75,10 @@ public class playerMovement : MonoBehaviour
             controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
             jump = false;
         }
+        if (StopMovement == true)
+        {
+            controller.Move(0f,false,jump);
+            jump = false;
+        }
     }
 }
