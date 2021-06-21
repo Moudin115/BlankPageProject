@@ -25,8 +25,9 @@ public class playerMovement : MonoBehaviour
 
     private void Update()
     {
-        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
+            horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+        
         /*if (Input.GetButtonDown("Jump"))
         {
             jump = true;
@@ -63,6 +64,7 @@ public class playerMovement : MonoBehaviour
         {
             StopMovement = false;
         }
+
     }
 
     private void FixedUpdate()

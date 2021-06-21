@@ -5,11 +5,8 @@ using UnityEngine.UI;
 
 public class PlayerVariables : MonoBehaviour
 {
-    public int maxHealth = 20;
-    public static int currentHealth = 20;
-
-    public int maxPic = 10;
-    public static int currentPics = 0;
+    public int maxPic = 7;
+    public static int currentPics = 7;
 
     public CamBar camBar;
 
@@ -17,34 +14,21 @@ public class PlayerVariables : MonoBehaviour
 
     private void Start()
     {
-        camBar.SetHealth(currentHealth);
         photosCollected.SetPhotos(currentPics);
        // transform.gameObject.GetComponentInChildren<Text>().text = currentHealth.ToString();
-        camBar.SetMaxHealth(maxHealth);
         
     }
     private void Update()
     {
-        if (CameraHandler.PolaroidCamActive == true && Input.GetKeyDown(KeyCode.L))
-        {
-            TakePicture(1);
-        }
         if (CameraHandler.PolaroidCamActive == true && Input.GetKeyDown(KeyCode.Space))
         {
-            RightPicture(1);
             TakePicture(1);
         }
     }
 
     void TakePicture(int picture)
     {
-        currentHealth -= picture;
-
-        camBar.SetHealth(currentHealth);
-    }
-    void RightPicture(int picture)
-    {
-        currentPics += picture;
+        currentPics -= picture;
         photosCollected.SetPhotos(currentPics);
     }
 }

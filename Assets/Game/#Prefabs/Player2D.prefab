@@ -28,7 +28,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2655176151384633742}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &768664141
 GameObject:
@@ -60,7 +60,7 @@ Transform:
   m_Children:
   - {fileID: 1219047660}
   m_Father: {fileID: 2655176151384633742}
-  m_RootOrder: 8
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 4.849, y: 0, z: 0.015}
 --- !u!114 &768664142
 MonoBehaviour:
@@ -214,7 +214,7 @@ Transform:
   m_LocalScale: {x: 0.075, y: 0.5, z: 0.2}
   m_Children: []
   m_Father: {fileID: 2655176151384633742}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!198 &1304330997
 ParticleSystem:
@@ -5016,7 +5016,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2655176151384633742}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1871631789
 GameObject:
@@ -5260,6 +5260,7 @@ GameObject:
   - component: {fileID: 1350534283}
   - component: {fileID: 365880315930841879}
   - component: {fileID: 1608705985506745550}
+  - component: {fileID: 1912539665}
   m_Layer: 6
   m_Name: Player2D
   m_TagString: Player
@@ -5279,6 +5280,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2812223712541585824}
+  - {fileID: 768664143}
   - {fileID: 1347607941}
   - {fileID: 54344906}
   - {fileID: 5774550130606563637}
@@ -5286,7 +5288,6 @@ RectTransform:
   - {fileID: 4491741379719737637}
   - {fileID: 1304330998}
   - {fileID: 2551090395480085368}
-  - {fileID: 768664143}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5455,6 +5456,14 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2812223713148137650}
   m_CullTransparentMesh: 1
+--- !u!81 &1912539665
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2812223713148137650}
+  m_Enabled: 1
 --- !u!1 &3323687510501741887
 GameObject:
   m_ObjectHideFlags: 0
@@ -5487,11 +5496,11 @@ RectTransform:
   m_Children:
   - {fileID: 2031071913}
   m_Father: {fileID: 2655176151384633742}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 1.92}
+  m_AnchoredPosition: {x: 12.354, y: 12.64}
   m_SizeDelta: {x: 266.9244, y: 132.762}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1626603724269000376
@@ -5585,7 +5594,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2655176151384633742}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5640,7 +5649,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2691659303766899293}
   - component: {fileID: 6302921615387500655}
-  - component: {fileID: 7847759535570168869}
   - component: {fileID: 9005648973633287983}
   - component: {fileID: 46856035}
   - component: {fileID: 7210910999559613928}
@@ -5650,7 +5658,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2691659303766899293
 Transform:
   m_ObjectHideFlags: 0
@@ -5663,7 +5671,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2655176151384633742}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &6302921615387500655
 Camera:
@@ -5708,14 +5716,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &7847759535570168869
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4617559183365101037}
-  m_Enabled: 1
 --- !u!114 &9005648973633287983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5860,7 +5860,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2655176151384633742}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
