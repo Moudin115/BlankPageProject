@@ -20,6 +20,7 @@ public class CameraHandler : MonoBehaviour
     public Animator BlendAnim;
 
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +29,7 @@ public class CameraHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.F) && PolaroidRestrictionArea.isInCol == true)
         {
             playerMovement.StopMovement = true;
             PolaroidCam.SetActive(true);
