@@ -10,6 +10,8 @@ public class SceneSwitchTrigger : MonoBehaviour
     [SerializeField]
     private string sceneName;
 
+    public Animator Transition;
+
     private void Start()
     {
         sceneSwitch = FindObjectOfType<SceneSwitch>();
@@ -19,6 +21,7 @@ public class SceneSwitchTrigger : MonoBehaviour
     {
         if(collision.tag == "Player") {
             sceneSwitch.SwitchScene(sceneName);
+            Transition.SetTrigger("Start");
         }
     }
 }
