@@ -5260,7 +5260,7 @@ GameObject:
   - component: {fileID: 1350534283}
   - component: {fileID: 365880315930841879}
   - component: {fileID: 1608705985506745550}
-  - component: {fileID: 1912539665}
+  - component: {fileID: 2366647701548918307}
   m_Layer: 6
   m_Name: Player2D
   m_TagString: Player
@@ -5456,14 +5456,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2812223713148137650}
   m_CullTransparentMesh: 1
---- !u!81 &1912539665
-AudioListener:
+--- !u!114 &2366647701548918307
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2812223713148137650}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
+  ListenerNumber: -1
 --- !u!1 &3323687510501741887
 GameObject:
   m_ObjectHideFlags: 0
