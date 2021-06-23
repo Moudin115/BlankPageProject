@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 54344905}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.75, z: 0}
+  m_LocalPosition: {x: 0, y: 0.66, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2655176151384633742}
@@ -55,7 +55,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 768664141}
   m_LocalRotation: {x: 0.042302925, y: -0.0000055370383, z: 0.00013077304, w: 0.99910486}
-  m_LocalPosition: {x: -0.024196625, y: 2.5287638, z: -9.960014}
+  m_LocalPosition: {x: -1.0598187, y: 1.4927914, z: -3.7168744}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1219047660}
@@ -84,7 +84,7 @@ MonoBehaviour:
   m_Follow: {fileID: 2655176151384633742}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 3.8131719
+    OrthographicSize: 2
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ad980451443d70438faac0bc6c235a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TrackedObjectOffset: {x: -0.024196837, y: 1.6834626, z: 0.0041949227}
+  m_TrackedObjectOffset: {x: -1.0598187, y: 1.1619486, z: 0.18302067}
   m_LookaheadTime: 1
   m_LookaheadSmoothing: 3
   m_LookaheadIgnoreY: 1
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_TargetMovementOnly: 0
   m_ScreenX: 0.5
   m_ScreenY: 0.5
-  m_CameraDistance: 10
+  m_CameraDistance: 3.913903
   m_DeadZoneWidth: 0.3
   m_DeadZoneHeight: 0.2
   m_DeadZoneDepth: 0
@@ -5159,7 +5159,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2812223712541585839}
   m_LocalRotation: {x: 0.042302925, y: -0.0000055370383, z: 0.00013077304, w: 0.99910486}
-  m_LocalPosition: {x: -0.024196625, y: 2.5287638, z: -9.960014}
+  m_LocalPosition: {x: -1.0598187, y: 1.4927914, z: -3.7168744}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2655176151384633742}
@@ -5192,7 +5192,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3.8131719
+  orthographic size: 2
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -5309,7 +5309,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.5018592}
+  m_Offset: {x: 0.07936096, y: 0.18706042}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -5320,7 +5320,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.9962816}
+  m_Size: {x: 0.55557823, y: 0.9804095}
   m_EdgeRadius: 0
 --- !u!50 &561360977
 Rigidbody2D:
@@ -5356,9 +5356,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.48962975}
+  m_Offset: {x: 0.12962306, y: -0.6404157}
   serializedVersion: 2
-  m_Radius: 0.49363208
+  m_Radius: 0.32961923
 --- !u!114 &561360982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5500,8 +5500,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 12.354, y: 12.64}
-  m_SizeDelta: {x: 266.9244, y: 132.762}
+  m_AnchoredPosition: {x: 12.354, y: 11.974}
+  m_SizeDelta: {x: 210, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1626603724269000376
 Canvas:
@@ -5614,7 +5614,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.3352, y: -0.15004194}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -5625,7 +5625,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4, y: 4}
+  m_Size: {x: 1.1949195, y: 1.9343913}
   m_EdgeRadius: 0
 --- !u!114 &1910398648
 MonoBehaviour:
@@ -5864,7 +5864,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -0.19}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &8942824131751684819
