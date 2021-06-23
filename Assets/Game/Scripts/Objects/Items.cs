@@ -10,6 +10,7 @@ public class Items : MonoBehaviour
     public static void PickUpCamera()
     {
         Camera = true;
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Interactables/equip_camera");
     }
 
 }

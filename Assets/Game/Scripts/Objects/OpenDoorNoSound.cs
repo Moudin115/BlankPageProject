@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OpenDoor : MonoBehaviour
+public class OpenDoorNoSound : MonoBehaviour
 {
     private bool playerDetected;
     public Transform doorPos;
@@ -30,7 +30,6 @@ public class OpenDoor : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                FMODUnity.RuntimeManager.PlayOneShot("event:/Interactables/door_inside");
                 sceneSwitch.SwitchScene(sceneName);
                 Transition.SetTrigger("Start");
             }
