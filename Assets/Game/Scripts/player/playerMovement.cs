@@ -60,7 +60,7 @@ public class playerMovement : MonoBehaviour
             StopMovement = true;
             return;
         }
-        if (dialogueRunner.IsDialogueRunning == false)
+        else if (dialogueRunner.IsDialogueRunning == false)
         {
             StopMovement = false;
         }
