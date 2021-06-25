@@ -5,48 +5,42 @@ using UnityEngine.SceneManagement;
 
 public class ParametersSetByName : MonoBehaviour
 {
-    FMOD.Studio.EventInstance Village;
-
-    
-    // Start is called before the first frame update
-    void Start()
+    FMOD.Studio.EventInstance BGM = FMODUnity.RuntimeManager.CreateInstance("event:/BackgroundMusic/FritzisTheme");
+    private void Start()
     {
-        Village = FMODUnity.RuntimeManager.CreateInstance("event:/BackgroundMusic/FritzisTheme");
-
-        Village.start();
-
-
-
-
-
-        /*else
-        {
-            Village.setParameterByName("Village", 10f);
-        }*/
+        BGM.start();
     }
+    private float SceneInstance;
+
     private void Update()
     {
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
+
         if (sceneName == "House_Fritzi_Room_Fritzi")
         {
-            Village.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-            Village.setParameterByName("Village", 0f);
+            SceneInstance = 0f;
+            BGM.setParameterByName("Village", SceneInstance);
             Debug.Log(sceneName);
         }
         if (sceneName == "House_Fritzi")
         {
-            Village.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-            Village.setParameterByName("Village", 0f);
+            SceneInstance = 0f;
+            BGM.setParameterByName("Village", SceneInstance);
             Debug.Log(sceneName);
         }
         if (sceneName == "Village")
         {
-            Village.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-            Village.setParameterByName("Village", 10f);
+            SceneInstance = 10f;
+            BGM.setParameterByName("Village", SceneInstance);
             Debug.Log(sceneName);
-            
         }
+        else
+        {
+            SceneInstance = 0f;
+            BGM.setParameterByName("Village", SceneInstance);
+        }
+        
     }
 
 }

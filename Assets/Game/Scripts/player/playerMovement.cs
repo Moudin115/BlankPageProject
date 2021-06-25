@@ -28,16 +28,18 @@ public class playerMovement : MonoBehaviour
     {
 
             horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
-        
+
         if (horizontalMove == 0)
         {
             anim.SetBool("walkBool", false);
-            
+
         }
         else
         {
             anim.SetBool("walkBool", true);
+
         }
+
         /*if (Input.GetButtonDown("Jump"))
         {
             jump = true;
@@ -64,17 +66,19 @@ public class playerMovement : MonoBehaviour
 
             }*/
 
-        if (dialogueRunner.IsDialogueRunning == true)
+
+        if (dialogueRunner.IsDialogueRunning == false)
         {
+            StopMovement = false;
             
+        }
+        else if (dialogueRunner.IsDialogueRunning == true)
+        {
             StopMovement = true;
             return;
         }
-        else if (dialogueRunner.IsDialogueRunning == false)
-        {
-            
-            StopMovement = false;
-        }
+
+
 
     }
 

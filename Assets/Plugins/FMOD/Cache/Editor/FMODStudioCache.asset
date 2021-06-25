@@ -121,11 +121,11 @@ MonoBehaviour:
   Path: Assets/Game/fmod_sounds/Polaroid/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637601317049262393
+  lastModified: 637602363458282853
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1190
+    Value: 1266
   Exists: 1
 --- !u!114 &-8185118475097773103
 MonoBehaviour:
@@ -166,7 +166,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 5861400985707460863}
+  - {fileID: 2457149003746250073}
   MinDistance: 0
   MaxDistance: 0
   Length: 81946
@@ -186,6 +186,29 @@ MonoBehaviour:
   guid: 04e307c9e9250d4d88829b76e8816fee
   Banks:
   - {fileID: -8185118475097773103}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-6320063047348301651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interactables/camera_trigger
+  m_EditorClassIdentifier: 
+  Path: event:/Interactables/camera_trigger
+  guid: 685f08534b2dad49958af45278a9b523
+  Banks:
+  - {fileID: 7546318455007523423}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -263,6 +286,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-3477656530591415537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/Surface
+  m_EditorClassIdentifier: 
+  Name: Surface
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-2729952057076602512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -353,6 +396,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 88149
+--- !u!114 &-1619126898276617342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/AmbienceDay/Location
+  m_EditorClassIdentifier: 
+  Name: Location
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-1211798307495691218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -437,6 +500,29 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-614541722083747924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interactables/camera_cartridge
+  m_EditorClassIdentifier: 
+  Path: event:/Interactables/camera_cartridge
+  guid: ac4c8d06b3ee6e459dc34209c6911c22
+  Banks:
+  - {fileID: 7546318455007523423}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-453184668770573427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -480,15 +566,16 @@ MonoBehaviour:
   - {fileID: 2655198372847184783}
   - {fileID: -8174814775170017950}
   - {fileID: 7990514299230151003}
-  - {fileID: 5078194703200163044}
-  - {fileID: -9097927874903936205}
-  - {fileID: -8896903099624289694}
+  - {fileID: -6320063047348301651}
+  - {fileID: 3409527179342015562}
+  - {fileID: 1823621384197114738}
+  - {fileID: -614541722083747924}
   EditorParameters: []
   MasterBanks:
   - {fileID: 7546318455007523423}
   StringsBanks:
   - {fileID: -8536821307035821060}
-  stringsBankWriteTime: 637601317049262393
+  stringsBankWriteTime: 637602363458282853
   cacheVersion: 6
 --- !u!114 &98477176167366007
 MonoBehaviour:
@@ -621,6 +708,49 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &1823621384197114738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interactables/bakery_bell
+  m_EditorClassIdentifier: 
+  Path: event:/Interactables/bakery_bell
+  guid: 75d4f311ab141442b981b901b4777b60
+  Banks:
+  - {fileID: 7546318455007523423}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &2457149003746250073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/FritzisTheme/Village
+  m_EditorClassIdentifier: 
+  Name: Village
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &2655198372847184783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -644,6 +774,30 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &3409527179342015562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Footsteps/Footsteps
+  m_EditorClassIdentifier: 
+  Path: event:/Footsteps/Footsteps
+  guid: 695faba1f994f547b5ed3960ddc53b42
+  Banks:
+  - {fileID: 7546318455007523423}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -3477656530591415537}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 800
 --- !u!114 &4245082770009873252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -809,7 +963,7 @@ MonoBehaviour:
   Path: Assets/Game/fmod_sounds/Polaroid/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637601317049232429
+  lastModified: 637602363458262893
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -833,7 +987,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -1211798307495691218}
+  - {fileID: -1619126898276617342}
   MinDistance: 0
   MaxDistance: 0
   Length: 88149
