@@ -18,6 +18,7 @@ public class playerMovement : MonoBehaviour
 
     private DialogueRunner dialogueRunner = null;
 
+    public Animator anim;
     private void Start()
     {
         dialogueRunner = FindObjectOfType<DialogueRunner>();
@@ -28,6 +29,15 @@ public class playerMovement : MonoBehaviour
 
             horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
         
+        if (horizontalMove == 0)
+        {
+            anim.SetBool("walkBool", false);
+            
+        }
+        else
+        {
+            anim.SetBool("walkBool", true);
+        }
         /*if (Input.GetButtonDown("Jump"))
         {
             jump = true;
@@ -56,12 +66,13 @@ public class playerMovement : MonoBehaviour
 
         if (dialogueRunner.IsDialogueRunning == true)
         {
-
+            
             StopMovement = true;
             return;
         }
         else if (dialogueRunner.IsDialogueRunning == false)
         {
+            
             StopMovement = false;
         }
 
@@ -74,11 +85,14 @@ public class playerMovement : MonoBehaviour
         {
             controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
             jump = false;
+            
         }
         if (StopMovement == true)
         {
+            
             controller.Move(0f,false,jump);
             jump = false;
+
         }
     }
 }
