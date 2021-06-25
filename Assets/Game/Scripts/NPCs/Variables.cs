@@ -5,7 +5,6 @@ using UnityEngine;
 public class Variables : MonoBehaviour
 {
     public static bool talkedToJoe;
-    public GameObject Check;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +19,5 @@ public class Variables : MonoBehaviour
     public void TalkedToJoe()
     {
         talkedToJoe = true;
-        Check.SetActive(true);
     }
 }

@@ -20,6 +20,29 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-9097927874903936205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Footsteps/steps_carpet
+  m_EditorClassIdentifier: 
+  Path: event:/Footsteps/steps_carpet
+  guid: 2c6d53bee6d45e4688df8573a5451a03
+  Banks:
+  - {fileID: 7546318455007523423}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-8973812147855875292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,6 +83,29 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-8896903099624289694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Footsteps/steps_concrete
+  m_EditorClassIdentifier: 
+  Path: event:/Footsteps/steps_concrete
+  guid: c1eff48ed10ac341952274151e891d9b
+  Banks:
+  - {fileID: 7546318455007523423}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-8536821307035821060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75,11 +121,11 @@ MonoBehaviour:
   Path: Assets/Game/fmod_sounds/Polaroid/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637602148300000000
+  lastModified: 637601317049262393
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1128
+    Value: 1190
   Exists: 1
 --- !u!114 &-8185118475097773103
 MonoBehaviour:
@@ -120,7 +166,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -8973812147855875292}
+  - {fileID: 5861400985707460863}
   MinDistance: 0
   MaxDistance: 0
   Length: 81946
@@ -307,6 +353,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 88149
+--- !u!114 &-1211798307495691218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/AmbienceDay/Location
+  m_EditorClassIdentifier: 
+  Name: Location
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-1150641648593544684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -414,13 +480,15 @@ MonoBehaviour:
   - {fileID: 2655198372847184783}
   - {fileID: -8174814775170017950}
   - {fileID: 7990514299230151003}
-  - {fileID: 6944277779431696700}
+  - {fileID: 5078194703200163044}
+  - {fileID: -9097927874903936205}
+  - {fileID: -8896903099624289694}
   EditorParameters: []
   MasterBanks:
   - {fileID: 7546318455007523423}
   StringsBanks:
   - {fileID: -8536821307035821060}
-  stringsBankWriteTime: 637602148300000000
+  stringsBankWriteTime: 637601317049262393
   cacheVersion: 6
 --- !u!114 &98477176167366007
 MonoBehaviour:
@@ -616,6 +684,49 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &5078194703200163044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Footsteps/steps_concrete_loose
+  m_EditorClassIdentifier: 
+  Path: event:/Footsteps/steps_concrete_loose
+  guid: 04e307c9e9250d4d88829b76e8816fee
+  Banks:
+  - {fileID: 7546318455007523423}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &5861400985707460863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/FritzisTheme/Village
+  m_EditorClassIdentifier: 
+  Name: Village
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &6006665775359927762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -698,7 +809,7 @@ MonoBehaviour:
   Path: Assets/Game/fmod_sounds/Polaroid/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637602148300000000
+  lastModified: 637601317049232429
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -722,7 +833,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -9220007728078465769}
+  - {fileID: -1211798307495691218}
   MinDistance: 0
   MaxDistance: 0
   Length: 88149
