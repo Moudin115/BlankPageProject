@@ -5,42 +5,50 @@ using UnityEngine.SceneManagement;
 
 public class ParametersSetByName : MonoBehaviour
 {
-    FMOD.Studio.EventInstance BGM = FMODUnity.RuntimeManager.CreateInstance("event:/BackgroundMusic/FritzisTheme");
-    private void Start()
-    {
-        BGM.start();
-    }
+    private static FMOD.Studio.EventInstance BGM ;
     private float SceneInstance;
 
+    private void Start()
+    {
+        BGM = FMODUnity.RuntimeManager.CreateInstance("event:/BackgroundMusic/FritzisTheme");
+        BGM.start();
+        BGM.release();
+        
+    }
     private void Update()
     {
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
-
         if (sceneName == "House_Fritzi_Room_Fritzi")
         {
             SceneInstance = 0f;
-            BGM.setParameterByName("Village", SceneInstance);
             Debug.Log(sceneName);
         }
         if (sceneName == "House_Fritzi")
         {
             SceneInstance = 0f;
-            BGM.setParameterByName("Village", SceneInstance);
             Debug.Log(sceneName);
         }
         if (sceneName == "Village")
         {
             SceneInstance = 10f;
-            BGM.setParameterByName("Village", SceneInstance);
+
             Debug.Log(sceneName);
         }
         else
         {
             SceneInstance = 0f;
-            BGM.setParameterByName("Village", SceneInstance);
+
         }
-        
+        Progress(SceneInstance);
     }
+    public void Progress(float SceneInstance)
+    {
+        BGM.setParameterByName("Village", SceneInstance);
+    }
+    /*private void OnDestroy()
+    {
+        BGM.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+    }*/
 
 }

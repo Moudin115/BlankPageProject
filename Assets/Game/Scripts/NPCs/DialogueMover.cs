@@ -34,6 +34,11 @@ public class DialogueMover : MonoBehaviour
             name = line.Substring(0, line.IndexOf(":"));
         else
             name = "Player";
+
+        if (name == "Fritzi")
+        {
+            name = "Player";
+        }
         // Search the GameObject of the character in the Scene
         character = GameObject.Find(name);
         // Sets the dialogue position
