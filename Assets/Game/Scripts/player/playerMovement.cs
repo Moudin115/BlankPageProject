@@ -8,7 +8,7 @@ public class playerMovement : MonoBehaviour
     public CharacterController2D controller;
 
     public float runSpeed = 40f;
-
+    private float runSpeedP;
     public float LayerMode = 1;
 
     float horizontalMove = 0f;
@@ -21,24 +21,15 @@ public class playerMovement : MonoBehaviour
     public Animator anim;
     private void Start()
     {
+        runSpeedP = 25f;
         dialogueRunner = FindObjectOfType<DialogueRunner>();
     }
 
     private void Update()
     {
-
+            
             horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
-        if (horizontalMove == 0)
-        {
-            anim.SetBool("walkBool", false);
-
-        }
-        else
-        {
-            anim.SetBool("walkBool", true);
-
-        }
 
         /*if (Input.GetButtonDown("Jump"))
         {
@@ -66,18 +57,32 @@ public class playerMovement : MonoBehaviour
 
             }*/
 
-
-        if (dialogueRunner.IsDialogueRunning == false)
+        if (dialogueRunner != null)
         {
-            StopMovement = false;
-            
-        }
-        else if (dialogueRunner.IsDialogueRunning == true)
-        {
-            StopMovement = true;
-            return;
-        }
+            if (dialogueRunner.IsDialogueRunning == false)
+            {
+                StopMovement = false;
+                runSpeed = runSpeedP;
+            }
+            else if (dialogueRunner.IsDialogueRunning == true)
+            {
+                StopMovement = true;
+                runSpeed = 0f;
+                return;
 
+            }
+        }
+        
+
+        if (horizontalMove == 0)
+        {
+            anim.SetBool("walkBool", false);
+
+        }
+        if (horizontalMove != 0)
+        {
+            anim.SetBool("walkBool", true);
+        }
 
 
     }
