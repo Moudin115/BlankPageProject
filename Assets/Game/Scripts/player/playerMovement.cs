@@ -7,7 +7,7 @@ public class playerMovement : MonoBehaviour
 {
     public CharacterController2D controller;
 
-    public float runSpeed = 40f;
+    public float runSpeed = 20f;
     private float runSpeedP;
     public float LayerMode = 1;
 
@@ -21,7 +21,7 @@ public class playerMovement : MonoBehaviour
     public Animator anim;
     private void Start()
     {
-        runSpeedP = 25f;
+        runSpeedP = 20f;
         dialogueRunner = FindObjectOfType<DialogueRunner>();
     }
 

@@ -13,7 +13,6 @@ public class ParametersSetByName : MonoBehaviour
         BGM = FMODUnity.RuntimeManager.CreateInstance("event:/BackgroundMusic/FritzisTheme");
         BGM.start();
         BGM.release();
-        
     }
     private void Update()
     {
@@ -22,23 +21,18 @@ public class ParametersSetByName : MonoBehaviour
         if (sceneName == "House_Fritzi_Room_Fritzi")
         {
             SceneInstance = 0f;
-            Debug.Log(sceneName);
         }
         if (sceneName == "House_Fritzi")
         {
             SceneInstance = 0f;
-            Debug.Log(sceneName);
         }
         if (sceneName == "Village")
         {
             SceneInstance = 10f;
-
-            Debug.Log(sceneName);
         }
         else
         {
             SceneInstance = 0f;
-
         }
         Progress(SceneInstance);
     }
@@ -46,9 +40,4 @@ public class ParametersSetByName : MonoBehaviour
     {
         BGM.setParameterByName("Village", SceneInstance);
     }
-    /*private void OnDestroy()
-    {
-        BGM.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-    }*/
-
 }
