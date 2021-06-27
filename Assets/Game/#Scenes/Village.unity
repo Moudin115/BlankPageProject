@@ -568,7 +568,7 @@ MonoBehaviour:
   player: {fileID: 1423215925}
   posX: 20.27
   posY: 0.8
-  previous: Photo_01
+  previous: PhotoWall
 --- !u!1 &153941363
 GameObject:
   m_ObjectHideFlags: 0
@@ -1441,7 +1441,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 918390387}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d0b2f30f4349cc40a7f59bb74f770da, type: 3}
   m_Name: 
@@ -1839,6 +1839,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1182169622}
   - component: {fileID: 1182169624}
+  - component: {fileID: 1182169623}
   m_Layer: 10
   m_Name: Glammer
   m_TagString: Untagged
@@ -1859,9 +1860,24 @@ Transform:
   m_Children:
   - {fileID: 1788951187}
   - {fileID: 918390388}
+  - {fileID: 1395771883}
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1182169623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182169621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abee481bf389e9e4c89b03ee1faaaa2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: PhotoWall
+  PhotoCollider: {fileID: 918390387}
 --- !u!61 &1182169624
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2122,6 +2138,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2edab2f41f5f08c479814b28df739ed4, type: 3}
+--- !u!1 &1395771882
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1395771883}
+  m_Layer: 10
+  m_Name: DoorPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1395771883
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395771882}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1182169622}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &1423215925 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2655176151384633742, guid: 2edab2f41f5f08c479814b28df739ed4, type: 3}

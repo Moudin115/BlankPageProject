@@ -19,4 +19,9 @@ public class SceneSwitch : MonoBehaviour
         prevScene = currentScene;
         SceneManager.LoadScene(sceneName);
     }
+    public void LastScene()
+    {
+        SceneManager.LoadScene(prevScene);
+        prevScene = currentScene;
+    }
 }

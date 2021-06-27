@@ -14,6 +14,7 @@ public class PolaroidRestrictionArea : MonoBehaviour
     private int WalkDirection;
 
     public static bool isInCol;
+    public static bool walkStop;
     void Start()
     {
         minWalkPoint = walkZone.bounds.min;
@@ -23,23 +24,26 @@ public class PolaroidRestrictionArea : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch (WalkDirection)
+        if (walkStop)
         {
-            case 0:
-                if (Player.position.x > maxWalkPoint.x)
+          if (Player.position.x > maxWalkPoint.x)
+          {
+            playerMovement.StopMovement = true;
+             if (Input.GetKeyDown(KeyCode.A))
                 {
-                    playerMovement.StopMovement = true;
-                    return;
+                    playerMovement.StopMovement = false;
                 }
-                break;
+          }
+          if (Player.position.x < minWalkPoint.x)
+          {
+            playerMovement.StopMovement = true;
+              if (Input.GetKeyDown(KeyCode.D))
+                {
+                    playerMovement.StopMovement = false;
+                }
+            }
+           
 
-            case 1:
-                if (Player.position.x < minWalkPoint.x)
-                {
-                    playerMovement.StopMovement = true;
-                    return;
-                }
-                break;
         }
     }
 

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Items : MonoBehaviour
 {
     public static bool Camera = false;
-    public static bool Papersheet = false;
+    public static bool Photo01 = false;
 
     public static void PickUpCamera()
     {
