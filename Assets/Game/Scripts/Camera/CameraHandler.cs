@@ -53,8 +53,8 @@ public class CameraHandler : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && PolaroidCamActive == true)
         {
             Trigger.SetActive(true);
-            FMODUnity.RuntimeManager.PlayOneShot("event:/Interactables/camera_trigger");
             ScreenshotHandler.TakeScreenshot_Static(500, 500);
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Interactables/camera_trigger");
             Blend.SetActive(true);
             BlendAnim.SetTrigger("Start");
             //StartCoroutine(Waiter());

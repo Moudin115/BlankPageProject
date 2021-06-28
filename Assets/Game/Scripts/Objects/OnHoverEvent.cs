@@ -16,7 +16,7 @@ public class OnHoverEvent : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     public void OnPointerEnter(PointerEventData eventData)
     {
         
-        transform.localScale = new Vector3(1.7f, 1.7f, 1f);
+        transform.localScale = new Vector3(1.3f, 1.3f, 1f);
     }
 
     public void OnPointerExit(PointerEventData eventData)
