@@ -19,6 +19,8 @@ public class playerMovement : MonoBehaviour
     private DialogueRunner dialogueRunner = null;
 
     public Animator anim;
+
+    private bool Colliding = false;
     private void Start()
     {
         runSpeedP = 20f;
@@ -79,10 +81,11 @@ public class playerMovement : MonoBehaviour
             anim.SetBool("walkBool", false);
 
         }
-        if (horizontalMove != 0)
+        if (horizontalMove != 0 && Colliding == false)
         {
             anim.SetBool("walkBool", true);
         }
+        else anim.SetBool("walkBool", false);
 
 
     }
@@ -103,5 +106,16 @@ public class playerMovement : MonoBehaviour
             jump = false;
 
         }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Wall")
+        {
+            Colliding = true;
+        }
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        Colliding = false;
     }
 }
