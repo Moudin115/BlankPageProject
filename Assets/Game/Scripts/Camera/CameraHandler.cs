@@ -31,12 +31,14 @@ public class CameraHandler : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F) && PolaroidRestrictionArea.isInCol == true)
         {
+            //SceneManager.LoadScene(sceneName: "Photo_01");
             playerMovement.StopMovement = true;
             PolaroidRestrictionArea.walkStop = true;
             PolaroidCam.SetActive(true);
             PolaroidCamActive = true;
             PolaroidMenu.SetActive(true);
             mainCam.SetActive(false);
+            
         }
         if (Input.GetKeyUp(KeyCode.F))
         {

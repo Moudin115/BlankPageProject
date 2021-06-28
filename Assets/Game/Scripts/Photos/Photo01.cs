@@ -8,6 +8,8 @@ public class Photo01 : MonoBehaviour
 
     public GameObject PhotoCollider;
 
+    public static bool Trigger = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,5 +32,13 @@ public class Photo01 : MonoBehaviour
                 }
             }
         
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            Trigger = true;
+            Debug.Log("Trigg");
+        }
     }
 }
