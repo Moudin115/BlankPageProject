@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -393,6 +393,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1607994568}
     m_Modifications:
+    - target: {fileID: 7938798950671212610, guid: c4b02a1e89a9e4b438752725259384ac, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 7938798950671212610, guid: c4b02a1e89a9e4b438752725259384ac, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7938798950671212613, guid: c4b02a1e89a9e4b438752725259384ac, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7938798951358948900, guid: c4b02a1e89a9e4b438752725259384ac, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -484,6 +496,18 @@ PrefabInstance:
     - target: {fileID: 7938798951358948903, guid: c4b02a1e89a9e4b438752725259384ac, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7938798951398455122, guid: c4b02a1e89a9e4b438752725259384ac, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7938798951398455123, guid: c4b02a1e89a9e4b438752725259384ac, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 7938798951398455123, guid: c4b02a1e89a9e4b438752725259384ac, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -31
       objectReference: {fileID: 0}
     - target: {fileID: 7938798951445254447, guid: c4b02a1e89a9e4b438752725259384ac, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
