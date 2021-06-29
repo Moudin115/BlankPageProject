@@ -28,7 +28,11 @@ public class ParametersSetByName : MonoBehaviour
         }
         if (sceneName == "Village")
         {
-            SceneInstance = 10f;
+            SceneInstance = 2f;
+        }
+        if (sceneName == "Bakery")
+        {
+            SceneInstance = 3f;
         }
         else
         {
