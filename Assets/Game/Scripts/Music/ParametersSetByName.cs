@@ -24,19 +24,19 @@ public class ParametersSetByName : MonoBehaviour
         }
         if (sceneName == "House_Fritzi")
         {
-            SceneInstance = 0f;
+            SceneInstance = 1f;
         }
         if (sceneName == "Village")
         {
-            SceneInstance = 10f;
+            SceneInstance = 2f;
         }
         if (sceneName == "Bakery")
         {
-            SceneInstance = 10f;
+            SceneInstance = 3f;
         }
         else
         {
-            SceneInstance = 10f;
+            SceneInstance = 2f;
         }
         Progress(SceneInstance);
     }
