@@ -31,8 +31,8 @@ public class CameraHandler : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F) && PolaroidRestrictionArea.isInCol == true)
         {
-            //SceneManager.LoadScene(sceneName: "Photo_01");
-            playerMovement.StopMovement = true;
+            SceneManager.LoadScene(sceneName: "Photo_01");
+            /*playerMovement.StopMovement = true;
             PolaroidRestrictionArea.walkStop = true;
             PolaroidCam.SetActive(true);
             PolaroidCamActive = true;
@@ -60,7 +60,7 @@ public class CameraHandler : MonoBehaviour
             Blend.SetActive(true);
             BlendAnim.SetTrigger("Start");
             //StartCoroutine(Waiter());
-            SceneManager.LoadScene(sceneName: "PhotoWall");
+            SceneManager.LoadScene(sceneName: "PhotoWall");*/
         }
 
         /*IEnumerator Waiter()

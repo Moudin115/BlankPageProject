@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraZoom : MonoBehaviour
 {
     public Camera Polaroidcam;
-    public float speed;
+    public float speed = 1;
 
 
     private void Start()
@@ -14,13 +14,14 @@ public class CameraZoom : MonoBehaviour
 
     public void Update()
     {
-        /*if ( Input.GetKeyDown(KeyCode.Z))
+        float horz = Input.GetAxis("Horizontal");
+        float vert = Input.GetAxis("Vertical");
+        transform.position += (Vector3.up * vert + Vector3.right * horz)* speed * Time.deltaTime;
+
+        float mouseWheel = Input.GetAxis("Mouse ScrollWheel");
+        if(mouseWheel != 0)
         {
-            Polaroidcam.orthographicSize = Mathf.Lerp(Polaroidcam.orthographicSize, 1, speed);
+            Polaroidcam.orthographicSize -= mouseWheel;
         }
-        else
-        {
-            Polaroidcam.orthographicSize = Mathf.Lerp(Polaroidcam.orthographicSize, 3, speed);
-        }*/
     }
 }
