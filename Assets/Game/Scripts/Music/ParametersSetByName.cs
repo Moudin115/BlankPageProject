@@ -34,10 +34,10 @@ public class ParametersSetByName : MonoBehaviour
         {
             SceneInstance = 3f;
         }
-        else
+        /*else
         {
             SceneInstance = 2f;
-        }
+        }*/
         Progress(SceneInstance);
     }
     public void Progress(float SceneInstance)
