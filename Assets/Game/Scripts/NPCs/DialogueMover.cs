@@ -34,11 +34,6 @@ public class DialogueMover : MonoBehaviour
             name = line.Substring(0, line.IndexOf(":"));
         else
             name = "Player";
-
-        if (name == "Fritzi")
-        {
-            name = "Player";
-        }
         // Search the GameObject of the character in the Scene
         character = GameObject.Find(name);
         // Sets the dialogue position
@@ -49,12 +44,11 @@ public class DialogueMover : MonoBehaviour
     private void SetDialoguePosition(GameObject character)
     {
         // Retrieve the position where the top part of the sprite is in the world
-        float characterSpriteHeight = character.GetComponent<SpriteRenderer>().sprite.bounds.extents.y + 2;
+        float characterSpriteHeight = character.GetComponent<BoxCollider2D>().bounds.extents.y;
 
         // Create position with the sprite top location
-        Vector3 characterPosition = new Vector3(character.transform.position.x,
-                                                characterSpriteHeight,
-                                                character.transform.position.z);
+        Vector3 characterPosition = new Vector2(character.transform.position.x,
+                                                characterSpriteHeight+2.7f);
 
         // Set the DialogueBubble position to the sprite top location in Screen Space
         this.transform.position = cam.WorldToScreenPoint(characterPosition);
