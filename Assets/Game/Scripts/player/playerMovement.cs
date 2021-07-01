@@ -65,10 +65,12 @@ public class playerMovement : MonoBehaviour
             {
                 StopMovement = false;
                 runSpeed = runSpeedP;
+                anim.SetBool("walkBool", true);
             }
             else if (dialogueRunner.IsDialogueRunning == true)
             {
                 StopMovement = true;
+                anim.SetBool("walkBool", false);
                 runSpeed = 0f;
                 return;
 

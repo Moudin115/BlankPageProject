@@ -92,6 +92,7 @@ namespace Yarn.Unity
         /// Gets a value that indicates if the dialogue is actively running.
         /// </summary>
         public bool IsDialogueRunning { get; set; }
+        private bool TriggerTrig = false;
 
         /// <summary>
         /// A type of <see cref="UnityEvent"/> that takes a single string
@@ -289,7 +290,17 @@ namespace Yarn.Unity
             IsDialogueRunning = false;
             Dialogue.Stop();
         }
-
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.tag == "Player")
+            {
+                if (TriggerTrig == false)
+                {
+                    StartDialogue();
+                    TriggerTrig = true;
+                }
+            }
+        }
         /// <summary>
         /// Returns `true` when a node named `nodeName` has been loaded.
         /// </summary>
