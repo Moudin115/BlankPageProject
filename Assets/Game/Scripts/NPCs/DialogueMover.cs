@@ -1,5 +1,6 @@
 using UnityEngine;
 using Yarn.Unity;
+using UnityEngine.SceneManagement;
 
 public class DialogueMover : MonoBehaviour
 {
@@ -44,13 +45,47 @@ public class DialogueMover : MonoBehaviour
     private void SetDialoguePosition(GameObject character)
     {
         // Retrieve the position where the top part of the sprite is in the world
-        float characterSpriteHeight = character.GetComponent<BoxCollider2D>().bounds.extents.y;
 
-        // Create position with the sprite top location
-        Vector3 characterPosition = new Vector2(character.transform.position.x,
-                                                characterSpriteHeight+2.7f);
+        float characterSpriteHeight = character.GetComponent<BoxCollider2D>().bounds.size.y + 0.5f;
+        float characterSpriteWidth = character.transform.position.x;
 
+        Scene currentScene = SceneManager.GetActiveScene();
+        string sceneName = currentScene.name;
+        if (sceneName == "House_Fritzi_Room_Fritzi")
+        {
+            characterSpriteHeight = character.GetComponent<BoxCollider2D>().bounds.size.y + 0.5f;
+            characterSpriteWidth = character.transform.position.x;
+        }
+        if (sceneName == "House_Fritzi")
+        {
+            characterSpriteHeight = character.GetComponent<BoxCollider2D>().bounds.size.y + 0.5f;
+            characterSpriteWidth = character.transform.position.x;
+        }
+        if (sceneName == "Village")
+        {
+            characterSpriteHeight = character.GetComponent<BoxCollider2D>().bounds.size.y + 1.5f;
+            characterSpriteWidth = character.transform.position.x;
+        }
+        if (sceneName == "Bakery")
+        {
+            characterSpriteHeight = character.GetComponent<BoxCollider2D>().bounds.size.y + 2.5f;
+            characterSpriteWidth = character.transform.position.x + 3;
+        }
+        if (sceneName == "Forest")
+        {
+            characterSpriteHeight = character.GetComponent<BoxCollider2D>().bounds.size.y + 1.5f;
+            characterSpriteWidth = character.transform.position.x;
+        }
+
+        Vector2 characterPosition = new Vector2(characterSpriteWidth,
+                                        characterSpriteHeight);
+        SetPos(characterPosition);
+        
         // Set the DialogueBubble position to the sprite top location in Screen Space
+        
+    }
+    private void SetPos(Vector2 characterPosition)
+    {
         this.transform.position = cam.WorldToScreenPoint(characterPosition);
     }
 }

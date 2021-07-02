@@ -20,7 +20,7 @@ public class NPC : MonoBehaviour
         if (yarnDialog != null)
         {
             Yarn.Unity.DialogueRunner dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
-            dialogueRunner.StartDialogue("Start");
+            //dialogueRunner.StartDialogue("Start");
             dialogueRunner.Add(yarnDialog);
             
         }

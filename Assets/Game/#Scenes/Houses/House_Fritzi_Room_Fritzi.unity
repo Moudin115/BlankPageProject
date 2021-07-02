@@ -171,7 +171,7 @@ MonoBehaviour:
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 64
-  sceneName: Village
+  sceneName: House_Fritzi
 --- !u!114 &131731962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,7 +287,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 312990364}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.793, y: 0.942, z: -0.164}
+  m_LocalPosition: {x: -3.793, y: -0.61, z: -0.164}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -369,7 +369,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 348195558}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.36, y: 1.545, z: 0.183}
+  m_LocalPosition: {x: -1.36, y: 0, z: 0.183}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -414,7 +414,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 401693829}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.27, y: 0.21, z: -25.324293}
+  m_LocalPosition: {x: 4.27, y: -1.729, z: -25.324293}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1647062832}
@@ -835,6 +835,7 @@ GameObject:
   - component: {fileID: 849934944}
   - component: {fileID: 849934943}
   - component: {fileID: 849934942}
+  - component: {fileID: 849934945}
   m_Layer: 7
   m_Name: DialogueRunner
   m_TagString: Untagged
@@ -850,7 +851,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 849934940}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -26.9, y: -37.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1262802017}
@@ -976,6 +977,32 @@ MonoBehaviour:
   onDialogueComplete:
     m_PersistentCalls:
       m_Calls: []
+--- !u!61 &849934945
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849934940}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.2689949, y: -1.7330546}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.2317073, y: 1.4028453}
+  m_EdgeRadius: 0
 --- !u!1 &862635501
 GameObject:
   m_ObjectHideFlags: 0
@@ -1242,11 +1269,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2655176151384633742, guid: 2edab2f41f5f08c479814b28df739ed4, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -2.329
+      value: -2.363
       objectReference: {fileID: 0}
     - target: {fileID: 2655176151384633742, guid: 2edab2f41f5f08c479814b28df739ed4, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1.342
+      value: -0.197
       objectReference: {fileID: 0}
     - target: {fileID: 2655176151384633742, guid: 2edab2f41f5f08c479814b28df739ed4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1377,7 +1404,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1194833705}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.7749, y: -0.71, z: 0}
+  m_LocalPosition: {x: -1.7749, y: -2.349, z: 0}
   m_LocalScale: {x: 13.383945, y: 2.108, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1521,7 +1548,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1265306862}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.575, y: 1.653575, z: -0.53}
+  m_LocalPosition: {x: -0.575, y: 0.108, z: -0.53}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1262802017}
@@ -1703,7 +1730,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1449216072}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.552, y: 0.679, z: -0.23}
+  m_LocalPosition: {x: -4.552, y: -0.863, z: -0.23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1914,7 +1941,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1475842576}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.322, y: 1.25, z: 0}
+  m_LocalPosition: {x: -4.322, y: 0, z: 0}
   m_LocalScale: {x: 0.25563335, y: 3.3061874, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2176,7 +2203,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1052885275}
   posX: -0.046
-  posY: 1.342
+  posY: -0.197
   previous: PhotoWall
 --- !u!114 &1495656975
 MonoBehaviour:
@@ -2192,8 +2219,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1052885275}
   posX: 1.424
-  posY: 1.342
-  previous: Village
+  posY: -0.197
+  previous: House_Fritzi
 --- !u!1 &1513219586
 GameObject:
   m_ObjectHideFlags: 0
@@ -2297,7 +2324,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1513219586}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.149, y: 1.04, z: 0}
+  m_LocalPosition: {x: 2.149, y: 0, z: 0}
   m_LocalScale: {x: 0.25563335, y: 3.3061874, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
