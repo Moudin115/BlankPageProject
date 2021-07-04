@@ -10561,7 +10561,6 @@ GameObject:
   - component: {fileID: 169909990}
   - component: {fileID: 169909989}
   - component: {fileID: 169909991}
-  - component: {fileID: 169909992}
   - component: {fileID: 169909988}
   m_Layer: 10
   m_Name: Well
@@ -10675,22 +10674,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.938385, y: 5.537985}
   m_EdgeRadius: 0
---- !u!114 &169909992
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 169909987}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5afacc750645def41b8bf01b5874e85d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterName: Player
-  talkToNode: Fountain
-  playerDetected: 0
-  yarnDialog: {fileID: 2480198943629176163, guid: bf7aa24c5c10ee94f8f4aabfd5443604, type: 3}
 --- !u!1 &222031795
 GameObject:
   m_ObjectHideFlags: 0
@@ -26324,9 +26307,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9724f1a89a6e1d409c9382d04a2c702, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 483874084}
-  relativeMove: 1
-  lockY: 1
+  distanceX: 0
+  distanceY: 0
+  smoothingX: 1
+  smoothingY: 1
 --- !u!4 &483874084
 Transform:
   m_ObjectHideFlags: 0
@@ -56107,9 +56091,6 @@ GameObject:
   m_Component:
   - component: {fileID: 907581878}
   - component: {fileID: 907581882}
-  - component: {fileID: 907581881}
-  - component: {fileID: 907581880}
-  - component: {fileID: 907581879}
   m_Layer: 10
   m_Name: Outline
   m_TagString: Untagged
@@ -56131,61 +56112,6 @@ Transform:
   m_Father: {fileID: 169909990}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &907581879
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 907581877}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 418d6a5859ceed444b8a45cd1a90011c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Outline: {fileID: 0}
---- !u!114 &907581880
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 907581877}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5afacc750645def41b8bf01b5874e85d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterName: Player
-  talkToNode: Fountain
-  playerDetected: 0
-  yarnDialog: {fileID: 2480198943629176163, guid: bf7aa24c5c10ee94f8f4aabfd5443604, type: 3}
---- !u!61 &907581881
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 907581877}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.009807587, y: -0.39003897}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 10.2846155, y: 6.327449}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.938385, y: 5.537985}
-  m_EdgeRadius: 0
 --- !u!212 &907581882
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -56296,7 +56222,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.017345428, y: 0}
+  m_Offset: {x: -0.025623322, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -56307,7 +56233,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 13.345711, y: 10}
+  m_Size: {x: 4.41938, y: 10}
   m_EdgeRadius: 0
 --- !u!1 &923030977
 GameObject:
@@ -81540,6 +81466,7 @@ GameObject:
   - component: {fileID: 1182169622}
   - component: {fileID: 1182169624}
   - component: {fileID: 1182169623}
+  - component: {fileID: 1182169625}
   m_Layer: 10
   m_Name: Glammer
   m_TagString: Untagged
@@ -81602,64 +81529,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
---- !u!1 &1247830089 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7938798951445254433, guid: c4b02a1e89a9e4b438752725259384ac, type: 3}
-  m_PrefabInstance: {fileID: 1815861449}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1269375016
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1269375017}
-  - component: {fileID: 1269375018}
-  m_Layer: 6
-  m_Name: CheckPicsLeft
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1269375017
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1269375016}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1423215925}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1269375018
+--- !u!114 &1182169625
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1269375016}
+  m_GameObject: {fileID: 1182169621}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 610c541718d694070a21327d1ae62e75, type: 3}
+  m_Script: {fileID: 11500000, guid: 5afacc750645def41b8bf01b5874e85d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultVariables:
-  - name: amount_Photos
-    value: 7
-    type: 0
-  debugTextView: {fileID: 0}
+  characterName: Player
+  talkToNode: Fountain
+  playerDetected: 0
+  yarnDialog: {fileID: 2480198943629176163, guid: d3cd3d67cf1d84d52abf96d4b216db5c, type: 3}
+--- !u!1 &1247830089 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7938798951445254433, guid: c4b02a1e89a9e4b438752725259384ac, type: 3}
+  m_PrefabInstance: {fileID: 1815861449}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1275088418
 GameObject:
   m_ObjectHideFlags: 0
@@ -96328,6 +96218,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 768664143, guid: 2edab2f41f5f08c479814b28df739ed4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1350534283, guid: 2edab2f41f5f08c479814b28df739ed4, type: 3}
       propertyPath: Blend
       value: 

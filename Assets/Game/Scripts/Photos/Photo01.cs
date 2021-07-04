@@ -8,37 +8,18 @@ public class Photo01 : MonoBehaviour
 
     public GameObject PhotoCollider;
 
-    public static bool Trigger = false;
-
     // Start is called before the first frame update
     void Start()
     {
-        SceneSwitch.prevScene = "Village";
-        if (Items.Photo01 == true)
-        {
-            Destroy(PhotoCollider);
-        }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-            if (PolaroidRestrictionArea.walkStop == true)
-            {
-                if (Input.GetKeyDown(KeyCode.Space))
+        
+                if (Items.Photo01 == true)
                 {
-                Items.Photo01 = true;
-                Destroy(PhotoCollider);
-                }
-            }
+                    Destroy(PhotoCollider);
+            PhotoCollider.SetActive(false);
+        }
+          
+       
         
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Player")
-        {
-            Trigger = true;
-            Debug.Log("Trigg");
-        }
-    }
+
 }

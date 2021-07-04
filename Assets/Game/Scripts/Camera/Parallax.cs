@@ -5,20 +5,36 @@ using UnityEngine;
 public class Parallax : MonoBehaviour
 {
 
-    public Transform cam;
-    public float relativeMove = .3f;
-    public bool lockY = false;
+    Transform cam; // Camera reference (of its transform)
+    Vector3 previousCamPos;
+
+    public float distanceX; // Distance of the item (z-index based) 
+    public float distanceY;
+
+    public float smoothingX = 1f; // Smoothing factor of parrallax effect
+    public float smoothingY = 1f;
+
+    void Awake()
+    {
+        cam = Camera.main.transform;
+    }
 
     void Update()
     {
-            if (lockY)
-            {
-                transform.position = new Vector3(cam.position.x * relativeMove, transform.position.y, transform.position.z);
-            }
-            else
-            {
-                transform.position = new Vector3(cam.position.x * relativeMove, cam.position.y * relativeMove, transform.position.z);
-            }
 
+        if (distanceX != 0f)
+        {
+            float parallaxX = (previousCamPos.x - cam.position.x) * distanceX;
+            Vector3 backgroundTargetPosX = new Vector3(transform.position.x + parallaxX, transform.position.y, transform.position.z);
+            transform.position = Vector3.Lerp(transform.position, backgroundTargetPosX, smoothingX * Time.deltaTime);
+        }
+
+        if (distanceY != 0f)
+        {
+            float parallaxY = (previousCamPos.y - cam.position.y) * distanceY;
+            Vector3 backgroundTargetPosY = new Vector3(transform.position.x, transform.position.y + parallaxY, transform.position.z);
+            transform.position = Vector3.Lerp(transform.position, backgroundTargetPosY, smoothingY * Time.deltaTime);
+        }
+        previousCamPos = cam.position;
     }
 }
