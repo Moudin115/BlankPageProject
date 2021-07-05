@@ -8,6 +8,8 @@ public class GameStatus : MonoBehaviour
 {
     //public AudioSource audioSource;
 
+    private DialogueRunner dr;
+
     public static int Rep_Jan = 20;
     public static int Rep_Mom = 20;
     public static int Rep_Joe = 20;
@@ -15,7 +17,7 @@ public class GameStatus : MonoBehaviour
     public static int Pictures;
 
 
-    private DialogueRunner dr;
+    
 
     private void Start()
     {

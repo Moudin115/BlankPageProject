@@ -24,6 +24,7 @@ public class NPCMovement : MonoBehaviour
     public Collider2D walkZone;
     private bool hasWalkZone;
 
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -44,16 +45,20 @@ public class NPCMovement : MonoBehaviour
 
     private void Update()
     {
+        
         if (isWalking)
         {
+            
             walkCounter -= Time.deltaTime;
-
+            
             switch (WalkDirection)
             {
                 case 0:
                     rb.velocity = new Vector2(moveSpeed, 0);
-                    if(hasWalkZone && transform.position.x > maxWalkPoint.x)
+                    if (hasWalkZone && transform.position.x > maxWalkPoint.x)
                     {
+                        
+                        
                         isWalking = false;
                         waitCounter = waitTime;
                     }
@@ -63,6 +68,7 @@ public class NPCMovement : MonoBehaviour
                     rb.velocity = new Vector2(-moveSpeed, 0);
                     if (hasWalkZone && transform.position.x < minWalkPoint.x)
                     {
+                        
                         isWalking = false;
                         waitCounter = waitTime;
                     }

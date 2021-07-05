@@ -15,7 +15,7 @@ public class playerMovement : MonoBehaviour
     bool jump = false;
 
     public static bool StopMovement = false;
-
+    
     private DialogueRunner dialogueRunner = null;
 
     public Animator anim;
@@ -29,8 +29,8 @@ public class playerMovement : MonoBehaviour
 
     private void Update()
     {
-            
-            horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+        
+        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
 
         /*if (Input.GetButtonDown("Jump"))
