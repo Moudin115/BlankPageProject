@@ -5,34 +5,29 @@ using UnityEngine.SceneManagement;
 
 public class CameraHandler : MonoBehaviour
 {
-    public GameObject mainCam;
-    public GameObject PolaroidCam;
-    public GameObject PolaroidMenu;
-    public GameObject Blend;
-
-    public Camera Polaroidcamera;
-    public float speed;
-
-    public GameObject Trigger;
-
-    public static bool PolaroidCamActive;
-
-    public Animator BlendAnim;
 
 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F) && PolaroidRestrictionArea.isInCol == true)
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            if (PolaroidRestrictionArea.isInCol) SceneManager.LoadScene("Photo_01");
+            if (PolaroidRestrictionArea.isInCol02) SceneManager.LoadScene("Photo_02");
+            if (PolaroidRestrictionArea.isInCol03) SceneManager.LoadScene("Photo_03");
+            if (PolaroidRestrictionArea.isInCol04) SceneManager.LoadScene("Photo_04");
+            if (PolaroidRestrictionArea.isInCol05) SceneManager.LoadScene("Photo_05");
+            if (PolaroidRestrictionArea.isInCol06) SceneManager.LoadScene("Photo_06");
+            if (PolaroidRestrictionArea.isInCol07) SceneManager.LoadScene("Photo_07");
+
+        }
+            /*if (Input.GetKeyDown(KeyCode.F) && PolaroidRestrictionArea.isInCol == true)
         {
             SceneManager.LoadScene(sceneName: "Photo_01");
-            /*playerMovement.StopMovement = true;
+            playerMovement.StopMovement = true;
             PolaroidRestrictionArea.walkStop = true;
             PolaroidCam.SetActive(true);
             PolaroidCamActive = true;
@@ -61,7 +56,7 @@ public class CameraHandler : MonoBehaviour
             BlendAnim.SetTrigger("Start");
             //StartCoroutine(Waiter());
             SceneManager.LoadScene(sceneName: "PhotoWall");*/
-        }
+        //}
 
         /*IEnumerator Waiter()
         {

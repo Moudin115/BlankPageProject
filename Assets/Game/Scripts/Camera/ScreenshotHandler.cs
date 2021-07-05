@@ -27,7 +27,8 @@ public class ScreenshotHandler : MonoBehaviour
 
             Texture2D renderResult = new Texture2D(renderTexture.width, renderTexture.height, TextureFormat.ARGB32, false);
             Rect rect = new Rect(0, 0, renderTexture.width, renderTexture.height);
-            renderResult.ReadPixels(new Rect(0, 0, renderTexture.width, renderTexture.height), 0,0);
+            renderResult.ReadPixels(rect, 0,0, false);
+            renderResult.Apply();
 
             //encoding to Screenshot
             byte[] byteArray = renderResult.EncodeToPNG();

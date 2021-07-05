@@ -18,21 +18,26 @@ public class Ambience : MonoBehaviour
     {
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
-        if (sceneName == "House_Fritzi_Room_Fritzi")
+        switch (sceneName)
         {
-            AmbienceInstance = 0f;
-        }
-        if (sceneName == "House_Fritzi")
-        {
-            AmbienceInstance = 0f;
-        }
-        if (sceneName == "Village")
-        {
-            AmbienceInstance = 1f;
-        }
-        else
-        {
-            AmbienceInstance = 0f;
+            case "House_Fritzi_Room_Fritzi":
+                AmbienceInstance = 0f;
+                break;
+            case "House_Fritzi":
+                AmbienceInstance = 0f;
+                break;
+            case "Village":
+                AmbienceInstance = 1f;
+                break;
+            case "Bakery":
+                AmbienceInstance = 0f;
+                break;
+            case "Forest":
+                AmbienceInstance = 2f;
+                break;
+            default:
+                AmbienceInstance = 0f;
+                break;
         }
         Ambiencer(AmbienceInstance);
     }

@@ -22,13 +22,24 @@ public class PhotoMenu : MonoBehaviour
 
     private bool Spaced;
 
-    public string PhotoNr;
-    
+    public int PhotoNr;
+    private bool CanPic;
+
+    SceneSwitch sceneSwitch;
+
 
     // Start is called before the first frame update
     void Start()
     {
         PolaroidRestrictionArea.isInCol = false;
+        PolaroidRestrictionArea.isInCol02 = false;
+        PolaroidRestrictionArea.isInCol03 = false;
+        PolaroidRestrictionArea.isInCol04 = false;
+        PolaroidRestrictionArea.isInCol05 = false;
+        PolaroidRestrictionArea.isInCol06 = false;
+        PolaroidRestrictionArea.isInCol07 = false;
+
+        sceneSwitch = FindObjectOfType<SceneSwitch>();
 
     }
 
@@ -39,24 +50,25 @@ public class PhotoMenu : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Q))
             {
-                SceneManager.LoadScene(sceneName: lastScene);
+                sceneSwitch.SwitchScene(lastScene);
             }
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.anyKeyDown)
             {
                 Menu.SetActive(false);
                 EisPressed = true;
             }
+
             if (EisPressed)
             {
                 float horz = Input.GetAxis("Horizontal");
                 float vert = Input.GetAxis("Vertical");
 
-                
+
                 Polaroidcam.transform.position += (Vector3.up * vert + Vector3.right * horz) * speed * Time.deltaTime;
-                if (Polaroidcam.transform.position.x >= 2.85f) { Polaroidcam.transform.position = new Vector3(2.85f, Polaroidcam.transform.position.y,  Polaroidcam.transform.position.z); }
-                if (Polaroidcam.transform.position.x <= -2.85f) { Polaroidcam.transform.position = new Vector3(-2.85f, Polaroidcam.transform.position.y,  Polaroidcam.transform.position.z); }
-                if (Polaroidcam.transform.position.y >= 2.07f) { Polaroidcam.transform.position = new Vector3(  Polaroidcam.transform.position.x, 2.07f, Polaroidcam.transform.position.z); }
-                if (Polaroidcam.transform.position.y <= -2.07f) { Polaroidcam.transform.position = new Vector3( Polaroidcam.transform.position.x, -2.07f, Polaroidcam.transform.position.z); }
+                if (Polaroidcam.transform.position.x >= 2.85f) { Polaroidcam.transform.position = new Vector3(2.85f, Polaroidcam.transform.position.y, Polaroidcam.transform.position.z); }
+                if (Polaroidcam.transform.position.x <= -2.85f) { Polaroidcam.transform.position = new Vector3(-2.85f, Polaroidcam.transform.position.y, Polaroidcam.transform.position.z); }
+                if (Polaroidcam.transform.position.y >= 2.07f) { Polaroidcam.transform.position = new Vector3(Polaroidcam.transform.position.x, 2.07f, Polaroidcam.transform.position.z); }
+                if (Polaroidcam.transform.position.y <= -2.07f) { Polaroidcam.transform.position = new Vector3(Polaroidcam.transform.position.x, -2.07f, Polaroidcam.transform.position.z); }
 
 
                 float mouseWheel = Input.GetAxis("Mouse ScrollWheel");
@@ -74,49 +86,79 @@ public class PhotoMenu : MonoBehaviour
 
 
                 }
-                if (Input.GetKeyDown(KeyCode.Space))
+
+                if (Input.GetKeyUp(KeyCode.E))
                 {
-                    FMODUnity.RuntimeManager.PlayOneShot("event:/Interactables/camera_trigger");
-                    ScreenshotHandler.TakeScreenshot_Static(500, 500);
-                    Blend.SetActive(true);
-                    BlendAnim.SetTrigger("Start");
-                    Items.Photo01 = true;
-                    Polaroid.SetActive(true);
-                    PolaroidAnim.SetTrigger("Start");
-                    Spaced = true;
-                    Yarn.Unity.DialogueRunner dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
-                    PlayerVariables.currentPics -= 1;
-                    int Photos = PlayerVariables.currentPics;
-                    switch (Photos)
+                    CanPic = true;
+                }
+                    if (Input.GetKeyDown(KeyCode.E) && CanPic == true)
                     {
-                        case 6:
-                            dialogueRunner.StartDialogue("6Left");
-                            break;
-                        case 5:
-                            dialogueRunner.StartDialogue("5Left");
-                            break;
-                        case 4:
-                            dialogueRunner.StartDialogue("4Left");
-                            break;
-                        case 3:
-                            dialogueRunner.StartDialogue("3Left");
-                            break;
-                        case 2:
-                            dialogueRunner.StartDialogue("2Left");
-                            break;
-                        case 1:
-                            dialogueRunner.StartDialogue("1Left");
-                            break;
-                        case 0:
-                            dialogueRunner.StartDialogue("0Left");
-                            break;
+                        FMODUnity.RuntimeManager.PlayOneShot("event:/Interactables/camera_trigger");
+                        ScreenshotHandler.TakeScreenshot_Static(300, 300);
+                        Blend.SetActive(true);
+                        BlendAnim.SetTrigger("Start");
+
+                        switch (PhotoNr)
+                        {
+                            case 1:
+                                Items.Photo01 = true;
+                                break;
+                            case 2:
+                                Items.Photo02 = true;
+                                break;
+                            case 3:
+                                Items.Photo03 = true;
+                                break;
+                            case 4:
+                                Items.Photo04 = true;
+                                break;
+                            case 5:
+                                Items.Photo05 = true;
+                                break;
+                            case 6:
+                                Items.Photo06 = true;
+                                break;
+                            case 7:
+                                Items.Photo07 = true;
+                                break;
+                        }
+                        Polaroid.SetActive(true);
+                        PolaroidAnim.SetTrigger("Start");
+                        Spaced = true;
+                        Yarn.Unity.DialogueRunner dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
+                        PlayerVariables.currentPics -= 1;
+                        int Photos = PlayerVariables.currentPics;
+                        switch (Photos)
+                        {
+                            case 6:
+                                dialogueRunner.StartDialogue("6Left");
+                                break;
+                            case 5:
+                                dialogueRunner.StartDialogue("5Left");
+                                break;
+                            case 4:
+                                dialogueRunner.StartDialogue("4Left");
+                                break;
+                            case 3:
+                                dialogueRunner.StartDialogue("3Left");
+                                break;
+                            case 2:
+                                dialogueRunner.StartDialogue("2Left");
+                                break;
+                            case 1:
+                                dialogueRunner.StartDialogue("1Left");
+                                break;
+                            case 0:
+                                dialogueRunner.StartDialogue("0Left");
+                                break;
+                        }
                     }
                 }
             }
         }
-    }
+    
     public void Confirm()
     {
-        SceneManager.LoadScene(sceneName: lastScene);
+        sceneSwitch.SwitchScene(lastScene);
     }
 }

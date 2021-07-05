@@ -18,26 +18,27 @@ public class ParametersSetByName : MonoBehaviour
     {
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
-        if (sceneName == "House_Fritzi_Room_Fritzi")
+        switch (sceneName)
         {
-            SceneInstance = 0f;
+            case "House_Fritzi_Room_Fritzi":
+                SceneInstance = 0f;
+                break;
+            case "House_Fritzi":
+                SceneInstance = 1f;
+                break;
+            case "Village":
+                SceneInstance = 2f;
+                break;
+            case "Bakery":
+                SceneInstance = 3f;
+                break;
+            case "Forest":
+                SceneInstance = 1f;
+                break;
+            default:
+                SceneInstance = 2f;
+                break;
         }
-        if (sceneName == "House_Fritzi")
-        {
-            SceneInstance = 1f;
-        }
-        if (sceneName == "Village")
-        {
-            SceneInstance = 2f;
-        }
-        if (sceneName == "Bakery")
-        {
-            SceneInstance = 3f;
-        }
-        /*else
-        {
-            SceneInstance = 2f;
-        }*/
         Progress(SceneInstance);
     }
     public void Progress(float SceneInstance)

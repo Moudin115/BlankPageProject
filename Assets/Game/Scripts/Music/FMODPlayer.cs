@@ -18,25 +18,21 @@ public class FMODPlayer : MonoBehaviour
     {
         RaycastHit2D hit;
         hit = Physics2D.Raycast(transform.position, Vector2.down, distance, 1 << 3);
-
-        if (hit.collider)
+        switch (hit.collider.tag)
         {
-            if (hit.collider.tag == "Ground_Carpet")
-            {
+            case "Ground_Carpet":
                 Material = 0f;
-            }
-            else if (hit.collider.tag == "Ground_Concrete")
-            {
+                break;
+            case "Ground_Concrete":
                 Material = 1f;
-            }
-            else if (hit.collider.tag == "Ground_LooseConcrete")
-            {
+                break;
+            case "Ground_LooseConcrete":
                 Material = 1f;
-            }
-            else
+                break;
+            default:
                 Material = 0f;
+                break;
         }
-
      }
 
     void PlayFootstepsEvent(string path)

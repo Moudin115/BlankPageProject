@@ -4,56 +4,52 @@ using UnityEngine;
 
 public class PolaroidRestrictionArea : MonoBehaviour
 {
-    private Vector2 minWalkPoint;
-    private Vector2 maxWalkPoint;
-
-    public Collider2D walkZone;
-
-    public Transform Player;
-
-    private int WalkDirection;
 
     public static bool isInCol;
-    public static bool walkStop;
-    void Start()
-    {
-        minWalkPoint = walkZone.bounds.min;
-        maxWalkPoint = walkZone.bounds.max;
-    }
+    public static bool isInCol02;
+    public static bool isInCol03;
+    public static bool isInCol04;
+    public static bool isInCol05;
+    public static bool isInCol06;
+    public static bool isInCol07;
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (walkStop)
-        {
-          if (Player.position.x > maxWalkPoint.x)
-          {
-            playerMovement.StopMovement = true;
-             if (Input.GetKeyDown(KeyCode.A))
-                {
-                    playerMovement.StopMovement = false;
-                }
-          }
-          if (Player.position.x < minWalkPoint.x)
-          {
-            playerMovement.StopMovement = true;
-              if (Input.GetKeyDown(KeyCode.D))
-                {
-                    playerMovement.StopMovement = false;
-                }
-            }
-           
-
-        }
-    }
+    public int PhotoNR;
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        isInCol = true;
-
+        switch (PhotoNR)
+        {
+            case 1:
+                isInCol = true;
+                break;
+            case 2:
+                isInCol02 = true;
+                break;
+            case 3:
+                isInCol03 = true;
+                break;
+            case 4:
+                isInCol04 = true;
+                break;
+            case 5:
+                isInCol05 = true;
+                break;
+            case 6:
+                isInCol06 = true;
+                break;
+            case 7:
+                isInCol07 = true;
+                break;
+        }
     }
     public void OnTriggerExit2D(Collider2D collision)
     {
         isInCol = false;
+        isInCol02 = false;
+        isInCol03 = false;
+        isInCol04 = false;
+        isInCol05 = false;
+        isInCol06 = false;
+        isInCol07 = false;
     }
 }

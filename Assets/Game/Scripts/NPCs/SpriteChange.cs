@@ -12,7 +12,7 @@ public class SpriteChange : MonoBehaviour
     {
         if (Items.Camera == true)
         {
-            camObj.SetActive(false);
+            camObj.SetActive(true);
         }
     }
 }
