@@ -123,16 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &25176162 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1539506880916017979, guid: 561e2e7f108b7c54d84dc4237d48cb87, type: 3}
-  m_PrefabInstance: {fileID: 2036849097}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &25176164 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 72188501, guid: 561e2e7f108b7c54d84dc4237d48cb87, type: 3}
-  m_PrefabInstance: {fileID: 2036849097}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &131731960
 GameObject:
   m_ObjectHideFlags: 0
@@ -266,7 +256,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -923963607
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d04f6063abc8dc447b41987679272a0c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -903,6 +893,7 @@ GameObject:
   m_Component:
   - component: {fileID: 849934941}
   - component: {fileID: 849934944}
+  - component: {fileID: 849934945}
   - component: {fileID: 849934943}
   - component: {fileID: 849934942}
   m_Layer: 7
@@ -1046,6 +1037,18 @@ MonoBehaviour:
   onDialogueComplete:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &849934945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849934940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11dbc1548d8e2624d9cc8c7b4495205b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &862635501
 GameObject:
   m_ObjectHideFlags: 0
@@ -1225,15 +1228,15 @@ PrefabInstance:
     - target: {fileID: 1350534283, guid: 2edab2f41f5f08c479814b28df739ed4, type: 3}
       propertyPath: Blend
       value: 
-      objectReference: {fileID: 25176162}
+      objectReference: {fileID: 0}
     - target: {fileID: 1350534283, guid: 2edab2f41f5f08c479814b28df739ed4, type: 3}
       propertyPath: BlendAnim
       value: 
-      objectReference: {fileID: 25176164}
+      objectReference: {fileID: 0}
     - target: {fileID: 1350534283, guid: 2edab2f41f5f08c479814b28df739ed4, type: 3}
       propertyPath: PolaroidMenu
       value: 
-      objectReference: {fileID: 1471612288}
+      objectReference: {fileID: 0}
     - target: {fileID: 2655176151384633742, guid: 2edab2f41f5f08c479814b28df739ed4, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1733,7 +1736,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 27391317
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ebbfc05cab32eb346806f417e20a1880, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1857,11 +1860,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4b02a1e89a9e4b438752725259384ac, type: 3}
---- !u!1 &1471612288 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2903735124247929039, guid: 561e2e7f108b7c54d84dc4237d48cb87, type: 3}
-  m_PrefabInstance: {fileID: 2036849097}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1475842576
 GameObject:
   m_ObjectHideFlags: 0
@@ -2699,17 +2697,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1734605330 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1212780539805681110, guid: 561e2e7f108b7c54d84dc4237d48cb87, type: 3}
-  m_PrefabInstance: {fileID: 2036849097}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7386ad61bcb08c4d8f766de9c205a4e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1745168393
 GameObject:
   m_ObjectHideFlags: 0
@@ -3020,7 +3007,7 @@ PrefabInstance:
     - target: {fileID: 1212780540584651177, guid: 561e2e7f108b7c54d84dc4237d48cb87, type: 3}
       propertyPath: photosCollected
       value: 
-      objectReference: {fileID: 1734605330}
+      objectReference: {fileID: 0}
     - target: {fileID: 1212780540584651180, guid: 561e2e7f108b7c54d84dc4237d48cb87, type: 3}
       propertyPath: m_Name
       value: Canvas
