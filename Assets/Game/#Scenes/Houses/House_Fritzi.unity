@@ -287,6 +287,9 @@ MonoBehaviour:
   walkTime: 1
   waitTime: 3
   walkZone: {fileID: 0}
+  sprite: {fileID: 0}
+  anim: {fileID: 0}
+  dr: {fileID: 0}
 --- !u!58 &226984571
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -388,7 +391,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1467880375
-  m_SortingLayer: 3
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -9095717837082945937, guid: bd3cb4af8406d4436a2ae8c2aafe1f8d, type: 3}
   m_Color: {r: 0.008375775, g: 0.8679245, b: 0, a: 1}
@@ -413,6 +416,7 @@ Transform:
   m_LocalScale: {x: 0.8, y: 0.87496006, z: 1}
   m_Children:
   - {fileID: 888030527}
+  - {fileID: 473621156}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -645,6 +649,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 401867425}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &473621155
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 473621156}
+  m_Layer: 7
+  m_Name: DialoguePos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &473621156
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 473621155}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 2.086, z: 0}
+  m_LocalScale: {x: 1.25, y: 1.1429093, z: 1}
+  m_Children: []
+  m_Father: {fileID: 226984575}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &582636088 stripped
 Animator:

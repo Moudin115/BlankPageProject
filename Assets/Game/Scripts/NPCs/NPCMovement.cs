@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Yarn.Unity;
 
 public class NPCMovement : MonoBehaviour
 {
@@ -30,9 +31,12 @@ public class NPCMovement : MonoBehaviour
 
     public Animator anim;
 
+    public DialogueRunner dr;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        dr = FindObjectOfType<DialogueRunner>();
 
         waitCounter = waitTime;
         walkCounter = walkTime;
@@ -50,61 +54,63 @@ public class NPCMovement : MonoBehaviour
 
     private void Update()
     {
+
         
-        if (isWalking)
-        {
-            
-            walkCounter -= Time.deltaTime;
-            
-            switch (WalkDirection)
+            if (isWalking && !dr.IsDialogueRunning)
             {
-                case 0:
-                    rb.velocity = new Vector2(moveSpeed, 0);
-                    sprite.transform.localScale = new Vector2(-1f, 1f);
-                    anim.SetBool("isWalking", true);
-                    if (hasWalkZone && transform.position.x > maxWalkPoint.x)
-                    {
-                        
-                        
-                        isWalking = false;
-                        waitCounter = waitTime;
-                    }
-                    break;
 
-                case 1:
-                    rb.velocity = new Vector2(-moveSpeed, 0);
-                    sprite.transform.localScale = new Vector2(1f, 1f);
-                    anim.SetBool("isWalking", true);
-                    if (hasWalkZone && transform.position.x < minWalkPoint.x)
-                    {
-                        
-                        isWalking = false;
-                        waitCounter = waitTime;
-                    }
-                    break;
+                walkCounter -= Time.deltaTime;
 
-                    //if y is given make more cases with y transformation
+                switch (WalkDirection)
+                {
+                    case 0:
+                        rb.velocity = new Vector2(moveSpeed, 0);
+                        sprite.transform.localScale = new Vector2(-1f, 1f);
+                        anim.SetBool("isWalking", true);
+                        if (hasWalkZone && transform.position.x > maxWalkPoint.x)
+                        {
+
+
+                            isWalking = false;
+                            waitCounter = waitTime;
+                        }
+                        break;
+
+                    case 1:
+                        rb.velocity = new Vector2(-moveSpeed, 0);
+                        sprite.transform.localScale = new Vector2(1f, 1f);
+                        anim.SetBool("isWalking", true);
+                        if (hasWalkZone && transform.position.x < minWalkPoint.x)
+                        {
+
+                            isWalking = false;
+                            waitCounter = waitTime;
+                        }
+                        break;
+
+                        //if y is given make more cases with y transformation
+                }
+
+                if (walkCounter < 0)
+                {
+                    isWalking = false;
+                    waitCounter = waitTime;
+                }
+
             }
-
-            if (walkCounter < 0)
+            else
             {
-                isWalking = false;
-                waitCounter = waitTime;
+                anim.SetBool("isWalking", false);
+                waitCounter -= Time.deltaTime;
+
+                rb.velocity = Vector2.zero;
+
+                if (waitCounter < 0)
+                {
+                    ChooseDirection();
+                }
             }
-
-        }
-        else
-        {
-            anim.SetBool("isWalking", false);
-            waitCounter -= Time.deltaTime;
-
-            rb.velocity = Vector2.zero;
-
-            if(waitCounter < 0)
-            {
-                ChooseDirection();
-            }
-        }
+        
     }
 
     public void ChooseDirection()
