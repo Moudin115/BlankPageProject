@@ -44,8 +44,5 @@ public class GameStatus : MonoBehaviour
     {
         Rep_Joe += int.Parse(parameters[0]);
     }
-    private void Update()
-    {
-        
-    }
+
 }

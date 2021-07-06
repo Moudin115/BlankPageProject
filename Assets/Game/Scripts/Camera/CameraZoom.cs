@@ -15,8 +15,9 @@ public class CameraZoom : MonoBehaviour
 
     public void Update()
     {
+        
         float mouseWheel = Input.GetAxis("Mouse ScrollWheel");
-        if(mouseWheel != 0)
+        if (mouseWheel != 0)
         {
             vcam.m_Lens.OrthographicSize -= mouseWheel;
             if (vcam.m_Lens.OrthographicSize >= 3f)
@@ -28,5 +29,7 @@ public class CameraZoom : MonoBehaviour
                 vcam.m_Lens.OrthographicSize = 2f;
             }
         }
+                
     }
 }
+
