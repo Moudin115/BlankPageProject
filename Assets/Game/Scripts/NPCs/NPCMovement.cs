@@ -24,6 +24,9 @@ public class NPCMovement : MonoBehaviour
     public Collider2D walkZone;
     private bool hasWalkZone;
 
+    Vector2 lastPos;
+
+    public GameObject sprite;
 
     void Start()
     {
@@ -55,6 +58,7 @@ public class NPCMovement : MonoBehaviour
             {
                 case 0:
                     rb.velocity = new Vector2(moveSpeed, 0);
+                    sprite.transform.localScale = new Vector2(-1f, 1f);
                     if (hasWalkZone && transform.position.x > maxWalkPoint.x)
                     {
                         
@@ -66,6 +70,7 @@ public class NPCMovement : MonoBehaviour
 
                 case 1:
                     rb.velocity = new Vector2(-moveSpeed, 0);
+                    sprite.transform.localScale = new Vector2(1f, 1f);
                     if (hasWalkZone && transform.position.x < minWalkPoint.x)
                     {
                         
