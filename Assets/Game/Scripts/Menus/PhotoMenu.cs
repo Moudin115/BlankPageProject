@@ -62,14 +62,56 @@ public class PhotoMenu : MonoBehaviour
             {
                 float horz = Input.GetAxis("Horizontal");
                 float vert = Input.GetAxis("Vertical");
-
-
                 Polaroidcam.transform.position += (Vector3.up * vert + Vector3.right * horz) * speed * Time.deltaTime;
-                if (Polaroidcam.transform.position.x >= 2.85f) { Polaroidcam.transform.position = new Vector3(2.85f, Polaroidcam.transform.position.y, Polaroidcam.transform.position.z); }
-                if (Polaroidcam.transform.position.x <= -2.85f) { Polaroidcam.transform.position = new Vector3(-2.85f, Polaroidcam.transform.position.y, Polaroidcam.transform.position.z); }
-                if (Polaroidcam.transform.position.y >= 2.07f) { Polaroidcam.transform.position = new Vector3(Polaroidcam.transform.position.x, 2.07f, Polaroidcam.transform.position.z); }
-                if (Polaroidcam.transform.position.y <= -2.07f) { Polaroidcam.transform.position = new Vector3(Polaroidcam.transform.position.x, -2.07f, Polaroidcam.transform.position.z); }
+                switch (PhotoNr)
+                {
+                    case 1:
+                        if (Polaroidcam.transform.position.x >= 3.7f) { Polaroidcam.transform.position = new Vector3(3.7f, Polaroidcam.transform.position.y, Polaroidcam.transform.position.z); }
+                        if (Polaroidcam.transform.position.x <= -3.7f) { Polaroidcam.transform.position = new Vector3(-3.7f, Polaroidcam.transform.position.y, Polaroidcam.transform.position.z); }
+                        if (Polaroidcam.transform.position.y >= 1.37f) { Polaroidcam.transform.position = new Vector3(Polaroidcam.transform.position.x, 1.37f, Polaroidcam.transform.position.z); }
+                        if (Polaroidcam.transform.position.y <= -1.37f) { Polaroidcam.transform.position = new Vector3(Polaroidcam.transform.position.x, -1.37f, Polaroidcam.transform.position.z); }
+                        break;
+                    case 2:
+                        if (Polaroidcam.transform.position.x >= 3.74f) { Polaroidcam.transform.position = new Vector3(3.74f, Polaroidcam.transform.position.y, Polaroidcam.transform.position.z); }
+                        if (Polaroidcam.transform.position.x <= -3.74f) { Polaroidcam.transform.position = new Vector3(-3.74f, Polaroidcam.transform.position.y, Polaroidcam.transform.position.z); }
+                        if (Polaroidcam.transform.position.y >= 1.37f) { Polaroidcam.transform.position = new Vector3(Polaroidcam.transform.position.x, 1.37f, Polaroidcam.transform.position.z); }
+                        if (Polaroidcam.transform.position.y <= -1.37f) { Polaroidcam.transform.position = new Vector3(Polaroidcam.transform.position.x, -1.37f, Polaroidcam.transform.position.z); }
+                        break;
+                        
+                    case 3:
+                        if (Polaroidcam.transform.position.x >= 3.74f) { Polaroidcam.transform.position = new Vector3(3.74f, Polaroidcam.transform.position.y, Polaroidcam.transform.position.z); }
+                        if (Polaroidcam.transform.position.x <= -3.74f) { Polaroidcam.transform.position = new Vector3(-3.74f, Polaroidcam.transform.position.y, Polaroidcam.transform.position.z); }
+                        if (Polaroidcam.transform.position.y >= 1.37f) { Polaroidcam.transform.position = new Vector3(Polaroidcam.transform.position.x, 1.37f, Polaroidcam.transform.position.z); }
+                        if (Polaroidcam.transform.position.y <= -1.37f) { Polaroidcam.transform.position = new Vector3(Polaroidcam.transform.position.x, -1.37f, Polaroidcam.transform.position.z); }
 
+                        break;
+                    case 4:
+                        if (Polaroidcam.transform.position.x >= 3.74f) { Polaroidcam.transform.position = new Vector3(3.74f, Polaroidcam.transform.position.y, Polaroidcam.transform.position.z); }
+                        if (Polaroidcam.transform.position.x <= -3.74f) { Polaroidcam.transform.position = new Vector3(-3.74f, Polaroidcam.transform.position.y, Polaroidcam.transform.position.z); }
+                        if (Polaroidcam.transform.position.y >= 1.37f) { Polaroidcam.transform.position = new Vector3(Polaroidcam.transform.position.x, 1.37f, Polaroidcam.transform.position.z); }
+                        if (Polaroidcam.transform.position.y <= -1.37f) { Polaroidcam.transform.position = new Vector3(Polaroidcam.transform.position.x, -1.37f, Polaroidcam.transform.position.z); }
+                        break;
+                    case 5:
+                        if (Polaroidcam.transform.position.x >= 3.74f) { Polaroidcam.transform.position = new Vector3(3.74f, Polaroidcam.transform.position.y, Polaroidcam.transform.position.z); }
+                        if (Polaroidcam.transform.position.x <= -3.74f) { Polaroidcam.transform.position = new Vector3(-3.74f, Polaroidcam.transform.position.y, Polaroidcam.transform.position.z); }
+                        if (Polaroidcam.transform.position.y >= 1.37f) { Polaroidcam.transform.position = new Vector3(Polaroidcam.transform.position.x, 1.37f, Polaroidcam.transform.position.z); }
+                        if (Polaroidcam.transform.position.y <= -1.37f) { Polaroidcam.transform.position = new Vector3(Polaroidcam.transform.position.x, -1.37f, Polaroidcam.transform.position.z); }
+                        break;
+                    case 6:
+                        if (Polaroidcam.transform.position.x >= 3.74f) { Polaroidcam.transform.position = new Vector3(3.74f, Polaroidcam.transform.position.y, Polaroidcam.transform.position.z); }
+                        if (Polaroidcam.transform.position.x <= -3.74f) { Polaroidcam.transform.position = new Vector3(-3.74f, Polaroidcam.transform.position.y, Polaroidcam.transform.position.z); }
+                        if (Polaroidcam.transform.position.y >= 1.37f) { Polaroidcam.transform.position = new Vector3(Polaroidcam.transform.position.x, 1.37f, Polaroidcam.transform.position.z); }
+                        if (Polaroidcam.transform.position.y <= -1.37f) { Polaroidcam.transform.position = new Vector3(Polaroidcam.transform.position.x, -1.37f, Polaroidcam.transform.position.z); }
+                        break;
+                    case 7:
+                        if (Polaroidcam.transform.position.x >= 3.74f) { Polaroidcam.transform.position = new Vector3(3.74f, Polaroidcam.transform.position.y, Polaroidcam.transform.position.z); }
+                        if (Polaroidcam.transform.position.x <= -3.74f) { Polaroidcam.transform.position = new Vector3(-3.74f, Polaroidcam.transform.position.y, Polaroidcam.transform.position.z); }
+                        if (Polaroidcam.transform.position.y >= 1.37f) { Polaroidcam.transform.position = new Vector3(Polaroidcam.transform.position.x, 1.37f, Polaroidcam.transform.position.z); }
+                        if (Polaroidcam.transform.position.y <= -1.37f) { Polaroidcam.transform.position = new Vector3(Polaroidcam.transform.position.x, -1.37f, Polaroidcam.transform.position.z); }
+                        break;
+                }
+
+                
 
                 float mouseWheel = Input.GetAxis("Mouse ScrollWheel");
                 if (mouseWheel != 0 && Spaced == false)

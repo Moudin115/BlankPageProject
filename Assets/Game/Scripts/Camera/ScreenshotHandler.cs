@@ -25,9 +25,11 @@ public class ScreenshotHandler : MonoBehaviour
             takeScreenshotOnNextFrame = false;
             RenderTexture renderTexture = Cam.targetTexture;
 
-            Texture2D renderResult = new Texture2D(renderTexture.width, renderTexture.height, TextureFormat.ARGB32, false);
-            Rect rect = new Rect(0, 0, renderTexture.width, renderTexture.height);
-            renderResult.ReadPixels(rect, 0,0, false);
+            
+            Rect rect = new Rect(Screen.width/2, Screen.height/2, renderTexture.width, renderTexture.height);
+            Texture2D renderResult = new Texture2D(renderTexture.width, renderTexture.height, TextureFormat.RGB24, false);
+
+            renderResult.ReadPixels(rect, 0,0);
             renderResult.Apply();
 
             //encoding to Screenshot
@@ -43,7 +45,7 @@ public class ScreenshotHandler : MonoBehaviour
     }
     private void TakeScreenshot(int width, int height)
     {
-        Cam.targetTexture = RenderTexture.GetTemporary(width, height, 16);
+        Cam.targetTexture = RenderTexture.GetTemporary(width, height, 24);
         takeScreenshotOnNextFrame = true;
     }
 
