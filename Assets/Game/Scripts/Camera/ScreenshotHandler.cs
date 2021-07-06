@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ScreenshotHandler : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class ScreenshotHandler : MonoBehaviour
     private bool takeScreenshotOnNextFrame;
     private int ScreenshotCounter = 1;
 
+    public static string currentScene;
 
     private void Awake()
     {
@@ -34,9 +36,34 @@ public class ScreenshotHandler : MonoBehaviour
 
             //encoding to Screenshot
             byte[] byteArray = renderResult.EncodeToPNG();
+            currentScene = SceneManager.GetActiveScene().name;
+
+            switch (currentScene)
+            {
+                case "Photo_01":
+                    ScreenshotCounter = 1;
+                    break;
+                case "Photo_02":
+                    ScreenshotCounter = 2;
+                    break;
+                case "Photo_03":
+                    ScreenshotCounter = 3;
+                    break;
+                case "Photo_04":
+                    ScreenshotCounter = 4;
+                    break;
+                case "Photo_05":
+                    ScreenshotCounter = 5;
+                    break;
+                case "Photo_06":
+                    ScreenshotCounter = 6;
+                    break;
+                case "Photo_07":
+                    ScreenshotCounter = 7;
+                    break;
+            }
             System.IO.File.WriteAllBytes(Application.dataPath + "/PhotoAlbum/PolaroidShot" + ScreenshotCounter.ToString() + ".png", byteArray);
 
-            ScreenshotCounter += 1;
             Debug.Log("saved Picture");
             AssetDatabase.Refresh();
             RenderTexture.ReleaseTemporary(renderTexture);

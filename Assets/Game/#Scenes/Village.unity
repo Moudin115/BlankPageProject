@@ -61144,7 +61144,6 @@ GameObject:
   - component: {fileID: 883422869}
   - component: {fileID: 883422868}
   - component: {fileID: 883422867}
-  - component: {fileID: 883422874}
   m_Layer: 7
   m_Name: Banause
   m_TagString: NPC
@@ -61186,6 +61185,7 @@ MonoBehaviour:
   waitTime: 3
   walkZone: {fileID: 1448711579}
   sprite: {fileID: 1752222945}
+  anim: {fileID: 1752222946}
 --- !u!58 &883422869
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -61315,32 +61315,6 @@ Transform:
   m_Father: {fileID: 546388940}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &883422874
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 883422866}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61d7e2f54044bc544ad19b03eef751f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_JumpForce: 0
-  m_MovementSmoothing: 0.05
-  m_AirControl: 0
-  m_WhatIsGround:
-    serializedVersion: 2
-    m_Bits: 8
-  m_GroundCheck: {fileID: 0}
-  m_CeilingCheck: {fileID: 0}
-  OnLandEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  OnCrouchEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &895340861
 GameObject:
   m_ObjectHideFlags: 0
@@ -76635,6 +76609,7 @@ MonoBehaviour:
   waitTime: 2
   walkZone: {fileID: 1448711579}
   sprite: {fileID: 1951686517}
+  anim: {fileID: 1951686518}
 --- !u!58 &1011281988
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -76776,7 +76751,7 @@ GameObject:
   - component: {fileID: 1021874936}
   - component: {fileID: 1021874935}
   m_Layer: 10
-  m_Name: Glammer (1)
+  m_Name: PhotoObj_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -102008,7 +101983,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2655176151384633742, guid: 2edab2f41f5f08c479814b28df739ed4, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 52.61
+      value: 18.49
       objectReference: {fileID: 0}
     - target: {fileID: 2655176151384633742, guid: 2edab2f41f5f08c479814b28df739ed4, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -102958,6 +102933,25 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -7622952178275324157, guid: 758fcf3a05527244f92f2136f6a1319c, type: 3}
   m_PrefabInstance: {fileID: 546346106}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1590553562
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590553561}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1600886641
 GameObject:
   m_ObjectHideFlags: 0
@@ -113357,6 +113351,25 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6503613536211152576, guid: 28d902194e5aba04b8b9debb8e12a789, type: 3}
   m_PrefabInstance: {fileID: 37936424}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1752222946
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752222945}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1787187878
 GameObject:
   m_ObjectHideFlags: 0
@@ -118875,6 +118888,25 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -1358015740898263533, guid: 24cb11f00a460c7449a267c2ec2210ce, type: 3}
   m_PrefabInstance: {fileID: 666963821}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1951686518
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951686517}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1962143259
 GameObject:
   m_ObjectHideFlags: 0
@@ -118931,6 +118963,7 @@ MonoBehaviour:
   waitTime: 4
   walkZone: {fileID: 1448711579}
   sprite: {fileID: 1590553561}
+  anim: {fileID: 1590553562}
 --- !u!58 &1962143262
 CircleCollider2D:
   m_ObjectHideFlags: 0

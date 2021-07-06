@@ -28,6 +28,8 @@ public class NPCMovement : MonoBehaviour
 
     public GameObject sprite;
 
+    public Animator anim;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -59,6 +61,7 @@ public class NPCMovement : MonoBehaviour
                 case 0:
                     rb.velocity = new Vector2(moveSpeed, 0);
                     sprite.transform.localScale = new Vector2(-1f, 1f);
+                    anim.SetBool("isWalking", true);
                     if (hasWalkZone && transform.position.x > maxWalkPoint.x)
                     {
                         
@@ -71,6 +74,7 @@ public class NPCMovement : MonoBehaviour
                 case 1:
                     rb.velocity = new Vector2(-moveSpeed, 0);
                     sprite.transform.localScale = new Vector2(1f, 1f);
+                    anim.SetBool("isWalking", true);
                     if (hasWalkZone && transform.position.x < minWalkPoint.x)
                     {
                         
@@ -91,6 +95,7 @@ public class NPCMovement : MonoBehaviour
         }
         else
         {
+            anim.SetBool("isWalking", false);
             waitCounter -= Time.deltaTime;
 
             rb.velocity = Vector2.zero;
