@@ -49,7 +49,7 @@ public class GameStatus : MonoBehaviour
         Rep_Joe += int.Parse(parameters[0]);
         Debug.Log(Rep_Joe);
     }
-    void Jan_Walk()
+    void Jan_Walk(string[] parameters)
     {
         Jan.Janwalk();
     }

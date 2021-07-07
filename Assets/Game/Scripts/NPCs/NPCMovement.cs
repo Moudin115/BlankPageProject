@@ -31,7 +31,7 @@ public class NPCMovement : MonoBehaviour
 
     public Animator anim;
 
-    public DialogueRunner dr;
+    private DialogueRunner dr;
 
     void Start()
     {

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -61190,7 +61190,6 @@ MonoBehaviour:
   walkZone: {fileID: 1448711579}
   sprite: {fileID: 1752222945}
   anim: {fileID: 1752222946}
-  dr: {fileID: 0}
 --- !u!58 &883422869
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -76588,7 +76587,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1011281985}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5afacc750645def41b8bf01b5874e85d, type: 3}
   m_Name: 
@@ -76616,7 +76615,6 @@ MonoBehaviour:
   walkZone: {fileID: 1448711579}
   sprite: {fileID: 1951686517}
   anim: {fileID: 1951686518}
-  dr: {fileID: 0}
 --- !u!58 &1011281988
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -118981,7 +118979,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1962143259}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5afacc750645def41b8bf01b5874e85d, type: 3}
   m_Name: 
@@ -119009,7 +119007,6 @@ MonoBehaviour:
   walkZone: {fileID: 1448711579}
   sprite: {fileID: 1590553561}
   anim: {fileID: 1590553562}
-  dr: {fileID: 0}
 --- !u!58 &1962143262
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -129447,6 +129444,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 998747149008321912, guid: 561e2e7f108b7c54d84dc4237d48cb87, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1212780540584651176, guid: 561e2e7f108b7c54d84dc4237d48cb87, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -129534,6 +129535,22 @@ PrefabInstance:
     - target: {fileID: 1212780540584651180, guid: 561e2e7f108b7c54d84dc4237d48cb87, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2369001502502662042, guid: 561e2e7f108b7c54d84dc4237d48cb87, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8223320343734001390, guid: 561e2e7f108b7c54d84dc4237d48cb87, type: 3}
+      propertyPath: m_Color.b
+      value: 0.7264151
+      objectReference: {fileID: 0}
+    - target: {fileID: 8223320343734001390, guid: 561e2e7f108b7c54d84dc4237d48cb87, type: 3}
+      propertyPath: m_Color.g
+      value: 0.7264151
+      objectReference: {fileID: 0}
+    - target: {fileID: 8223320343734001390, guid: 561e2e7f108b7c54d84dc4237d48cb87, type: 3}
+      propertyPath: m_Color.r
+      value: 0.7264151
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 561e2e7f108b7c54d84dc4237d48cb87, type: 3}
