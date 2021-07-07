@@ -10,14 +10,14 @@ public class GameStatus : MonoBehaviour
 
     private DialogueRunner dr;
 
-    public static int Rep_Jan = 20;
-    public static int Rep_Mom = 20;
-    public static int Rep_Joe = 20;
+    public static int Rep_Jan = 0;
+    public static int Rep_Mom = 0;
+    public static int Rep_Joe = 0;
 
     public static int Pictures;
 
+    public static int walker = 0;
 
-    
 
     private void Start()
     {
@@ -26,6 +26,8 @@ public class GameStatus : MonoBehaviour
         dr.AddCommandHandler("Rep_Jan", ReputationJan);
         dr.AddCommandHandler("Rep_Mom", ReputationMom);
         dr.AddCommandHandler("Rep_Joe", ReputationJoe);
+
+        dr.AddCommandHandler("Jan_Walk", Jan_Walk);
     }
 
     /*void PlaySound(string[] parameters)
@@ -35,14 +37,20 @@ public class GameStatus : MonoBehaviour
     void ReputationJan(string[] parameters)
     {
         Rep_Jan += int.Parse(parameters[0]);
+        Debug.Log(Rep_Jan);
     }
     void ReputationMom(string[] parameters)
     {
         Rep_Mom += int.Parse(parameters[0]);
+        Debug.Log(Rep_Mom);
     }
     void ReputationJoe(string[] parameters)
     {
         Rep_Joe += int.Parse(parameters[0]);
+        Debug.Log(Rep_Joe);
     }
-
+    void Jan_Walk()
+    {
+        Jan.Janwalk();
+    }
 }
