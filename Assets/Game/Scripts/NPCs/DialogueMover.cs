@@ -55,8 +55,10 @@ public class DialogueMover : MonoBehaviour
 
         Scene currentScene = SceneManager.GetActiveScene();*/
 
-        Vector2 characterPosition = DialoguePos.transform.position;
-        SetPos(characterPosition);
+            Vector2 characterPosition = DialoguePos.transform.position;
+            SetPos(characterPosition);
+        
+        
         
         // Set the DialogueBubble position to the sprite top location in Screen Space
         
