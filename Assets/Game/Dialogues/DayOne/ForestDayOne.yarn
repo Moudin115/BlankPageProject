@@ -1,0 +1,249 @@
+title: Start
+tags: 
+colorID: 0
+position: -1106,-472
+---
+Player: Hi Jan.
+Jan: Oh, hello.
+Player: Sorry, if I kept you waiting.
+Jan: No problemo.
+Jan: Did you manage to pack everything?
+Player: No, not yet.
+Player: But I don’t think I will take that much stuff with me.
+Player: Makes me more flexible.
+Jan: True that.
+Jan: And you picked an artistic endeavor that is light on the equipment side of things.
+Player: Compared to yours—indeed.
+Jan: Just imagine all the clay and tools I would need to carry.
+Player: Don’t forget the finished pottery that you would created in the process.
+Player: I guess you’d have to take a car in order to continue pottery while traveling.
+Jan: Haha. Yes it would be a huge hussel.
+Jan: But a mobile pottery studio would be kind of awesome though.
+Jan: »Pimp my Ride« style—complete with a kiln in the trunk.
+Player: That sounds awesome indeed.
+Player: Could be an actual business idea: A traveling pottery studio.
+Player: You could offer workshops in different towns and even in nature.
+Jan: That sounds cool.
+Jan: But then again I could also establish a studio in Futti and offer workshops here.
+Jan: I always liked the idea of having an artist’s house here …
+Jan: Should we take a walk?
+Player: Yes, I would love to.
+//trigger animation Jan to stand up and move him to the net frame
+===
+title: aboutPhotos
+tags: 
+colorID: 0
+position: -525,-464
+---
+//If player takes photo here start conversation after the shot
+Jan: Can I see it?
+Player: Sure.
+Jan: Looks great.
+Jan: I just wonder why you stick to these instant cameras?
+Jan: I think you would have a lot more flexibility with a digital camera.
+[[I think I like the struggle and interaction between me and the camera.|interaction]]
+[[Don’t know.|dontKnow]]
+===
+title: dontKnow
+tags: 
+colorID: 0
+position: -387,-41
+---
+Player: Maybe one reason could be, that each picture I shot with the instant camera is quite expensive.
+Player: That way I shot more deliberate.
+Player: I feel like I would create a lot more junk pictures with a digital camera.
+Jan: Still, I think over time a digital camera would be more cost effective.
+Jan: And, I mean you could just take the same cautious approach when shooting with a digital one.
+Player: Hmm. Maybe. Yes.
+Player: But I think for now I will stick with the instant one.
+Player: Aaaaanyway. Should we move on?
+Jan: Certainly.
+//start walking animation for Jan and move him to the next frame
+===
+title: interaction
+tags: 
+colorID: 0
+position: -649,-37
+---
+<<Rep_Jan 1>>
+Player: You know, when I take a photo with this camera there is always this moment …
+Player: when the Polaroid gets ejected and I wait for the picture to develop, where I experience a mixture of excitement and doubt on how it will turn out.
+Player: As by that point I have no more control on the outcome.
+Player: Maybe the reason why I like this style of camera is similar to your pottery experience:
+Player: You’ve got an idea in your head, but the material has its own ideas that will contribute to the final outcome.
+Jan: That suddenly makes a lot of sense—at least to me.
+Jan: I think I can relate to this feeling of excoubtment.
+Player: Hehe. Excoubtment. I like it.
+Jan: Hehe. Anyway. I think it’s the same when I place the clay in the kiln and than close the lid.
+Jan: I’m never 100 percent sure that it will come out the way I imagined.
+Jan: Aaanyway. Should we move on?
+Player: Sure, sure.
+//Start walk animation for Jan and move him to the next frame
+===
+title: Overlook
+tags: 
+colorID: 0
+position: 194,-466
+---
+Player: I always loved that place.
+Player: From here you can see Futti in all its glory.
+Jan: Jupp. Glorious Futtenach.
+Player: I wonder when I will see this view again.
+Jan: I one year, my friend.
+Jan: You could take a picture. That way you can see this view everyday.
+Player: Silly you. But maybe that’s not a bad idea.
+Player: By the way, I’m not so sure that I will be back in one year.
+Jan: Huh? What do you mean?
+Jan: I thought you said you wanted to go only for a year.
+Player: At least a year.
+Player: That is how long I think my savings will last.
+Jan: But what do you want to do after you burned through your savings?
+Player: I’m planning to look for some part time work on the way.
+Player: That way I can move from place to place without too much problem—at least that’s my plan.
+Jan: So, you won’t be back next autumn?
+Player: …
+Player: Probably not.
+Jan: …
+Jan: But don’t you think that you’ve seen enough after a year?
+Jan: Won’t you miss home?
+Player: I don’t know.
+Player: I really like Futti. But I haven’t seen much else in my life.
+Player: I want to see something new.
+Jan: So you leave everything behind just because you »already know it?«
+[[I’m not leaving anything behind. I just don’t want to be trapped here.|trapped]]
+[[I’m not giving up on this—this is my home.|home]]
+===
+title: trapped
+tags: 
+colorID: 0
+position: 6,-157
+---
+Jan: Trapped?
+Jan: That sounds pretty harsh.
+Player: How to describe it?
+Player: I just feel I have taken every picture in my style that I could take around Futtenach.
+Jan: You still haven’t taken pictures of Futti’s inhabitants.
+Player: Do you have to bring this up?
+Player: I just feel really uncomfortable to take pictures of humans.
+Player: Whenever I tried, I’m super unhappy with the outcome.
+Player: And I feel like I mistreated those I shot.
+Jan: It’s not like you’re shooting someone—like with a gun or something.
+Jan: I think you’re just being silly.
+Jan: Same goes for this random wish to move out of here, just because Futtenach doesn’† hype you anymore.
+Jan: I don’t understand why coming back here seems to be such a low priority?
+Jan: Whenever I went on vacation, after a week or so I really looked forward to come back home.
+[[I think I kinda carry home with me where ever I go.|whereeverIgo]]
+[[I think I’m just different in that regard.|different]]
+===
+title: home
+tags: 
+colorID: 0
+position: 376,-156
+---
+<<Rep_Jan 1>>
+Player: I’m not cutting ties with Futti.
+Player: Nor with you.
+Jan: I hope so.
+Player: It’s just that I never had the chance to see much else.
+Player: You know, Mom didn’t earn that much. So traveling far away for vacations was always out of the question.
+Player: I still think I was lucky, as Futtenach is a really beautiful place.
+Player: Plus Mom often took me on small trips around the area.
+Player: To be honest: I often was jealous when you went on vacation—traveling through Europe.
+Jan: I didn’t know that.
+Player: You always seemed so inspired when you came back.
+Jan: I guess I was.
+Jan: Going somewhere else, having all these new impressions is really exhilarating.
+Jan: I remember that the last few times I went somewhere else, I had tons of ideas for my pottery when I came back.
+Jan: So I can understand that you want to catch up on these kind of experiences.
+Jan: But what I don’t understand is, why coming back here seems to be such a low priority?
+Jan: Whenever I went on vacation, after a week or so I really looked forward to come back home.
+[[I think I kinda carry home with me where ever I go.|whereeverIgo]]
+[[I think I’m just different in that regard.|different]]
+===
+title: different
+tags: 
+colorID: 0
+position: 7,227
+---
+Jan: What do you mean by that?
+Player: I feel, I soaked in so much of Futti that I have a storage full of memories.
+Player: You know, I can always recall these memories, and they appear really vividly in my head.
+Player: They are my rations against homesickness.
+Jan: Like lembas bread?
+Player: Hehe. Ye, maybe.
+Player: But that way I always feel connected to Futtenach.
+Jan: Sounds very poetic.
+Jan: But still …
+Jan: I’m not delighted by the thought that this could be a crossroad, that might lead to us splitting paths.
+Player: …
+[[I don’t think it will be that bad.|thatBad]]
+[[That thought has crossed my mind as well.|thatThought]]
+===
+title: whereeverIgo
+tags: 
+colorID: 0
+position: 378,227
+---
+<<Rep_Jan 1>>
+Jan: What do you mean?
+Player: I feel that after spending my whole life here, you, the townsfolk, Mom, and Futti are a part of me.
+Player: These relationships and experiences will never leave me, even if I’m somewhere else.
+Jan: That sounds very poetic.
+Jan: But still …
+Jan: I’m not delighted by the thought that this could be a crossroad, that might lead to us splitting paths.
+Player: …
+[[I don’t think it will be that bad.|thatBad]]
+[[That thought has crossed my mind as well.|thatThought]]
+===
+title: thatBad
+tags: 
+colorID: 0
+position: 9,477
+---
+Player: Besides, a split path doesn’t mean those two paths might not cross again in the future.
+Player: Not saying, that this will lead to us going separate ways.
+Player: I mean, even if I’m not in Futti, I’m not gone. I still got a phone, you know.
+Player: I want to keep our friendship.
+Player: I think we can stay in contact.
+Player: And I guess I have a lot more interesting stuff to tell when I’m in Norway—with all the new impressions.
+Jan: I guess.
+Jan: Maybe I’m just overreacting.
+Jan: All of it just feels so uncertain.
+Player: Same for me. I have no clue how this will turn out.
+Player: But I feel I have to take this chance now. There might not be another one.
+Player: Speaking of taking stuff: I need to take the train soonish.
+Player: And I haven’t packed my stuff yet.
+Player: I better head back home.
+Player: I’m gonna give you live-updates of my journey.
+Jan: Pinky promise?
+Player: Pinky Promise!
+===
+title: thatThought
+tags: 
+colorID: 0
+position: 375,478
+---
+<<Rep_Jan 1>>
+Player: But I’m not that afraid that we lose touch or something.
+Player: I think I’m more afraid of the thought, that I come back and have nothing to show for, while you have established a studio, and run a successful business.
+Player: You know: Like I just wasted my time with this trip.
+Jan: I don’t think you have to be afraid of that scenario.
+Jan: For one, I don’t think you will come back empty-handed—you’re far to hard-working and talented for that.
+Jan: And even if you come home broke. I would love to employ you.
+Jan: I mean I’m still your friend.
+Player: I’m really glad that you say that.
+Player: Even if I’m not in Futti, I’m not gone. I still got a phone, you know.
+Player: But, I understand your concern. And I can assure you that I don’t leave Futti because I’m done with this place—or you.
+Player: Far from it. I’m very proud of this nice village and really fond of you.
+Player: I won’t throw this away.
+Player: Speaking of not throwing stuff away:
+Player: I don’t want to throw my train ticket away because I showed up too late.
+Player: I still need to pack my bag. So I better go home now.
+Player: I’m gonna give you live-updates from my journey as soon as I board the train.
+Player: Let’s keep this going.
+Jan: Yes! Let’s keep this going.
+Player: We are not done yet, Jan.
+Jan: Indeed, Fritzi.
+Jan: Like they always say in Anime: Let’s give our best.
+Player: GANBAROU!
+===
