@@ -33,7 +33,7 @@ public class ParametersSetByName : MonoBehaviour
                 SceneInstance = 3f;
                 break;
             case "Forest":
-                SceneInstance = 1f;
+                SceneInstance = 2f;
                 break;
             default:
                 SceneInstance = 2f;

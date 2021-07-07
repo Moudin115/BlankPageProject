@@ -28,6 +28,7 @@ public class GameStatus : MonoBehaviour
         dr.AddCommandHandler("Rep_Joe", ReputationJoe);
 
         dr.AddCommandHandler("Jan_Walk", Jan_Walk);
+        dr.AddCommandHandler("end_Jan_Walk", end_Jan_Walk);
     }
 
     /*void PlaySound(string[] parameters)
@@ -52,5 +53,9 @@ public class GameStatus : MonoBehaviour
     void Jan_Walk(string[] parameters)
     {
         Jan.Janwalk();
+    }
+    void end_Jan_Walk(string[] parameters)
+    {
+        Jan.endJanwalk();
     }
 }

@@ -27,7 +27,10 @@ public class FMODPlayer : MonoBehaviour
                 Material = 1f;
                 break;
             case "Ground_LooseConcrete":
-                Material = 1f;
+                Material = 2f;
+                break;
+            case "Ground_Gravel":
+                Material = 3f;
                 break;
             default:
                 Material = 0f;

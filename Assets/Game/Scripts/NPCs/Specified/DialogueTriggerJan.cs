@@ -22,6 +22,10 @@ public class DialogueTriggerJan : MonoBehaviour
                 dialogueRunner.StartDialogue(DialogueName);
                 TriggerTrig = true;
             }
+            if (DialogueName == "Overlook")
+            {
+                dialogueRunner.StartDialogue(DialogueName);
+            }
         }
     }
 }

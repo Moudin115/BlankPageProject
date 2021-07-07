@@ -52,4 +52,8 @@ public class Jan : MonoBehaviour
     {
         JanIsFollowing = true;
     }
+    public static void endJanwalk()
+    {
+        JanIsFollowing = false;
+    }
 }

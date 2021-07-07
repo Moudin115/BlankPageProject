@@ -8,6 +8,8 @@ public class Ambience : MonoBehaviour
     private static FMOD.Studio.EventInstance ambience;
     private float AmbienceInstance;
 
+    public bool Collided;
+
     private void Start()
     {
         ambience = FMODUnity.RuntimeManager.CreateInstance("event:/Ambience/AmbienceDay");
@@ -33,7 +35,14 @@ public class Ambience : MonoBehaviour
                 AmbienceInstance = 0f;
                 break;
             case "Forest":
-                AmbienceInstance = 2f;
+                if (Collided == false)
+                {
+                    AmbienceInstance = 3f;
+                }
+                if (Collided == true)
+                {
+                    AmbienceInstance = 4f;
+                }
                 break;
             default:
                 AmbienceInstance = 0f;
@@ -44,5 +53,19 @@ public class Ambience : MonoBehaviour
     public void Ambiencer(float AmbienceInstance)
     {
         ambience.setParameterByName("Location", AmbienceInstance);
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            Collided = true;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            Collided = false;
+        }
     }
 }
