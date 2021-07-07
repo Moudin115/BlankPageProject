@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Items : MonoBehaviour
 {
-    public static bool Camera = false;
-    public static bool Photo01 = false;
-    public static bool Photo02 = false;
-    public static bool Photo03 = false;
-    public static bool Photo04 = false;
-    public static bool Photo05 = false;
-    public static bool Photo06 = false;
-    public static bool Photo07 = false;
+    public static bool Camera;
+    public static bool Photo01;
+    public static bool Photo02;
+    public static bool Photo03;
+    public static bool Photo04;
+    public static bool Photo05;
+    public static bool Photo06;
+    public static bool Photo07;
 
     public static void PickUpCamera()
     {

@@ -8718,6 +8718,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &700103622 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2812223713148137650, guid: 2edab2f41f5f08c479814b28df739ed4, type: 3}
+  m_PrefabInstance: {fileID: 2812223713822381705}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &718608303
 GameObject:
   m_ObjectHideFlags: 0
@@ -31495,7 +31500,6 @@ MonoBehaviour:
   walkZone: {fileID: 0}
   sprite: {fileID: 0}
   anim: {fileID: 0}
-  dr: {fileID: 0}
 --- !u!58 &1183408757
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -50571,6 +50575,7 @@ GameObject:
   - component: {fileID: 1948771359}
   - component: {fileID: 1948771358}
   - component: {fileID: 1948771360}
+  - component: {fileID: 1948771356}
   - component: {fileID: 1948771361}
   - component: {fileID: 1948771362}
   m_Layer: 7
@@ -50580,6 +50585,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1948771356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948771355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ad6d74e4c25bc5499ae3b10ec1bc3f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3.75
+  anim: {fileID: 2058320019}
+  tar: {fileID: 700103622}
+  sprite: {fileID: 2058320018}
 --- !u!4 &1948771357
 Transform:
   m_ObjectHideFlags: 0
@@ -50666,7 +50687,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1948771355}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1b3ceff266617e42935fa5a673658b3, type: 3}
   m_Name: 
@@ -50678,7 +50699,6 @@ MonoBehaviour:
   walkZone: {fileID: 1858243470}
   sprite: {fileID: 2058320018}
   anim: {fileID: 2058320019}
-  dr: {fileID: 0}
 --- !u!114 &1948771362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56842,8 +56862,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 768664143, guid: 2edab2f41f5f08c479814b28df739ed4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0001296997
+      objectReference: {fileID: 0}
+    - target: {fileID: 768664143, guid: 2edab2f41f5f08c479814b28df739ed4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 1.0000001
       objectReference: {fileID: 0}
     - target: {fileID: 1350534283, guid: 2edab2f41f5f08c479814b28df739ed4, type: 3}
       propertyPath: Blend

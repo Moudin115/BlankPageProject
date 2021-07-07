@@ -13,7 +13,7 @@ public class PauseMenu : MonoBehaviour
     string Keycode;
 
     //public PlayerMovement playerMovement;
-
+    
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -25,11 +25,13 @@ public class PauseMenu : MonoBehaviour
 
                 Resume();
             }
-            else
+            else if (GameIsPaused == false)
             {
 
                 Pause();
             }
+
+            
         }
     }
     public void Resume()
@@ -51,6 +53,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 0; //Change for Slowmo effect
         //GamePauseUI.SetActive(true);
         GameIsPaused = true;
+
 
     }
     public void LoadMenu()
