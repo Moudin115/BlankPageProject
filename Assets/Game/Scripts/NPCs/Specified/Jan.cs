@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Yarn.Unity;
 
 public class Jan : MonoBehaviour
 {
@@ -17,11 +18,22 @@ public class Jan : MonoBehaviour
     private int WalkDirection;
 
     public static bool JanIsFollowing;
+    public static bool WalkCompleted;
 
+    private DialogueRunner dialogueRunner;
+
+    public bool startTalk;
     // Start is called before the first frame update
     void Start()
     {
+        dialogueRunner = FindObjectOfType<DialogueRunner>();
         target = tar.GetComponent<Transform>();
+        if (JanIsFollowing && DialogueTriggerJan.aboutTrig)
+        {
+            Debug.Log("Photo_03");
+            transform.position = new Vector2(tar.transform.position.x - 3, tar.transform.position.y);
+            dialogueRunner.StartDialogue("aboutPhotos");
+        }
     }
 
     // Update is called once per frame
@@ -45,7 +57,11 @@ public class Jan : MonoBehaviour
                 transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
             }
         }
-        
+        if (WalkCompleted == true)
+        {
+            anim.SetBool("idleBool", true);
+        }
+
     }
 
     public static void Janwalk()
@@ -55,5 +71,6 @@ public class Jan : MonoBehaviour
     public static void endJanwalk()
     {
         JanIsFollowing = false;
+        WalkCompleted = true;
     }
 }

@@ -22,7 +22,7 @@ public class PhotoMenu : MonoBehaviour
 
     private bool Spaced;
 
-    public static int PhotoNr;
+    public int PhotoNr;
     private bool CanPic;
 
     SceneSwitch sceneSwitch;
@@ -150,6 +150,8 @@ public class PhotoMenu : MonoBehaviour
                                 break;
                             case 3:
                                 Items.Photo03 = true;
+                                DialogueTriggerJan.aboutTrig = true;
+                            Debug.Log("taken pic 03");
                                 break;
                             case 4:
                                 Items.Photo04 = true;

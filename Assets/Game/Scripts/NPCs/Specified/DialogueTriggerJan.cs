@@ -9,22 +9,20 @@ public class DialogueTriggerJan : MonoBehaviour
     private DialogueRunner dialogueRunner;
     public string DialogueName = "";
 
+    public static bool aboutTrig;
+
     private void Start()
     {
         dialogueRunner = FindObjectOfType<DialogueRunner>();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player" && Jan.JanIsFollowing == true)
+        if (collision.tag == "Player" && TriggerTrig == false)
         {
-            if (TriggerTrig == false)
-            {
-                dialogueRunner.StartDialogue(DialogueName);
-                TriggerTrig = true;
-            }
             if (DialogueName == "Overlook")
             {
                 dialogueRunner.StartDialogue(DialogueName);
+                TriggerTrig = true;
             }
         }
     }
