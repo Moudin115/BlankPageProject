@@ -55,12 +55,12 @@ public class DialogueControlls : MonoBehaviour
     private void ChangeOption()
     {
 
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.W)|| Input.GetKeyDown(KeyCode.A))
         {
             currentOption = (currentOption + 1) % optionSize;
             dialogue.SetText(options[currentOption].text);
         }
-        else if (Input.GetKeyDown(KeyCode.S))
+        else if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D))
         {
             //Move to the previous option
             if (currentOption == 0)
