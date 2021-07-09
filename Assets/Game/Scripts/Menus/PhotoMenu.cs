@@ -52,17 +52,18 @@ public class PhotoMenu : MonoBehaviour
             {
                 sceneSwitch.SwitchScene(lastScene);
             }
-            if (Input.anyKeyDown)
+            if (Input.anyKey && !EisPressed)
             {
                 Menu.SetActive(false);
                 EisPressed = true;
             }
+            
 
             if (EisPressed)
             {
                 float horz = Input.GetAxis("Horizontal");
                 float vert = Input.GetAxis("Vertical");
-                Polaroidcam.transform.position += (Vector3.up * vert + Vector3.right * horz) * speed * Time.deltaTime;
+                Polaroidcam.transform.position += (Vector3.up * vert + Vector3.right * horz) * speed * Time.unscaledDeltaTime;
                 switch (PhotoNr)
                 {
                     case 1:
@@ -129,7 +130,7 @@ public class PhotoMenu : MonoBehaviour
 
                 }
 
-                if (Input.GetKeyUp(KeyCode.E))
+                if (!Input.anyKey && EisPressed)
                 {
                     CanPic = true;
                 }
@@ -137,7 +138,9 @@ public class PhotoMenu : MonoBehaviour
                     {
                         FMODUnity.RuntimeManager.PlayOneShot("event:/Interactables/camera_trigger");
                         ScreenshotHandler.TakeScreenshot_Static(300, 300);
-                        Blend.SetActive(true);
+                    Cursor.lockState = CursorLockMode.Confined;
+                    Cursor.visible = true;
+                    Blend.SetActive(true);
                         BlendAnim.SetTrigger("Start");
 
                         switch (PhotoNr)
@@ -203,6 +206,8 @@ public class PhotoMenu : MonoBehaviour
     
     public void Confirm()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         sceneSwitch.SwitchScene(lastScene);
     }
 }
