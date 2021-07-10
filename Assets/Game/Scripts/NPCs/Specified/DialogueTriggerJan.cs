@@ -17,7 +17,7 @@ public class DialogueTriggerJan : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player" && TriggerTrig == false)
+        if (collision.tag == "Player" && TriggerTrig == false && Jan.JanIsFollowing)
         {
             if (DialogueName == "Overlook")
             {

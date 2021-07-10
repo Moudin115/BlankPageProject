@@ -5,7 +5,7 @@ using Yarn.Unity;
 
 public class DialogueTrigger : MonoBehaviour
 {
-    private static bool TriggerTrig = false;
+    private bool TriggerTrig = false;
     private DialogueRunner dialogueRunner;
 
         private void Start()
