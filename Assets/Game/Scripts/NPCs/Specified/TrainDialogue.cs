@@ -3,24 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using Yarn.Unity;
 
-public class DialogueTrigger : MonoBehaviour
+public class TrainDialogue : MonoBehaviour
 {
     private bool TriggerTrig = false;
     private DialogueRunner dialogueRunner;
+    public string DialogueName = "";
 
-        private void Start()
+    public GameObject End;
+
+    private void Start()
     {
         dialogueRunner = FindObjectOfType<DialogueRunner>();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.tag == "Player" && TriggerTrig == false)
         {
-            if (TriggerTrig == false)
-            {
                 dialogueRunner.StartDialogue("Start");
                 TriggerTrig = true;
-            }
+                End.SetActive(true);
         }
     }
 }
