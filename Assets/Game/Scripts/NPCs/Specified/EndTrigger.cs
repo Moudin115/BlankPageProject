@@ -54,10 +54,8 @@ public class EndTrigger : MonoBehaviour
     {
         if (Reputation_Jan < 3 && Reputation_Mom == 0 && Reputation_Joe < 2)
         {
-            End.alone = true;
             dialogueRunner.StartDialogue("alone");
             EndDialogue = true;
-            
         }
         if (Reputation_Jan >= 3)
         {
