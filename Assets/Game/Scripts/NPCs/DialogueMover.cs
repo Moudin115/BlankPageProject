@@ -47,13 +47,13 @@ public class DialogueMover : MonoBehaviour
     private void SetDialoguePosition(GameObject character)
     {
         // Retrieve the position where the top part of the sprite is in the world
-
-        DialoguePos = character.transform.Find("DialoguePos");
+            DialoguePos = character.transform.Find("DialoguePos");
 
         /*float characterSpriteHeight = character.GetComponent<BoxCollider2D>().bounds.size.y + 0.5f;
         float characterSpriteWidth = character.transform.position.x;
 
         Scene currentScene = SceneManager.GetActiveScene();*/
+
 
             Vector2 characterPosition = DialoguePos.transform.position;
             SetPos(characterPosition);
