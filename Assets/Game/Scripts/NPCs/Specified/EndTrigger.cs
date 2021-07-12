@@ -15,6 +15,7 @@ public class EndTrigger : MonoBehaviour
     public int Reputation_Mom = GameStatus.Rep_Mom;
     public int Reputation_Joe = GameStatus.Rep_Joe;
 
+
     private void Start()
     {
         dialogueRunner = FindObjectOfType<DialogueRunner>();

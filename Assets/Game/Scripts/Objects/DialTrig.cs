@@ -3,15 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using Yarn.Unity;
 
-public class TrainDialogue : MonoBehaviour
+public class DialTrig : MonoBehaviour
 {
     private bool TriggerTrig = false;
     private DialogueRunner dialogueRunner;
     public string DialogueName = "";
 
-    public GameObject End;
-
-    public Animator Anim;
+    
 
     private void Start()
     {
@@ -21,10 +19,9 @@ public class TrainDialogue : MonoBehaviour
     {
         if (collision.tag == "Player" && TriggerTrig == false)
         {
-                dialogueRunner.StartDialogue(DialogueName);
-            Anim.SetBool("TrainTrig", true);
+            
+            dialogueRunner.StartDialogue("Start");
             TriggerTrig = true;
-                End.SetActive(true);
         }
     }
 }
