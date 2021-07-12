@@ -39,7 +39,18 @@ public class Jan : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (JanIsFollowing)
+        if (dialogueRunner.IsDialogueRunning)
+        {
+            if (tar.transform.position.x > this.transform.position.x)
+            {
+                sprite.transform.localScale = new Vector2(-1f, 1f);
+            }
+            if (tar.transform.position.x < this.transform.position.x)
+            {
+                sprite.transform.localScale = new Vector2(1f, 1f);
+            }
+        }
+            if (JanIsFollowing)
         {
             if (tar.transform.position.x > this.transform.position.x)
             {

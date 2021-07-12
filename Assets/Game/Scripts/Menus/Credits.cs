@@ -9,6 +9,15 @@ public class Credits : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
+            Items.Camera = false;
+            Items.Photo01 = false;
+            Items.Photo02 = false;
+            Items.Photo03 = false;
+            Items.Photo04 = false;
+            Items.Photo05 = false;
+            Items.Photo06 = false;
+            Items.Photo07 = false;
+
             SceneManager.LoadScene("MainMenu");
         }
     }
