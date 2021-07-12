@@ -803,7 +803,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3490566, g: 0.3490566, b: 0.3490566, a: 0.3764706}
+  m_Color: {r: 0.3490566, g: 0.3490566, b: 0.3490566, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1020,6 +1020,7 @@ GameObject:
   - component: {fileID: 630460363}
   - component: {fileID: 630460362}
   - component: {fileID: 630460365}
+  - component: {fileID: 630460366}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -1085,6 +1086,18 @@ MonoBehaviour:
   posX: 0
   posY: 0
   previous: Village
+--- !u!114 &630460366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630460361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5139d3500a64e97428e3d95910d5f2ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &727300408
 GameObject:
   m_ObjectHideFlags: 0
