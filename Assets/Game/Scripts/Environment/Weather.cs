@@ -12,5 +12,9 @@ public class Weather : MonoBehaviour
         {
             rain.SetActive(true);
         }
+        if (isRaining == false)
+        {
+            rain.SetActive(false);
+        }
     }
 }
