@@ -22,6 +22,10 @@ public class MomTrig : MonoBehaviour
         {
             MomCouch.SetActive(true);
         }
+        if (MomDialogue == false)
+        {
+            MomCouch.SetActive(false);
+        }
     }
     // Update is called once per frame
     void Update()

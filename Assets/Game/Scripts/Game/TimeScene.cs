@@ -16,5 +16,10 @@ public class TimeScene : MonoBehaviour
             DayTime.SetActive(false);
             Evening.SetActive(true);
         }
+        if (PackTrig.hasPacked == false)
+        {
+            DayTime.SetActive(true);
+            Evening.SetActive(false);
+        }
     }
 }

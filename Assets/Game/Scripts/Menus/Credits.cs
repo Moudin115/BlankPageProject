@@ -21,6 +21,9 @@ public class Credits : MonoBehaviour
             Items.Photo06 = false;
             Items.Photo07 = false;
 
+            PackTrig.hasPacked = false;
+            MomTrig.MomDialogue = false;
+
             SceneManager.LoadScene("MainMenu");
         }
     }
