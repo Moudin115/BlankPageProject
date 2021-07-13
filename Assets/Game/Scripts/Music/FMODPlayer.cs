@@ -32,6 +32,9 @@ public class FMODPlayer : MonoBehaviour
             case "Ground_Gravel":
                 Material = 3f;
                 break;
+            case "Ground_Leaves":
+                Material = 4f;
+                break;
             default:
                 Material = 0f;
                 break;
