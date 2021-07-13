@@ -23,6 +23,7 @@ public class Credits : MonoBehaviour
 
             PackTrig.hasPacked = false;
             MomTrig.MomDialogue = false;
+            Jan.WalkCompleted = false;
 
             SceneManager.LoadScene("MainMenu");
         }

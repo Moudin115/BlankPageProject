@@ -11,14 +11,17 @@ public class EndTrigger : MonoBehaviour
     public static bool Trig;
     public static bool EndDialogue;
 
-    public int Reputation_Jan = GameStatus.Rep_Jan;
-    public int Reputation_Mom = GameStatus.Rep_Mom;
-    public int Reputation_Joe = GameStatus.Rep_Joe;
+    private int Reputation_Jan;
+    private int Reputation_Mom;
+    private int Reputation_Joe;
 
 
     private void Start()
     {
         dialogueRunner = FindObjectOfType<DialogueRunner>();
+        Reputation_Jan = GameStatus.Rep_Jan;
+        Reputation_Mom = GameStatus.Rep_Mom;
+        Reputation_Joe = GameStatus.Rep_Joe;
     }
 
     private void Update()
@@ -28,7 +31,11 @@ public class EndTrigger : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 Trig = false;
-                CheckReps();            }
+                CheckReps();
+                CheckJan();
+                CheckMom();
+                CheckJoe();
+            }
         }
         if (EndDialogue && dialogueRunner.IsDialogueRunning == false)
         {
@@ -58,18 +65,27 @@ public class EndTrigger : MonoBehaviour
             dialogueRunner.StartDialogue("alone");
             EndDialogue = true;
         }
+    }
+    void CheckJan()
+    {
         if (Reputation_Jan >= 3)
         {
             End.jan = true;
             dialogueRunner.StartDialogue("alone");
             EndDialogue = true;
         }
+    }
+    void CheckMom()
+    {
         if (Reputation_Mom > 0)
         {
             End.mom = true;
             dialogueRunner.StartDialogue("alone");
             EndDialogue = true;
         }
+    }
+    void CheckJoe()
+    {
         if (Reputation_Joe >= 2)
         {
             End.joe = true;
@@ -77,5 +93,4 @@ public class EndTrigger : MonoBehaviour
             EndDialogue = true;
         }
     }
-
 }
