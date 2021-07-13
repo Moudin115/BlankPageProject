@@ -5,6 +5,8 @@ using UnityEngine;
 public class Items : MonoBehaviour
 {
     public static bool Camera;
+    public static bool Luggage;
+
     public static bool Photo01;
     public static bool Photo02;
     public static bool Photo03;
@@ -18,5 +20,12 @@ public class Items : MonoBehaviour
         Camera = true;
         FMODUnity.RuntimeManager.PlayOneShot("event:/Interactables/equip_camera");
     }
+
+    public static void PickUpLuggage()
+    {
+        Luggage = true;
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Interactables/equip_camera");
+    }
+
 
 }

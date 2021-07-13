@@ -11,6 +11,8 @@ public class TrainDialogue : MonoBehaviour
 
     public GameObject End;
 
+    public Animator Anim;
+
     private void Start()
     {
         dialogueRunner = FindObjectOfType<DialogueRunner>();
@@ -19,8 +21,9 @@ public class TrainDialogue : MonoBehaviour
     {
         if (collision.tag == "Player" && TriggerTrig == false)
         {
-                dialogueRunner.StartDialogue("Start");
-                TriggerTrig = true;
+                dialogueRunner.StartDialogue(DialogueName);
+            Anim.SetBool("TrainTrig", true);
+            TriggerTrig = true;
                 End.SetActive(true);
         }
     }
