@@ -219,7 +219,6 @@ Player: I better head back home.
 Player: I’m gonna give you live-updates of my journey.
 Jan: Pinky promise?
 Player: Pinky Promise!
-<<weather_Sun>>
 <<end_Jan_Walk>>
 ===
 title: thatThought
@@ -235,7 +234,6 @@ Jan: I don’t think you have to be afraid of that scenario.
 Jan: For one, I don’t think you will come back empty-handed—you’re far to hard-working and talented for that.
 Jan: And even if you come home broke. I would love to employ you.
 Jan: I mean I’m still your friend.
-<<weather_Sun>>
 Player: I’m really glad that you say that.
 Player: Even if I’m not in Futti, I’m not gone. I still got a phone, you know.
 Player: But, I understand your concern. And I can assure you that I don’t leave Futti because I’m done with this place—or you.
@@ -252,4 +250,19 @@ Jan: Indeed, Fritzi.
 Jan: Like they always say in Anime: Let’s give our best.
 Player: GANBAROU!
 <<end_Jan_Walk>>
+===
+title: default
+tags: 
+colorID: 0
+position: 1099,-547
+---
+Jan: ...
+===
+title: sun
+tags: 
+colorID: 0
+position: 981,-10
+---
+<<weather_Sun>>
+Player: The Rain wears off, I hope it stays that way. I've got to go home fast!
 ===

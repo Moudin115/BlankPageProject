@@ -54,6 +54,7 @@ public class NPC : MonoBehaviour
                 Items.PickUpCamera();
                 Destroy(gameObject);
             }
+            talkToNode = "default";
         }
     }
     void SetActiveNPC(bool set)
