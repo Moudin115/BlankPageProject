@@ -219,6 +219,8 @@ Player: I’m gonna give you live-updates of my journey.
 Jan: Pinky promise?
 Player: Pinky Promise!
 <<weather_Rain>>
+Player: Oh no. Why does it have to start raining now. I better hurry.
+Jan: I will stay a moment longer. You can go ahead.
 <<end_Jan_Walk>>
 ===
 title: thatThought
@@ -250,6 +252,9 @@ Jan: Indeed, Fritzi.
 Jan: Like they always say in Anime: Let’s give our best.
 Player: GANBAROU!
 <<weather_Rain>>
+<<weather_Rain>>
+Player: Oh no. Why does it have to start raining now. I better hurry.
+Jan: I will stay a moment longer. You can go ahead.
 <<end_Jan_Walk>>
 ===
 title: default
@@ -257,7 +262,7 @@ tags:
 colorID: 0
 position: 928,-413
 ---
-Jan: ...
+Jan: …
 ===
 title: sun
 tags: 
@@ -265,26 +270,28 @@ colorID: 0
 position: 928,124
 ---
 <<weather_Sun>>
-Player: The Rain wears off, I hope it stays that way. I've got to go home fast!
+Player: It stopped raining. 
+Player: Hope it stays that way.
+Player: Fast now.
 ===
 title: forest
 tags: 
 colorID: 0
 position: 928,-131
 ---
-Player: Ah, the Forest!
-Player: Everytime I come here I feel refreshed!
+Player: I always loved that the forest begins just outside of Futtenach.
+Player: I’m gonna miss this.
 <<wait 1>>
-Player: I gotta go talk to Jan, so we can go for a walk.
+Player: I gotta go—there will be enough time to ponder the merits of the Futtenach forest, when I’m moseying with Jan.
 ===
 title: Grenzstein
 tags: 
 colorID: 0
 position: 928,435
 ---
-Player: A Border stone!
-Player: I read that we have so many here because there were so many medieval dukes back in the day.
-Player: Well, here is one of many!
+Player: A border stone.
+Player: I read that we have so many here because tons of dukes lived here back in medieval times.
+Player: Well, here is one of many.
 ===
 title: EastEnd
 tags: 
@@ -293,5 +300,5 @@ position: 928,708
 ---
 Player: I'm already pretty deep in the Forest.
 <<wait 1>>
-Player: I should not risk wandering around too much, or it will get out of hand again and turn into a 6-hour walk.
+Player: I should not risk wandering around too much, or I might miss my train.
 ===
