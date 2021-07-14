@@ -9,6 +9,7 @@ public class DialogueMover : MonoBehaviour
 
     private Transform DialoguePos;
 
+
     // Start is called before the first frame update
     void Awake()
     {

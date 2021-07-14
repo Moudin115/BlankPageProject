@@ -15,7 +15,20 @@ public class EndTrigger : MonoBehaviour
     private int Reputation_Mom;
     private int Reputation_Joe;
 
+    public GameObject JanObj;
+    public GameObject MomObj;
+    public GameObject JoeObj;
+
+    public float movespeeds;
+
+    public GameObject tarJan;
+    public GameObject tarMom;
+    public GameObject tarJoe;
+
+    public GameObject player;
+
     private static FMOD.Studio.EventInstance TrainS;
+
     private void Start()
     {
         TrainS = FMODUnity.RuntimeManager.CreateInstance("event:/Ambience/train");
@@ -24,17 +37,23 @@ public class EndTrigger : MonoBehaviour
 
         dialogueRunner = FindObjectOfType<DialogueRunner>();
         Reputation_Jan = GameStatus.Rep_Jan;
-        Reputation_Mom = GameStatus.Rep_Mom;
+        //Reputation_Mom = GameStatus.Rep_Mom;
         Reputation_Joe = GameStatus.Rep_Joe;
+
+        Reputation_Mom = 1;
+
         TrainS.setParameterByName("TrainLeaving", 0f);
+
+
     }
     private void Update()
     {
+        
         if (Trig == true)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                
+                player.transform.localScale = new Vector3(1, 1, 1);
                 TrainS.setParameterByName("TrainLeaving", 1f);
                 Trig = false;
                 CheckReps();
@@ -78,7 +97,9 @@ public class EndTrigger : MonoBehaviour
         if (Reputation_Jan >= 3)
         {
             End.jan = true;
-            dialogueRunner.StartDialogue("alone");
+            JanObj.SetActive(true);
+            JanObj.transform.position = tarJan.transform.position;
+            dialogueRunner.StartDialogue("Jan");
             EndDialogue = true;
         }
     }
@@ -87,7 +108,9 @@ public class EndTrigger : MonoBehaviour
         if (Reputation_Mom > 0)
         {
             End.mom = true;
-            dialogueRunner.StartDialogue("alone");
+            MomObj.SetActive(true);
+            MomObj.transform.position = tarMom.transform.position;
+            dialogueRunner.StartDialogue("mom");
             EndDialogue = true;
         }
     }
@@ -96,6 +119,9 @@ public class EndTrigger : MonoBehaviour
         if (Reputation_Joe >= 2)
         {
             End.joe = true;
+            JoeObj.SetActive(true);
+            JoeObj.transform.position = Vector2.MoveTowards(JoeObj.transform.position, tarJoe.transform.position, movespeeds * Time.deltaTime);
+            JoeObj.transform.position = tarJoe.transform.position;
             dialogueRunner.StartDialogue("alone");
             EndDialogue = true;
         }
