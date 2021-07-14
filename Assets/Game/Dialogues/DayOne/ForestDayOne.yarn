@@ -94,7 +94,6 @@ Jan: In one year, my friend.
 Jan: You could take a picture. That way you can see this view everyday.
 Player: Silly you. But maybe that’s not a bad idea.
 Player: By the way, I’m not so sure that I will be back in one year.
-<<weather_Rain>>
 Jan: Huh? What do you mean?
 Jan: I thought you said you wanted to go only for a year.
 Player: At least a year.
@@ -219,6 +218,7 @@ Player: I better head back home.
 Player: I’m gonna give you live-updates of my journey.
 Jan: Pinky promise?
 Player: Pinky Promise!
+<<weather_Rain>>
 <<end_Jan_Walk>>
 ===
 title: thatThought
@@ -249,19 +249,20 @@ Player: We are not done yet, Jan.
 Jan: Indeed, Fritzi.
 Jan: Like they always say in Anime: Let’s give our best.
 Player: GANBAROU!
+<<weather_Rain>>
 <<end_Jan_Walk>>
 ===
 title: default
 tags: 
 colorID: 0
-position: 1099,-547
+position: 928,-413
 ---
 Jan: ...
 ===
 title: sun
 tags: 
 colorID: 0
-position: 981,-10
+position: 928,124
 ---
 <<weather_Sun>>
 Player: The Rain wears off, I hope it stays that way. I've got to go home fast!
@@ -269,10 +270,28 @@ Player: The Rain wears off, I hope it stays that way. I've got to go home fast!
 title: forest
 tags: 
 colorID: 0
-position: 1330,-90
+position: 928,-131
 ---
 Player: Ah, the Forest!
 Player: Everytime I come here I feel refreshed!
 <<wait 1>>
 Player: I gotta go talk to Jan, so we can go for a walk.
+===
+title: Grenzstein
+tags: 
+colorID: 0
+position: 928,435
+---
+Player: A Border stone!
+Player: I read that we have so many here because there were so many medieval dukes back in the day.
+Player: Well, here is one of many!
+===
+title: EastEnd
+tags: 
+colorID: 0
+position: 928,708
+---
+Player: I'm already pretty deep in the Forest.
+<<wait 1>>
+Player: I should not risk wandering around too much, or it will get out of hand again and turn into a 6-hour walk.
 ===
