@@ -17,11 +17,10 @@ public class sunTrig : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player" && TriggerTrig == false && Jan.WalkCompleted && !Jan.Left)
+        if (collision.tag == "Player" && TriggerTrig == false && Jan.WalkCompleted)
         {
 
             dialogueRunner.StartDialogue("sun");
-            Jan.Left = true;
             TriggerTrig = true;
         }
     }
