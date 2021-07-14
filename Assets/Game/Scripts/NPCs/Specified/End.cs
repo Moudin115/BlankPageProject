@@ -24,7 +24,7 @@ public class End : MonoBehaviour
         if (joe == true) _joe.SetActive(true);
         if (mom == true) _mom.SetActive(true);
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.Return))
         {
             SceneManager.LoadScene("Credits");
         }
