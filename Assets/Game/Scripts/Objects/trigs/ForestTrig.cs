@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using Yarn.Unity;
 
-public class sunTrig : MonoBehaviour
+public class ForestTrig : MonoBehaviour
 {
-    private bool TriggerTrig = false;
+    private static bool TriggerTrig = false;
     private DialogueRunner dialogueRunner;
     public string DialogueName = "";
 
@@ -17,11 +17,10 @@ public class sunTrig : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player" && TriggerTrig == false && Jan.WalkCompleted && !Jan.Left)
+        if (collision.tag == "Player" && TriggerTrig == false)
         {
 
-            dialogueRunner.StartDialogue("sun");
-            Jan.Left = true;
+            dialogueRunner.StartDialogue(DialogueName);
             TriggerTrig = true;
         }
     }
