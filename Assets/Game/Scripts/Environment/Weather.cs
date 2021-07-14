@@ -6,7 +6,6 @@ public class Weather : MonoBehaviour
 {
 
     private static FMOD.Studio.EventInstance rainS;
-    private float AmbienceInstance;
 
     public static bool isRaining = false;
     public GameObject rain;
@@ -21,21 +20,15 @@ public class Weather : MonoBehaviour
         
         if (isRaining == true)
         {
-            AmbienceInstance = 1f;
             rain.SetActive(true);
-            Ambiencer(AmbienceInstance);
+            rainS.setParameterByName("Rain", 0f);
         }
         if (isRaining == false)
         {
-            AmbienceInstance = 0f;
             rain.SetActive(false);
-            Ambiencer(AmbienceInstance);
+            rainS.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         }
         
     }
 
-    public void Ambiencer(float AmbienceInstance)
-    {
-        rainS.setParameterByName("Rain", AmbienceInstance);
-    }
 }

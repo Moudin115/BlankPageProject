@@ -81941,6 +81941,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 331797831}
     m_Modifications:
     - target: {fileID: 6103227553232533110, guid: 2d2d0d47dcf534249b6d3773a95c878a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6103227553232533110, guid: 2d2d0d47dcf534249b6d3773a95c878a, type: 3}
       propertyPath: TriggerOnce
       value: 1
       objectReference: {fileID: 0}
@@ -81992,7 +81996,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bridge
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6103227553232533110, guid: 2d2d0d47dcf534249b6d3773a95c878a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2d2d0d47dcf534249b6d3773a95c878a, type: 3}
 --- !u!1 &2104062566
 GameObject:

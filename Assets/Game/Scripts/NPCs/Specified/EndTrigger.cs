@@ -15,20 +15,27 @@ public class EndTrigger : MonoBehaviour
     private int Reputation_Mom;
     private int Reputation_Joe;
 
+    private static FMOD.Studio.EventInstance TrainS;
     private void Start()
     {
+        TrainS = FMODUnity.RuntimeManager.CreateInstance("event:/Ambience/train");
+        TrainS.start();
+        TrainS.release();
+
         dialogueRunner = FindObjectOfType<DialogueRunner>();
         Reputation_Jan = GameStatus.Rep_Jan;
         Reputation_Mom = GameStatus.Rep_Mom;
         Reputation_Joe = GameStatus.Rep_Joe;
+        TrainS.setParameterByName("TrainLeaving", 0f);
     }
-
     private void Update()
     {
         if (Trig == true)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
+                
+                TrainS.setParameterByName("TrainLeaving", 1f);
                 Trig = false;
                 CheckReps();
                 CheckJan();
@@ -39,6 +46,7 @@ public class EndTrigger : MonoBehaviour
         if (EndDialogue && dialogueRunner.IsDialogueRunning == false)
         {
             SceneManager.LoadScene("EndingScreen");
+            TrainS.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

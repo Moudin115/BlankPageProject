@@ -9,7 +9,6 @@ public class TrainDialogue : MonoBehaviour
     private DialogueRunner dialogueRunner;
     public string DialogueName = "";
 
-    public static FMOD.Studio.EventInstance TrainS;
 
     public GameObject End;
 
@@ -18,17 +17,6 @@ public class TrainDialogue : MonoBehaviour
     private void Start()
     {
         dialogueRunner = FindObjectOfType<DialogueRunner>();
-        TrainS = FMODUnity.RuntimeManager.CreateInstance("event:/Ambience/train");
-        TrainS.start();
-        TrainS.release();
-
-    }
-    private void Update()
-    {
-        if (TriggerTrig == true)
-        {
-            TrainS.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
