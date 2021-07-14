@@ -23,7 +23,7 @@ Player: I need to get to the train station.
 title: alone
 tags: 
 colorID: 0
-position: -862,456
+position: -863,455
 ---
 // trigger when attempting to enter the train and Mom=0, Jan<3, Joe<2
 Player: Time to say goodbye.
@@ -40,4 +40,41 @@ Player: I’m not really the person to shot selfies. But this could be a good op
 Player: Starting a new chapter after all.
 //final photo with fritiz only
 //After picture development roll credits
+===
+title: mom
+tags: 
+colorID: 0
+position: -587,453
+---
+// trigger when attempting to enter the train and Mom=1, Jan<3, Joe<2
+Player: Time to say goodbye.
+//turn Fritzi around—facing right
+Mom: Hey, wait for me Fritzi.
+Player: There you are.
+Mom: I hope you didn’t plan on boarding the train without properly saying goodbye to me.
+Player: Never!
+Player: Glad you came.
+Mom: Of course.
+Mom: Be careful.
+Mom: And call me regularly.
+Player: I will.
+Player: Love you mom.
+Mom: Oh, Fritzi.
+Mom: Stay safe.
+Player: You too mom.
+Player: Would you mind me taking a picture with you?
+Mom: Of course not.
+Player: I need to insert a new film first.
+//play insert film sound
+Player: Kind of poetic to start the documentation of my new life with an image of the old one.
+Mom: Silly you.
+Player: Here we go!
+//creditpicture with mom and fritzi
+===
+title: Jan
+tags: 
+colorID: 0
+position: -333,451
+---
+Empty Text
 ===
