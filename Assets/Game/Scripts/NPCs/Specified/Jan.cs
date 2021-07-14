@@ -19,6 +19,7 @@ public class Jan : MonoBehaviour
 
     public static bool JanIsFollowing;
     public static bool WalkCompleted;
+    public static bool Left;
 
     private DialogueRunner dialogueRunner;
 
@@ -71,6 +72,10 @@ public class Jan : MonoBehaviour
         if (WalkCompleted == true)
         {
             anim.SetBool("idleBool", true);
+            if (Left == true)
+            {
+                transform.position = new Vector2(17.31f, 6.421f);
+            }
         }
 
     }
