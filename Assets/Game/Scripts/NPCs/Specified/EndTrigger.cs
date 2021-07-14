@@ -122,7 +122,7 @@ public class EndTrigger : MonoBehaviour
             JoeObj.SetActive(true);
             JoeObj.transform.position = Vector2.MoveTowards(JoeObj.transform.position, tarJoe.transform.position, movespeeds * Time.deltaTime);
             JoeObj.transform.position = tarJoe.transform.position;
-            dialogueRunner.StartDialogue("alone");
+            dialogueRunner.StartDialogue("Joe");
             EndDialogue = true;
         }
     }

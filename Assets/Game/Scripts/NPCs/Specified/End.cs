@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class End : MonoBehaviour
 {
-
+    
 
     public static bool jan;
     public static bool mom;
@@ -16,10 +16,19 @@ public class End : MonoBehaviour
     public GameObject _joe;
     public GameObject _mom;
 
+    private static FMOD.Studio.EventInstance EndS;
 
+    private void Start()
+    {
+        EndS = FMODUnity.RuntimeManager.CreateInstance("event:/BackgroundMusic/EndingTheme");
+        EndS.start();
+        EndS.release();
+    }
     // Update is called once per frame
     void Update()
     {
+        EndS.setParameterByName("EndingThemeLoop", 0f);
+        EndS.setParameterByName("EndingThemeGuests", 0f);
         if (jan == true) _jan.SetActive(true);
         if (joe == true) _joe.SetActive(true);
         if (mom == true) _mom.SetActive(true);
