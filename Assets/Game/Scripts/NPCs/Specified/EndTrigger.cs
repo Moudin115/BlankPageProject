@@ -15,7 +15,6 @@ public class EndTrigger : MonoBehaviour
     private int Reputation_Mom;
     private int Reputation_Joe;
 
-
     private void Start()
     {
         dialogueRunner = FindObjectOfType<DialogueRunner>();
