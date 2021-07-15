@@ -201,11 +201,11 @@ MonoBehaviour:
   Path: Assets/Game/fmod_sounds/Polaroid/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637619806340000000
+  lastModified: 637619048099332250
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1618
+    Value: 1564
   Exists: 1
 --- !u!114 &-8508009154498153569
 MonoBehaviour:
@@ -247,7 +247,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -5426549141214665039}
+  - {fileID: -2016012719685075917}
   MinDistance: 0
   MaxDistance: 0
   Length: 35874
@@ -330,7 +330,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -630492286349464160}
+  - {fileID: 6333057478487823476}
   MinDistance: 0
   MaxDistance: 0
   Length: 81946
@@ -1637,6 +1637,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-3237384600668003088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/AmbienceDay/Location
+  m_EditorClassIdentifier: 
+  Name: Location
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-3206197845058551471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2083,7 +2103,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 4014021737352192284}
+  - {fileID: 8044278037349123640}
   MinDistance: 0
   MaxDistance: 0
   Length: 90198
@@ -2111,6 +2131,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 88149
+--- !u!114 &-2016012719685075917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/train/TrainLeaving
+  m_EditorClassIdentifier: 
+  Name: TrainLeaving
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-1990798872190732769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2398,6 +2438,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-1138217557653875489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/Surface
+  m_EditorClassIdentifier: 
+  Name: Surface
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-1024259392441189015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2831,13 +2891,12 @@ MonoBehaviour:
   - {fileID: -8484658342656184680}
   - {fileID: -8152521487805007724}
   - {fileID: -2052166841778020783}
-  - {fileID: 3161064151651322274}
   EditorParameters: []
   MasterBanks:
   - {fileID: 7546318455007523423}
   StringsBanks:
   - {fileID: -8536821307035821060}
-  stringsBankWriteTime: 637619806340000000
+  stringsBankWriteTime: 637619048099332250
   cacheVersion: 6
 --- !u!114 &98477176167366007
 MonoBehaviour:
@@ -3909,7 +3968,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 2978161959229861278}
+  - {fileID: -1138217557653875489}
   MinDistance: 0
   MaxDistance: 0
   Length: 1055
@@ -4559,6 +4618,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 35874
+--- !u!114 &6333057478487823476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/FritzisTheme/Village
+  m_EditorClassIdentifier: 
+  Name: Village
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &6354068093383216823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4861,7 +4940,7 @@ MonoBehaviour:
   Path: Assets/Game/fmod_sounds/Polaroid/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637619806340000000
+  lastModified: 637619048099302427
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -4945,7 +5024,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -1580531340468499995}
+  - {fileID: -3237384600668003088}
   MinDistance: 0
   MaxDistance: 0
   Length: 163915
@@ -4962,6 +5041,26 @@ MonoBehaviour:
   m_Name: parameter:/EndingTheme/EndingThemeLoop
   m_EditorClassIdentifier: 
   Name: EndingThemeLoop
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &8044278037349123640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Rain/Rain
+  m_EditorClassIdentifier: 
+  Name: Rain
   Min: 0
   Max: 1
   Default: 0

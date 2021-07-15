@@ -15,19 +15,13 @@ public class EndTrigger : MonoBehaviour
     private int Reputation_Mom;
     private int Reputation_Joe;
 
-    public GameObject JanObj;
-    public GameObject MomObj;
-    public GameObject JoeObj;
-
-    public float movespeeds;
-
-    public GameObject tarJan;
-    public GameObject tarMom;
-    public GameObject tarJoe;
-
     public GameObject player;
 
     private static FMOD.Studio.EventInstance TrainS;
+
+    private bool JanDia;
+    private bool MomDia;
+    private bool JoeDia;
 
     private void Start()
     {
@@ -56,10 +50,10 @@ public class EndTrigger : MonoBehaviour
                 player.transform.localScale = new Vector3(1, 1, 1);
                 TrainS.setParameterByName("TrainLeaving", 1f);
                 Trig = false;
-                CheckReps();
                 CheckJan();
                 CheckMom();
                 CheckJoe();
+                CheckReps();
             }
         }
         if (EndDialogue && dialogueRunner.IsDialogueRunning == false)
@@ -88,18 +82,58 @@ public class EndTrigger : MonoBehaviour
     {
         if (Reputation_Jan < 3 && Reputation_Mom == 0 && Reputation_Joe < 2)
         {
-            dialogueRunner.StartDialogue("alone");
+            dialogueRunner.StartDialogue("enterTrainAlone");
+            EndDialogue = true;
+        }
+        else
+        {
+            MultiDialogue();
+        }
+    }
+    void MultiDialogue()
+    {
+        dialogueRunner.StartDialogue("enterTrainGuests");
+    }
+/*    void MomDial()
+    {
+        if (MomDia) dialogueRunner.StartDialogue("enterTrainGuestsMom");
+        if (dialogueRunner.IsDialogueRunning == false)
+        {
+            JanDial();
+        }
+    }
+    void JanDial()
+    {
+        if (JanDia) dialogueRunner.StartDialogue("enterTrainGuestsJan");
+        if (dialogueRunner.IsDialogueRunning == false)
+        {
+            Dial2();
+        }
+    }
+    void Dial2()
+    {
+        dialogueRunner.StartDialogue("enterTrainGuests2");
+        if (dialogueRunner.IsDialogueRunning == false)
+        {
+            JoeDial();
+        }
+    }
+    void JoeDial()
+    {
+        if (JoeDia) dialogueRunner.StartDialogue("enterTrainGuestsJoe");
+        if (dialogueRunner.IsDialogueRunning == false)
+        {
+            dialogueRunner.StartDialogue("enterTrainGuestsEnd");
             EndDialogue = true;
         }
     }
+*/
     void CheckJan()
     {
         if (Reputation_Jan >= 3)
         {
             End.jan = true;
-            JanObj.SetActive(true);
-            JanObj.transform.position = tarJan.transform.position;
-            dialogueRunner.StartDialogue("Jan");
+            JanDia = true;
             EndDialogue = true;
         }
     }
@@ -108,9 +142,7 @@ public class EndTrigger : MonoBehaviour
         if (Reputation_Mom > 0)
         {
             End.mom = true;
-            MomObj.SetActive(true);
-            MomObj.transform.position = tarMom.transform.position;
-            dialogueRunner.StartDialogue("mom");
+            MomDia = true;
             EndDialogue = true;
         }
     }
@@ -119,10 +151,7 @@ public class EndTrigger : MonoBehaviour
         if (Reputation_Joe >= 2)
         {
             End.joe = true;
-            JoeObj.SetActive(true);
-            JoeObj.transform.position = Vector2.MoveTowards(JoeObj.transform.position, tarJoe.transform.position, movespeeds * Time.deltaTime);
-            JoeObj.transform.position = tarJoe.transform.position;
-            dialogueRunner.StartDialogue("Joe");
+            JoeDia = true;
             EndDialogue = true;
         }
     }

@@ -14,6 +14,7 @@ public class Weather : MonoBehaviour
         rainS = FMODUnity.RuntimeManager.CreateInstance("event:/Ambience/Rain");
         rainS.start();
         rainS.release();
+
     }
     void Update()
     {
@@ -26,6 +27,7 @@ public class Weather : MonoBehaviour
         if (isRaining == false)
         {
             rain.SetActive(false);
+            rainS.setParameterByName("Rain", 1f);
             rainS.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         }
         
