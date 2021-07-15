@@ -1,7 +1,7 @@
 title: Start
 tags: 
 colorID: 0
-position: -859,128
+position: -1341,111
 ---
 //trigger when arriving at the station
 Station: The train is arriving. Please step back from the platform.
@@ -14,16 +14,16 @@ Player: No need to hurry then.
 title: towardsVillage
 tags: 
 colorID: 0
-position: -426,127
+position: -1056,113
 ---
 //Trigger placed in the direction of the village
-Player: What am I going?
+Player: What am I doing?
 Player: I need to get to the train station.
 ===
-title: alone
+title: enterTrainAlone
 tags: 
 colorID: 0
-position: -863,455
+position: -1337,710
 ---
 // trigger when attempting to enter the train and Mom=0, Jan<3, Joe<2
 Player: Time to say goodbye.
@@ -48,7 +48,7 @@ Player: Starting a new chapter after all.
 title: mom
 tags: 
 colorID: 0
-position: -596,457
+position: -1340,392
 ---
 // trigger when attempting to enter the train and Mom=1, Jan<3, Joe<2
 Player: Time to say goodbye.
@@ -63,31 +63,12 @@ Mom: Be careful.
 Mom: And call me regularly.
 Player: I will.
 Player: Love you mom.
-Mom: Oh, Fritzi.
-Mom: Stay safe.
-Player: You too mom.
-Player: Would you mind me taking a picture with you?
-Mom: Of course not.
-Player: I need to insert a new film first.
-//play insert film sound
-<<sound_Cartridge>>
-<<wait 3>>
-Player: Kind of poetic to start the documentation of my new life with an image of the old one.
-Mom: Silly you.
-Player: Here we go!
-<<wait 2>>
-//creditpicture with mom and fritzi
-<<sound_Photo>>
 ===
 title: Jan
 tags: 
 colorID: 0
-position: -323,458
+position: -1058,391
 ---
-// trigger when attempting to enter the train and Mom=0, Jan>2, Joe<2
-Player: Time to say goodbye.
-//turn Fritzi around—facing right
-Jan: Hey, wait for me!
 Player: Jan!
 Jan: I wanted to wave you goodbye.
 Player: Much appreciated.
@@ -100,29 +81,12 @@ Jan: Absolutely.
 Jan: So I just need to open my studio fast, so you have to come back sooner.
 Player: Hehe. I guess I would have no other choice than.
 Jan: You must.
-Player: For now let me take a picture of us.
-Jan: Huh?
-Jan: Fritzi taking pictures of people. Well, that’s new.
-Player: I need to add a new cartridge first.
-//Play insert film sound
-<<sound_Cartridge>>
-<<wait 3>>
-Player: How poetic—starting the documentation of my new life with an image of the old one.
-Jan: I would say, it symbolizes that there is no new with out an old.
-Player: Wise words.
-Player: Come here!
-<<wait 2>>
-//Take picture
-<<sound_Photo>>
 ===
 title: Joe
 tags: 
 colorID: 0
-position: -51,456
+position: -765,391
 ---
-// trigger when attempting to enter the train and Mom=0, Jan<3, Joe>2
-Player: Time to say goodbye.
-//turn Fritzi around—facing right
 Joe: Fritzi! Glad I made it in time.
 Player: Joe!
 Player: What a surprise.
@@ -131,7 +95,7 @@ Player: Wow. I didn’t expect you to come.
 Player: But I’m glad you did.
 Joe: It’s no big deal.
 Joe: I just wish for you to have an enriching experience in Norway.
-Player: I hope so too.
+Player: I wish so too.
 Player: But you can’t slack off either, Mr. Löwe.
 Player: There are still lots of new recipes to discover.
 Joe: Oho—are you challenging me? I love it.
@@ -139,18 +103,22 @@ Joe: Yes, I will make sure to further hone my craft.
 Player: Please greet the regulars from me.
 Player: I enjoyed working at your bakery—and I learned a lot.
 Joe: My pleasure.
-Player: You know what Joe, I think I want to take a picture of you now.
-Joe: Oho—you seem to grow already.
-Joe: Now you start taking pictures of people.
+===
+title: enterTrainGuests
+tags: 
+colorID: 0
+position: -1059,711
+---
+Player: You know what, I think I want to take a picture of us.
 Player: I think it is only appropriate to start this new phase in my life with a new film cartridge.
-//Play insert Cartridge sound
 <<sound_Cartridge>>
 <<wait 3>>
 Player: I like the symbolism off my new life starting with my old one.
-Player: I hope you’re okay with me joining this shot?
-Joe: Of course!
-Joe: To the next step in your life!
+Mom: Silly you.
+Jan: I would say, it symbolizes that there is no new with out an old.
+Player: Come here!
+Joe: To your next step in life!
 <<wait 2>>
-//take ending photo
+//Take picture
 <<sound_Photo>>
 ===
