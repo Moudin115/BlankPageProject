@@ -6,7 +6,7 @@ using TMPro;
 
 public class PlayerVariables : MonoBehaviour
 {
-    public int maxPic = 7;
-    public static int currentPics = 7;
+    public int maxPic = 5;
+    public static int currentPics = 5;
 }
     
