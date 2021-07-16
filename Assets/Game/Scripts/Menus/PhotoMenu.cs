@@ -8,10 +8,11 @@ public class PhotoMenu : MonoBehaviour
 {
     public string lastScene = "";
     public GameObject Menu;
+    public GameObject crossHair;
 
     public Camera Polaroidcam;
     public float speed = 1;
-
+    
     private bool EisPressed = false;
 
     public GameObject Blend;
@@ -136,6 +137,7 @@ public class PhotoMenu : MonoBehaviour
                 }
                     if (Input.GetKeyDown(KeyCode.E) && CanPic == true)
                     {
+                        crossHair.SetActive(false);
                         FMODUnity.RuntimeManager.PlayOneShot("event:/Interactables/camera_trigger");
                         ScreenshotHandler.TakeScreenshot_Static(1200, 1200);
                     Cursor.lockState = CursorLockMode.Confined;
