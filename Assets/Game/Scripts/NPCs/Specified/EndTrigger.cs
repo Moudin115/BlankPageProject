@@ -23,8 +23,12 @@ public class EndTrigger : MonoBehaviour
     private bool MomDia;
     private bool JoeDia;
 
+    private static FMOD.Studio.EventInstance EndS;
+
     private void Start()
     {
+        EndS = endMusicTrig.EndS;
+
         TrainS = FMODUnity.RuntimeManager.CreateInstance("event:/Ambience/train");
         TrainS.start();
         TrainS.release();
@@ -46,13 +50,14 @@ public class EndTrigger : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                player.transform.localScale = new Vector3(1, 1, 1);
-                TrainS.setParameterByName("TrainLeaving", 1f);
-                Trig = false;
+                    player.transform.localScale = new Vector3(1, 1, 1);
                 CheckJan();
                 CheckMom();
                 CheckJoe();
                 CheckReps();
+                TrainS.setParameterByName("TrainLeaving", 1f);
+                Trig = false;
+                
             }
         }
         if (EndDialogue && dialogueRunner.IsDialogueRunning == false)
@@ -131,6 +136,7 @@ public class EndTrigger : MonoBehaviour
     {
         if (Reputation_Jan >= 3)
         {
+            EndS.setParameterByName("JanEnding", 1f);
             End.jan = true;
             JanDia = true;
             EndDialogue = true;
@@ -140,6 +146,7 @@ public class EndTrigger : MonoBehaviour
     {
         if (Reputation_Mom > 0)
         {
+            EndS.setParameterByName("Mom", 1f);
             End.mom = true;
             MomDia = true;
             EndDialogue = true;
@@ -149,6 +156,7 @@ public class EndTrigger : MonoBehaviour
     {
         if (Reputation_Joe >= 2)
         {
+            EndS.setParameterByName("Joe", 1f);
             End.joe = true;
             JoeDia = true;
             EndDialogue = true;
