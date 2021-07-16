@@ -28,7 +28,7 @@ public class ScreenshotHandler : MonoBehaviour
             RenderTexture renderTexture = Cam.targetTexture;
 
             
-            Rect rect = new Rect(Screen.width/2-600, Screen.height/2-600, renderTexture.width, renderTexture.height);
+            Rect rect = new Rect(Screen.width/2-300, Screen.height/2-300, renderTexture.width, renderTexture.height);
             Texture2D renderResult = new Texture2D(renderTexture.width, renderTexture.height, TextureFormat.RGB24, false);
 
             renderResult.ReadPixels(rect,0,0);
