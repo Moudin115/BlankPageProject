@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.IO;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -66,6 +62,12 @@ public class ScreenshotHandler : MonoBehaviour
 
             Debug.Log("saved Picture");
             //AssetDatabase.Refresh();
+            Resources.Load("/PhotoAlbum/PolaroidShot1.png");
+            Resources.Load("/PhotoAlbum/PolaroidShot2.png");
+            Resources.Load("/PhotoAlbum/PolaroidShot3.png");
+            Resources.Load("/PhotoAlbum/PolaroidShot4.png");
+            Resources.Load("/PhotoAlbum/PolaroidShot5.png");
+
             RenderTexture.ReleaseTemporary(renderTexture);
             //Cam.targetTexture = null;
         }
