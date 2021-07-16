@@ -146,6 +146,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-8779793667784395590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/Surface
+  m_EditorClassIdentifier: 
+  Name: Surface
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-8769670342134470639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,7 +221,7 @@ MonoBehaviour:
   Path: Assets/Game/fmod_sounds/Polaroid/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637620486581934118
+  lastModified: 637620411300000000
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -247,7 +267,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -3072877365876491898}
+  - {fileID: 4481246827070555465}
   MinDistance: 0
   MaxDistance: 0
   Length: 35874
@@ -350,7 +370,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 2887164179941957716}
+  - {fileID: -5280630274160798219}
   MinDistance: 0
   MaxDistance: 0
   Length: 81946
@@ -477,6 +497,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-7908366585345859871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/EndingTheme/Joe
+  m_EditorClassIdentifier: 
+  Name: Joe
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-7753325162195977620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -720,10 +760,10 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 9208145816786049451}
-  - {fileID: 38505652415001987}
-  - {fileID: -6692168504328692484}
-  - {fileID: -6220598308168953136}
+  - {fileID: 3624272948882852319}
+  - {fileID: -7908366585345859871}
+  - {fileID: 2485263793319582267}
+  - {fileID: 2618948439004666903}
   MinDistance: 0
   MaxDistance: 0
   Length: 80052
@@ -780,6 +820,26 @@ MonoBehaviour:
   m_Name: parameter:/EndingTheme/Mom
   m_EditorClassIdentifier: 
   Name: Mom
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-6453258458988497721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Rain/Rain
+  m_EditorClassIdentifier: 
+  Name: Rain
   Min: 0
   Max: 1
   Default: 0
@@ -1163,6 +1223,26 @@ MonoBehaviour:
   m_Name: parameter:/AmbienceDay/Location
   m_EditorClassIdentifier: 
   Name: Location
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-5280630274160798219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/FritzisTheme/Village
+  m_EditorClassIdentifier: 
+  Name: Village
   Min: 0
   Max: 4
   Default: 0
@@ -2410,6 +2490,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-2164233206982133634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/AmbienceDay/Location
+  m_EditorClassIdentifier: 
+  Name: Location
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-2112052982542470997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2490,7 +2590,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 892702020821486864}
+  - {fileID: -6453258458988497721}
   MinDistance: 0
   MaxDistance: 0
   Length: 90198
@@ -3344,7 +3444,7 @@ MonoBehaviour:
   - {fileID: 7546318455007523423}
   StringsBanks:
   - {fileID: -8536821307035821060}
-  stringsBankWriteTime: 637620486581934118
+  stringsBankWriteTime: 637620411300000000
   cacheVersion: 6
 --- !u!114 &19045119429638071
 MonoBehaviour:
@@ -4164,6 +4264,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &2485263793319582267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/EndingTheme/EndingThemeLoop
+  m_EditorClassIdentifier: 
+  Name: EndingThemeLoop
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &2531564757953604679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4197,6 +4317,26 @@ MonoBehaviour:
   m_Name: parameter:/train/TrainLeaving
   m_EditorClassIdentifier: 
   Name: TrainLeaving
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &2618948439004666903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/EndingTheme/Mom
+  m_EditorClassIdentifier: 
+  Name: Mom
   Min: 0
   Max: 1
   Default: 0
@@ -4616,7 +4756,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -2522821611998535588}
+  - {fileID: -8779793667784395590}
   MinDistance: 0
   MaxDistance: 0
   Length: 1055
@@ -4633,6 +4773,26 @@ MonoBehaviour:
   m_Name: parameter:/train/TrainLeaving
   m_EditorClassIdentifier: 
   Name: TrainLeaving
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &3624272948882852319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/EndingTheme/JanEnding
+  m_EditorClassIdentifier: 
+  Name: JanEnding
   Min: 0
   Max: 1
   Default: 0
@@ -4815,6 +4975,26 @@ MonoBehaviour:
   Name: Location
   Min: 0
   Max: 4
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &4481246827070555465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/train/TrainLeaving
+  m_EditorClassIdentifier: 
+  Name: TrainLeaving
+  Min: 0
+  Max: 1
   Default: 0
   ID:
     data1: 0
@@ -5728,7 +5908,7 @@ MonoBehaviour:
   Path: Assets/Game/fmod_sounds/Polaroid/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637620486581904147
+  lastModified: 637620411300000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -5857,7 +6037,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -2328105930182435164}
+  - {fileID: -2164233206982133634}
   MinDistance: 0
   MaxDistance: 0
   Length: 163915
