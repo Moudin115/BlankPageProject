@@ -98,7 +98,7 @@ public class PhotoMenu : MonoBehaviour
                         if (Polaroidcam.transform.position.y >= 1.37f) { Polaroidcam.transform.position = new Vector3(Polaroidcam.transform.position.x, 1.37f, Polaroidcam.transform.position.z); }
                         if (Polaroidcam.transform.position.y <= -1.37f) { Polaroidcam.transform.position = new Vector3(Polaroidcam.transform.position.x, -1.37f, Polaroidcam.transform.position.z); }
                         break;
-                    case 6:
+                    /*case 6:
                         if (Polaroidcam.transform.position.x >= 3.7f) { Polaroidcam.transform.position = new Vector3(3.7f, Polaroidcam.transform.position.y, Polaroidcam.transform.position.z); }
                         if (Polaroidcam.transform.position.x <= -3.7f) { Polaroidcam.transform.position = new Vector3(-3.7f, Polaroidcam.transform.position.y, Polaroidcam.transform.position.z); }
                         if (Polaroidcam.transform.position.y >= 1.37f) { Polaroidcam.transform.position = new Vector3(Polaroidcam.transform.position.x, 1.37f, Polaroidcam.transform.position.z); }
@@ -109,7 +109,7 @@ public class PhotoMenu : MonoBehaviour
                         if (Polaroidcam.transform.position.x <= -3.7f) { Polaroidcam.transform.position = new Vector3(-3.7f, Polaroidcam.transform.position.y, Polaroidcam.transform.position.z); }
                         if (Polaroidcam.transform.position.y >= 1.37f) { Polaroidcam.transform.position = new Vector3(Polaroidcam.transform.position.x, 1.37f, Polaroidcam.transform.position.z); }
                         if (Polaroidcam.transform.position.y <= -1.37f) { Polaroidcam.transform.position = new Vector3(Polaroidcam.transform.position.x, -1.37f, Polaroidcam.transform.position.z); }
-                        break;
+                        break;*/
                 }
 
                 
@@ -162,12 +162,12 @@ public class PhotoMenu : MonoBehaviour
                             case 5:
                                 Items.Photo05 = true;
                                 break;
-                            case 6:
+                            /*case 6:
                                 Items.Photo06 = true;
                                 break;
                             case 7:
                                 Items.Photo07 = true;
-                                break;
+                                break;*/
                         }
                         Polaroid.SetActive(true);
                         PolaroidAnim.SetTrigger("Start");
@@ -177,12 +177,12 @@ public class PhotoMenu : MonoBehaviour
                         int Photos = PlayerVariables.currentPics;
                         switch (Photos)
                         {
-                            case 6:
+                            /*case 6:
                                 dialogueRunner.StartDialogue("6Left");
                                 break;
                             case 5:
                                 dialogueRunner.StartDialogue("5Left");
-                                break;
+                                break;*/
                             case 4:
                                 dialogueRunner.StartDialogue("4Left");
                                 break;
