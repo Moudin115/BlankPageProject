@@ -24,7 +24,6 @@ public class Items : MonoBehaviour
     public static void PickUpLuggage()
     {
         Luggage = true;
-        FMODUnity.RuntimeManager.PlayOneShot("event:/Interactables/equip_camera");
     }
 
 
