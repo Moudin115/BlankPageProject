@@ -28,10 +28,10 @@ public class ScreenshotHandler : MonoBehaviour
             RenderTexture renderTexture = Cam.targetTexture;
 
             
-            Rect rect = new Rect(Screen.width/2, Screen.height/2, renderTexture.width, renderTexture.height);
+            Rect rect = new Rect(Screen.width/2-600, Screen.height/2-600, renderTexture.width, renderTexture.height);
             Texture2D renderResult = new Texture2D(renderTexture.width, renderTexture.height, TextureFormat.RGB24, false);
 
-            renderResult.ReadPixels(rect, 0,0);
+            renderResult.ReadPixels(rect,0,0);
             renderResult.Apply();
 
             //encoding to Screenshot
@@ -67,12 +67,12 @@ public class ScreenshotHandler : MonoBehaviour
             Debug.Log("saved Picture");
             AssetDatabase.Refresh();
             RenderTexture.ReleaseTemporary(renderTexture);
-            Cam.targetTexture = null;
+            //Cam.targetTexture = null;
         }
     }
     private void TakeScreenshot(int width, int height)
     {
-        Cam.targetTexture = RenderTexture.GetTemporary(width, height, 24);
+        Cam.targetTexture = RenderTexture.GetTemporary(width, height);
         takeScreenshotOnNextFrame = true;
     }
 

@@ -137,7 +137,7 @@ public class PhotoMenu : MonoBehaviour
                     if (Input.GetKeyDown(KeyCode.E) && CanPic == true)
                     {
                         FMODUnity.RuntimeManager.PlayOneShot("event:/Interactables/camera_trigger");
-                        ScreenshotHandler.TakeScreenshot_Static(300, 300);
+                        ScreenshotHandler.TakeScreenshot_Static(1200, 1200);
                     Cursor.lockState = CursorLockMode.Confined;
                     Cursor.visible = true;
                     Blend.SetActive(true);
