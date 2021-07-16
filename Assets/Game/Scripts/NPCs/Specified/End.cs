@@ -36,4 +36,9 @@ public class End : MonoBehaviour
             SceneManager.LoadScene("Credits");
         }
     }
+
+    public void Continue()
+    {
+        SceneManager.LoadScene("Credits");
+    }
 }
