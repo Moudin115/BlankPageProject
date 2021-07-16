@@ -5,15 +5,13 @@ using UnityEngine;
 public class Weather : MonoBehaviour
 {
 
-    private static FMOD.Studio.EventInstance rainS;
+    
 
     public static bool isRaining = false;
     public GameObject rain;
     private void Start()
     {
-        rainS = FMODUnity.RuntimeManager.CreateInstance("event:/Ambience/Rain");
-        rainS.start();
-        rainS.release();
+        
 
     }
     void Update()
@@ -22,13 +20,12 @@ public class Weather : MonoBehaviour
         if (isRaining == true)
         {
             rain.SetActive(true);
-            rainS.setParameterByName("Rain", 0f);
+            
         }
         if (isRaining == false)
         {
             rain.SetActive(false);
-            rainS.setParameterByName("Rain", 1f);
-            rainS.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            
         }
         
     }
