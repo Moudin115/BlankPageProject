@@ -48,7 +48,7 @@ public class EndTrigger : MonoBehaviour
         
         if (Trig == true)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Trig == true)
             {
                     player.transform.localScale = new Vector3(1, 1, 1);
                 CheckJan();
