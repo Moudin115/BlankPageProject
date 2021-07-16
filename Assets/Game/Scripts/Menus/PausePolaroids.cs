@@ -10,8 +10,6 @@ public class PausePolaroids : MonoBehaviour
     public GameObject Pic03;
     public GameObject Pic04;
     public GameObject Pic05;
-    public GameObject Pic06;
-    public GameObject Pic07;
 
     void Update()
     {
@@ -34,14 +32,6 @@ public class PausePolaroids : MonoBehaviour
         if (Items.Photo05 == true)
         {
             Pic05.SetActive(true);
-        }
-        if (Items.Photo06 == true)
-        {
-            Pic06.SetActive(true);
-        }
-        if (Items.Photo07 == true)
-        {
-            Pic07.SetActive(true);
         }
     }
 

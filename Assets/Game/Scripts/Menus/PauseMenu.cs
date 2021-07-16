@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
+    private static FMOD.Studio.EventInstance BGM;
 
     //public GameObject GamePauseUI;
     public static bool GameIsPaused = false;
@@ -13,7 +14,10 @@ public class PauseMenu : MonoBehaviour
     string Keycode;
 
     //public PlayerMovement playerMovement;
-    
+    private void Start()
+    {
+        BGM = ParametersSetByName.BGM;
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -59,6 +63,7 @@ public class PauseMenu : MonoBehaviour
     public void LoadMenu()
     {
         //playerMovement.stopMusic();
+        BGM.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         GameIsPaused = false;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.Confined;

@@ -65,7 +65,7 @@ public class ScreenshotHandler : MonoBehaviour
             System.IO.File.WriteAllBytes(Application.dataPath + "/PhotoAlbum/PolaroidShot" + ScreenshotCounter.ToString() + ".png", byteArray);
 
             Debug.Log("saved Picture");
-            AssetDatabase.Refresh();
+            //AssetDatabase.Refresh();
             RenderTexture.ReleaseTemporary(renderTexture);
             //Cam.targetTexture = null;
         }

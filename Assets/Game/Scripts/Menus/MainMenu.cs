@@ -22,12 +22,13 @@ public class MainMenu : MonoBehaviour
     private void Update()
     {
         EndS.setParameterByName("EndingThemeLoop", 1f);
+        BGM.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
     }
     public void PlayGame()
     {
-        EndS.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         BGM.start();
         BGM.release();
+        EndS.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 

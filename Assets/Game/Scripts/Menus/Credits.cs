@@ -7,7 +7,7 @@ public class Credits : MonoBehaviour
 {
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E)|| Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(KeyCode.Escape))
         {
             Items.Camera = false;
             Items.Luggage = false;

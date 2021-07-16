@@ -20,6 +20,8 @@ public class End : MonoBehaviour
 
     private void Start()
     {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.Confined;
         EndS = endMusicTrig.EndS;
     }
     // Update is called once per frame
@@ -31,7 +33,7 @@ public class End : MonoBehaviour
         if (joe == true) _joe.SetActive(true);
         if (mom == true) _mom.SetActive(true);
 
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.F))
         {
             SceneManager.LoadScene("Credits");
         }
