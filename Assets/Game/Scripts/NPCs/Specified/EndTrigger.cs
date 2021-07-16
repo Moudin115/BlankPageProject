@@ -96,7 +96,8 @@ public class EndTrigger : MonoBehaviour
     }
     void MultiDialogue()
     {
-        dialogueRunner.StartDialogue("enterTrainGuests");
+        dialogueRunner.StartDialogue("Guests");
+        EndDialogue = true;
     }
 /*    void MomDial()
     {
