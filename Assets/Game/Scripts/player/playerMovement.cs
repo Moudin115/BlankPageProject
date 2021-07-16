@@ -7,7 +7,7 @@ public class playerMovement : MonoBehaviour
 {
     public CharacterController2D controller;
 
-    public float runSpeed = 20f;
+    public float runSpeed = 18f;
     private float runSpeedP;
     public float LayerMode = 1;
 
@@ -23,7 +23,7 @@ public class playerMovement : MonoBehaviour
     private bool Colliding = false;
     private void Start()
     {
-        runSpeedP = 20f;
+        runSpeedP = 18f;
         dialogueRunner = FindObjectOfType<DialogueRunner>();
     }
 
