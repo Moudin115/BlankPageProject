@@ -65,12 +65,12 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
     }
-    public void ResetLevel()
+    /*public void ResetLevel()
     {
         GameIsPaused = false;
         Cursor.lockState = CursorLockMode.Locked;
         Time.timeScale = 1f;
         Debug.Log("Restarting ...");
         SceneManager.LoadScene("TestArea");
-    }
+    }*/
 }
