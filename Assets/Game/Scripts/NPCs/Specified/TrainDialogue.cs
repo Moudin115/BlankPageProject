@@ -18,16 +18,30 @@ public class TrainDialogue : MonoBehaviour
     private int Reputation_Mom;
     private int Reputation_Joe;
 
+    public GameObject JanObj;
+    public GameObject MomObj;
+    public GameObject JoeObj;
+
+    
+
     private void Start()
     {
         dialogueRunner = FindObjectOfType<DialogueRunner>();
+
 
         //Reputation_Jan = GameStatus.Rep_Jan;
         Reputation_Jan = GameStatus.Rep_Jan;
         Reputation_Mom = GameStatus.Rep_Mom;
         Reputation_Joe = GameStatus.Rep_Joe;
-    }
 
+        if (Reputation_Jan >= 3) JanObj.SetActive(true);
+        if (Reputation_Mom >= 1) MomObj.SetActive(true);
+        if (Reputation_Joe >= 2) JoeObj.SetActive(true);
+    }
+    private void Update()
+    {
+        
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player" && TriggerTrig == false)

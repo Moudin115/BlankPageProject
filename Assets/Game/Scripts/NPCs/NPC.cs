@@ -45,6 +45,7 @@ public class NPC : MonoBehaviour
     }
     private void Update()
     {
+        
         Yarn.Unity.DialogueRunner dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
         if (playerDetected && Input.GetKeyDown(KeyCode.E)) {
             playerDetected = false;

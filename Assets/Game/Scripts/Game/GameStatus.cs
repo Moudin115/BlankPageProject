@@ -35,6 +35,7 @@ public class GameStatus : MonoBehaviour
 
         dr.AddCommandHandler("sound_Cartridge", sound_Cartridge);
         dr.AddCommandHandler("sound_Photo", sound_Photo);
+
     }
 
     /*void PlaySound(string[] parameters)

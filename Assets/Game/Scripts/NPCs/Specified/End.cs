@@ -20,14 +20,12 @@ public class End : MonoBehaviour
 
     private void Start()
     {
-        EndS = FMODUnity.RuntimeManager.CreateInstance("event:/BackgroundMusic/EndingTheme");
-        EndS.start();
-        EndS.release();
+        EndS = endMusicTrig.EndS;
     }
     // Update is called once per frame
     void Update()
     {
-        EndS.setParameterByName("EndingThemeLoop", 0f);
+        EndS.setParameterByName("EndingThemeLoop", 1f);
         EndS.setParameterByName("EndingThemeGuests", 0f);
         if (jan == true) _jan.SetActive(true);
         if (joe == true) _joe.SetActive(true);

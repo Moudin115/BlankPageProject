@@ -31,10 +31,9 @@ public class EndTrigger : MonoBehaviour
 
         dialogueRunner = FindObjectOfType<DialogueRunner>();
         Reputation_Jan = GameStatus.Rep_Jan;
-        //Reputation_Mom = GameStatus.Rep_Mom;
+        Reputation_Mom = GameStatus.Rep_Mom;
         Reputation_Joe = GameStatus.Rep_Joe;
 
-        Reputation_Mom = 1;
 
         TrainS.setParameterByName("TrainLeaving", 0f);
 
