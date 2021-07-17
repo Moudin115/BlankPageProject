@@ -31,6 +31,11 @@ public class MainMenu : MonoBehaviour
         EndS.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+    public void About()
+    {
+        EndS.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        SceneManager.LoadScene("Credits");
+    }
 
     public void QuitGame()
     {
