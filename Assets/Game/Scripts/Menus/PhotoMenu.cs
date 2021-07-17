@@ -142,8 +142,8 @@ public class PhotoMenu : MonoBehaviour
                         ScreenshotHandler.TakeScreenshot_Static(1200, 1200);
                     Cursor.lockState = CursorLockMode.Confined;
                     Cursor.visible = true;
-                    Blend.SetActive(true);
-                        BlendAnim.SetTrigger("Start");
+                        //Blend.SetActive(true);
+                        //BlendAnim.SetTrigger("Start");
 
                         switch (PhotoNr)
                         {
