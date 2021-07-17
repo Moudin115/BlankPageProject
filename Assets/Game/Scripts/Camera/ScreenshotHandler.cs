@@ -63,7 +63,7 @@ public class ScreenshotHandler : MonoBehaviour
             System.IO.File.WriteAllBytes(Application.dataPath + "/PhotoAlbum/PolaroidShot" + ScreenshotCounter.ToString() + ".png", byteArray);
 
             Debug.Log("saved Picture");
-            AssetDatabase.Refresh();
+            //AssetDatabase.Refresh();
             /*AssetDatabase.ImportAsset("/PhotoAlbum/PolaroidShot1.png", ImportAssetOptions.Default);
             AssetDatabase.ImportAsset("/PhotoAlbum/PolaroidShot2.png", ImportAssetOptions.Default);
             AssetDatabase.ImportAsset("/PhotoAlbum/PolaroidShot3.png", ImportAssetOptions.Default);
