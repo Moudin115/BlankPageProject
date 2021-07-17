@@ -72,7 +72,7 @@ public class Jan : MonoBehaviour
         if (WalkCompleted == true)
         {
             anim.SetBool("idleBool", true);
-            if (Left == true)
+            if (Left == true ||Items.Photo04)
             {
                 transform.position = new Vector2(17.31f, 6.421f);
             }

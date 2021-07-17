@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.IO;
+using UnityEditor;
 
 public class ScreenshotHandler : MonoBehaviour
 {
@@ -27,7 +29,7 @@ public class ScreenshotHandler : MonoBehaviour
             Rect rect = new Rect(Screen.width/2-300, Screen.height/2-300, renderTexture.width, renderTexture.height);
             Texture2D renderResult = new Texture2D(renderTexture.width, renderTexture.height, TextureFormat.RGB24, false);
 
-            renderResult.ReadPixels(rect,0,0);
+            renderResult.ReadPixels(rect, 0, 0, false);
             renderResult.Apply();
 
             //encoding to Screenshot
@@ -61,12 +63,12 @@ public class ScreenshotHandler : MonoBehaviour
             System.IO.File.WriteAllBytes(Application.dataPath + "/PhotoAlbum/PolaroidShot" + ScreenshotCounter.ToString() + ".png", byteArray);
 
             Debug.Log("saved Picture");
-            //AssetDatabase.Refresh();
-            Resources.Load("/PhotoAlbum/PolaroidShot1.png");
-            Resources.Load("/PhotoAlbum/PolaroidShot2.png");
-            Resources.Load("/PhotoAlbum/PolaroidShot3.png");
-            Resources.Load("/PhotoAlbum/PolaroidShot4.png");
-            Resources.Load("/PhotoAlbum/PolaroidShot5.png");
+            AssetDatabase.Refresh();
+            /*AssetDatabase.ImportAsset("/PhotoAlbum/PolaroidShot1.png", ImportAssetOptions.Default);
+            AssetDatabase.ImportAsset("/PhotoAlbum/PolaroidShot2.png", ImportAssetOptions.Default);
+            AssetDatabase.ImportAsset("/PhotoAlbum/PolaroidShot3.png", ImportAssetOptions.Default);
+            AssetDatabase.ImportAsset("/PhotoAlbum/PolaroidShot4.png", ImportAssetOptions.Default);
+            AssetDatabase.ImportAsset("/PhotoAlbum/PolaroidShot5.png", ImportAssetOptions.Default);*/
 
             RenderTexture.ReleaseTemporary(renderTexture);
             //Cam.targetTexture = null;
