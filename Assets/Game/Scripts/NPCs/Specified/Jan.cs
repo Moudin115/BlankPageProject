@@ -53,6 +53,7 @@ public class Jan : MonoBehaviour
         }
             if (JanIsFollowing)
         {
+            anim.SetBool("idleBool", false);
             if (tar.transform.position.x > this.transform.position.x)
             {
                 sprite.transform.localScale = new Vector2(-1f, 1f);
@@ -71,7 +72,7 @@ public class Jan : MonoBehaviour
         }
         if (WalkCompleted == true)
         {
-            anim.SetBool("idleBool", true);
+            anim.SetBool("isWalking", false);
             if (Left == true ||Items.Photo04)
             {
                 transform.position = new Vector2(17.31f, 6.421f);
