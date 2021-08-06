@@ -47,7 +47,7 @@ public class NPC : MonoBehaviour
     {
         
         Yarn.Unity.DialogueRunner dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
-        if (playerDetected && Input.GetKeyDown(KeyCode.E)) {
+        if (playerDetected && Input.GetButtonDown("Interact")) {
             playerDetected = false;
             dialogueRunner.StartDialogue(talkToNode);
             if (talkToNode == "PickUpCamera")
@@ -60,6 +60,7 @@ public class NPC : MonoBehaviour
             }
         }
     }
+
     void SetActiveNPC(bool set)
     {
         ActiveNPC = set ? this : null;

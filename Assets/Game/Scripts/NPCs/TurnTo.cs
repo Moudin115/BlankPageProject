@@ -14,12 +14,12 @@ public class TurnTo : MonoBehaviour
     private bool spoken = false;
     void Start()
     {
-        Vector2 Spriter = this.transform.localScale;
+        Vector2 SpriteVec = Vector2.one;
         dialogueRunner = FindObjectOfType<DialogueRunner>();
         target = tar.GetComponent<Transform>();
     }
 
-    
+
     void Update()
     {
         if (dialogueRunner.IsDialogueRunning == true)
@@ -32,6 +32,10 @@ public class TurnTo : MonoBehaviour
             {
                 sprite.transform.localScale = new Vector2(1f, 1f);
             }
+        }
+        if (dialogueRunner.IsDialogueRunning == false)
+        {
+            sprite.transform.localScale = Vector2.one;
         }
     }
 }
