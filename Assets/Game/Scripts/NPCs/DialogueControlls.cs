@@ -12,7 +12,7 @@ public class DialogueControlls : MonoBehaviour
     private int currentOption;
 
     private bool isOptionDisplayed;
-
+    bool axisInUse = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +37,7 @@ public class DialogueControlls : MonoBehaviour
     void Update()
     {
         ControlOptions();
+        
     }
 
     private void ControlOptions()
@@ -52,30 +53,43 @@ public class DialogueControlls : MonoBehaviour
         }
     }
 
-    private void ChangeOption()
+    public void ChangeOption()
     {
-
-        if (Input.GetKeyDown(KeyCode.A))
+        
+        float horizontalInput = Input.GetAxis("Horizontal");
+        if (horizontalInput < 0)
         {
-            currentOption = (currentOption + 1) % optionSize;
-            dialogue.SetText(options[currentOption].text);
+            if (!axisInUse)
+            {
+                currentOption = (currentOption + 1) % optionSize;
+                dialogue.SetText(options[currentOption].text);
+                axisInUse = true;
+            }
         }
-        else if (Input.GetKeyDown(KeyCode.D))
+        if (horizontalInput > 0)
         {
-            //Move to the previous option
-            if (currentOption == 0)
-                currentOption = optionSize - 1;
-            else
-                currentOption = (Mathf.Abs(currentOption - 1) % optionSize);
+            if (!axisInUse)
+            {
+                //Move to the previous option
+                if (currentOption == 0)
+                    currentOption = optionSize - 1;
+                else
+                    currentOption = (Mathf.Abs(currentOption - 1) % optionSize);
 
-            dialogue.SetText(options[currentOption].text);
+                dialogue.SetText(options[currentOption].text);
+                axisInUse = true;
+            }
+        }
+        else if (horizontalInput == 0)
+        {
+            axisInUse = false;
         }
     }
 
     private void SkipDialogue()
     {
         //change Keycode later
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetButtonDown("Interact"))
         {
             //Time.timeScale = 0f;
             dialogueUI.MarkLineComplete();
@@ -90,7 +104,7 @@ public class DialogueControlls : MonoBehaviour
             dialogueUI.SelectOption(currentOption);
             ResetCurrentOption();
         }
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetButtonDown("Interact"))
         {
             //Time.timeScale = 1f;
             dialogueUI.SelectOption(currentOption);

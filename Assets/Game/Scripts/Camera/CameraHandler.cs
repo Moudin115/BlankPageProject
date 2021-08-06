@@ -13,7 +13,7 @@ public class CameraHandler : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetButtonDown("Photo"))
         {
             if (PolaroidRestrictionArea.isInCol) SceneManager.LoadScene("Photo_01");
             if (PolaroidRestrictionArea.isInCol02) SceneManager.LoadScene("Photo_02");

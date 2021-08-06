@@ -17,7 +17,7 @@ public class InventoryMenu : MonoBehaviour
         if (ItemInHand == "Camera"){
         }
         
-        if (Input.GetKeyDown(KeyCode.Q) && PauseMenu.GameIsPaused == false)
+        if ((Input.GetButtonDown("Back")) && PauseMenu.GameIsPaused == false)
         {
 
 

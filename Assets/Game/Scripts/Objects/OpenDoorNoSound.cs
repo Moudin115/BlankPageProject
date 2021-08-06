@@ -28,7 +28,7 @@ public class OpenDoorNoSound : MonoBehaviour
 
         if (playerDetected == true)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetButtonDown("Interact"))
             {
                 sceneSwitch.SwitchScene(sceneName);
                 Transition.SetTrigger("Start");

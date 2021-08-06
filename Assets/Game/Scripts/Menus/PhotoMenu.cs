@@ -49,7 +49,7 @@ public class PhotoMenu : MonoBehaviour
     {
         if (!Spaced)
         {
-            if (Input.GetKeyDown(KeyCode.Q))
+            if (Input.GetButtonDown("Back"))
             {
                 sceneSwitch.SwitchScene(lastScene);
             }
@@ -135,7 +135,7 @@ public class PhotoMenu : MonoBehaviour
                 {
                     CanPic = true;
                 }
-                    if (Input.GetKeyDown(KeyCode.E) && CanPic == true)
+                    if (Input.GetButtonDown("Interact") && CanPic == true)
                     {
                         crossHair.SetActive(false);
                         FMODUnity.RuntimeManager.PlayOneShot("event:/Interactables/camera_trigger");

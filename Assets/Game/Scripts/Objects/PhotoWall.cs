@@ -14,7 +14,7 @@ public class PhotoWall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetButtonDown("Interact"))
         {
             SceneManager.LoadScene("House_Fritzi_Room_Fritzi");
         }

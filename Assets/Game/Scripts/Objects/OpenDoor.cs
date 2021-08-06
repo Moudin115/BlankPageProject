@@ -28,7 +28,7 @@ public class OpenDoor : MonoBehaviour
 
         if (playerDetected == true)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetButtonDown("Interact"))
             {
                 FMODUnity.RuntimeManager.PlayOneShot("event:/Interactables/door_inside");
                 sceneSwitch.SwitchScene(sceneName);
