@@ -9,6 +9,7 @@ public class EndTrigger : MonoBehaviour
     private DialogueRunner dialogueRunner;
 
     public static bool Trig;
+    private static bool TriggerTrig;
     public static bool EndDialogue;
 
     private int Reputation_Jan;
@@ -48,7 +49,7 @@ public class EndTrigger : MonoBehaviour
         
         if (Trig == true)
         {
-            if (Trig == true)
+            if (Trig == true && TriggerTrig == false)
             {
                     player.transform.localScale = new Vector3(1, 1, 1);
                 CheckJan();
@@ -57,13 +58,17 @@ public class EndTrigger : MonoBehaviour
                 CheckReps();
                 TrainS.setParameterByName("TrainLeaving", 1f);
                 Trig = false;
-                
+                TriggerTrig = true;
             }
         }
         if (EndDialogue && dialogueRunner.IsDialogueRunning == false)
         {
-            SceneManager.LoadScene("EndingScreen");
-            TrainS.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            if (EndDoor.EndDoorActive)
+            {
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Interactables/camera_trigger");
+                SceneManager.LoadScene("EndingScreen");
+                TrainS.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            }
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
