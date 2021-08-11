@@ -207,6 +207,9 @@
 		<property name="length">
 			<value>63.515999999999998</value>
 		</property>
+		<property name="volume">
+			<value>2</value>
+		</property>
 		<relationship name="fadeInCurve">
 			<destination>{2dca5985-1b67-4f21-ac0b-278f1b7036cd}</destination>
 		</relationship>
@@ -716,6 +719,7 @@
 	</object>
 	<object class="MixerBusEffectChain" id="{daa7c9a3-b2f6-4fd3-9173-af03a5df2d56}">
 		<relationship name="effects">
+			<destination>{519163eb-8aaa-45bc-b348-1c4b8375caa2}</destination>
 			<destination>{c2535f56-262a-4761-b849-a7a821c34a5a}</destination>
 		</relationship>
 	</object>
@@ -790,7 +794,7 @@
 			<value>2</value>
 		</property>
 		<property name="maximum">
-			<value>3</value>
+			<value>2</value>
 		</property>
 		<relationship name="parameter">
 			<destination>{e657bb15-72b4-4463-86f4-3f61d0d952ec}</destination>
@@ -801,7 +805,7 @@
 			<value>2</value>
 		</property>
 		<property name="maximum">
-			<value>3</value>
+			<value>2</value>
 		</property>
 		<relationship name="parameter">
 			<destination>{e657bb15-72b4-4463-86f4-3f61d0d952ec}</destination>
@@ -812,7 +816,7 @@
 			<value>2</value>
 		</property>
 		<property name="maximum">
-			<value>3</value>
+			<value>2</value>
 		</property>
 		<relationship name="parameter">
 			<destination>{e657bb15-72b4-4463-86f4-3f61d0d952ec}</destination>
@@ -823,7 +827,7 @@
 			<value>1</value>
 		</property>
 		<property name="maximum">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="parameter">
 			<destination>{e657bb15-72b4-4463-86f4-3f61d0d952ec}</destination>
@@ -834,7 +838,7 @@
 			<value>1</value>
 		</property>
 		<property name="maximum">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="parameter">
 			<destination>{e657bb15-72b4-4463-86f4-3f61d0d952ec}</destination>
@@ -845,7 +849,7 @@
 			<value>1</value>
 		</property>
 		<property name="maximum">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="parameter">
 			<destination>{e657bb15-72b4-4463-86f4-3f61d0d952ec}</destination>
@@ -856,7 +860,7 @@
 			<value>0</value>
 		</property>
 		<property name="maximum">
-			<value>1</value>
+			<value>0</value>
 		</property>
 		<relationship name="parameter">
 			<destination>{e657bb15-72b4-4463-86f4-3f61d0d952ec}</destination>
@@ -867,7 +871,7 @@
 			<value>0</value>
 		</property>
 		<property name="maximum">
-			<value>1</value>
+			<value>0</value>
 		</property>
 		<relationship name="parameter">
 			<destination>{e657bb15-72b4-4463-86f4-3f61d0d952ec}</destination>
@@ -878,7 +882,7 @@
 			<value>0</value>
 		</property>
 		<property name="maximum">
-			<value>1</value>
+			<value>0</value>
 		</property>
 		<relationship name="parameter">
 			<destination>{e657bb15-72b4-4463-86f4-3f61d0d952ec}</destination>
@@ -889,7 +893,7 @@
 			<value>1</value>
 		</property>
 		<property name="maximum">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="parameter">
 			<destination>{e657bb15-72b4-4463-86f4-3f61d0d952ec}</destination>
@@ -949,6 +953,17 @@
 		<relationship name="parameter">
 			<destination>{e657bb15-72b4-4463-86f4-3f61d0d952ec}</destination>
 		</relationship>
+	</object>
+	<object class="SFXReverbEffect" id="{519163eb-8aaa-45bc-b348-1c4b8375caa2}">
+		<property name="decayTime">
+			<value>3700</value>
+		</property>
+		<property name="HFDecayRatio">
+			<value>57</value>
+		</property>
+		<property name="lowShelfGain">
+			<value>-0.5</value>
+		</property>
 	</object>
 	<object class="MixerBusFader" id="{c2535f56-262a-4761-b849-a7a821c34a5a}" />
 	<object class="AutomationPoint" id="{35b8e536-1975-4a50-8904-2dfa024db077}">

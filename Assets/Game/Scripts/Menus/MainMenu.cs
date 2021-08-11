@@ -11,7 +11,7 @@ public class MainMenu : MonoBehaviour
 
     private void Start()
     {
-        EndS = FMODUnity.RuntimeManager.CreateInstance("event:/BackgroundMusic/EndingTheme");
+        EndS = FMODUnity.RuntimeManager.CreateInstance("event:/BackgroundMusic/MenuTheme");
         EndS.start();
         EndS.release();
 
@@ -21,7 +21,7 @@ public class MainMenu : MonoBehaviour
     }
     private void Update()
     {
-        EndS.setParameterByName("EndingThemeLoop", 1f);
+        //EndS.setParameterByName("EndingThemeLoop", 1f);
         BGM.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
     }
     public void PlayGame()
