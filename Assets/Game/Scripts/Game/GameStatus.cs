@@ -34,6 +34,7 @@ public class GameStatus : MonoBehaviour
         dr.AddCommandHandler("weather_Sun", weather_Sun);
 
         dr.AddCommandHandler("sound_Cartridge", sound_Cartridge);
+        dr.AddCommandHandler("sound_Cartridge_outside", sound_Cartridge_outside);
         dr.AddCommandHandler("sound_Photo", sound_Photo);
 
     }
@@ -77,6 +78,12 @@ public class GameStatus : MonoBehaviour
     void sound_Cartridge(string[] parameters)
     {
         FMOD.Studio.EventInstance S_Cartridge = FMODUnity.RuntimeManager.CreateInstance("event:/Interactables/camera_cartridge");
+        S_Cartridge.start();
+        S_Cartridge.release();
+    }
+    void sound_Cartridge_outside(string[] parameters)
+    {
+        FMOD.Studio.EventInstance S_Cartridge = FMODUnity.RuntimeManager.CreateInstance("event:/Interactables/camera_cartridge_outside");
         S_Cartridge.start();
         S_Cartridge.release();
     }
