@@ -33,7 +33,8 @@ public class MomTrig : MonoBehaviour
         if (PackTrig.hasPacked == true && MomDialogue == false)
         {
             Destroy(Door);
-            Mom.SetActive(true);
+            MomCouch.SetActive(true);
+            //Mom.SetActive(true);
             dialogueRunner.StartDialogue(DialogueName);
             MomDialogue = true;
         }

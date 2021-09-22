@@ -36,6 +36,7 @@ public class GameStatus : MonoBehaviour
         dr.AddCommandHandler("sound_Cartridge", sound_Cartridge);
         dr.AddCommandHandler("sound_Cartridge_outside", sound_Cartridge_outside);
         dr.AddCommandHandler("sound_Photo", sound_Photo);
+        dr.AddCommandHandler("sound_backpack", sound_backpack);
 
     }
 
@@ -91,4 +92,9 @@ public class GameStatus : MonoBehaviour
     {
         FMODUnity.RuntimeManager.PlayOneShot("event:/Interactables/camera_trigger");
     }
+    void sound_backpack(string[] parameters)
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Interactables/equip_backpack");
+    }
+
 }
