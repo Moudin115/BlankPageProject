@@ -5,7 +5,7 @@ using Yarn.Unity;
 
 public class MomTrig : MonoBehaviour
 {
-    public GameObject Mom;
+    //public GameObject Mom;
     public GameObject MomCouch;
     public GameObject Door;
     private DialogueRunner dialogueRunner;
@@ -18,11 +18,13 @@ public class MomTrig : MonoBehaviour
 
     private void Start()
     {
+        anim.SetBool("sitBool", true);
+
         dialogueRunner = FindObjectOfType<DialogueRunner>();
         if (MomDialogue == true)
         {
             MomCouch.SetActive(true);
-            anim.SetBool("sitBool", true);
+            //anim.SetBool("sitBool", true);
         }
         if (MomDialogue == false)
         {
@@ -39,6 +41,7 @@ public class MomTrig : MonoBehaviour
             //Mom.SetActive(true);
             dialogueRunner.StartDialogue(DialogueName);
             MomDialogue = true;
+            anim.SetBool("sitBool", true);
         }
         Door.SetActive(true);
     }
