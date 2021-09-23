@@ -38,6 +38,8 @@ public class GameStatus : MonoBehaviour
         dr.AddCommandHandler("sound_Photo", sound_Photo);
         dr.AddCommandHandler("sound_backpack", sound_backpack);
 
+        dr.AddCommandHandler("enterTrainGuestsJan", enterTrainGuestsJan);
+
     }
 
     /*void PlaySound(string[] parameters)
@@ -96,5 +98,9 @@ public class GameStatus : MonoBehaviour
     {
         FMODUnity.RuntimeManager.PlayOneShot("event:/Interactables/equip_backpack");
     }
-
+    void enterTrainGuestsJan(string[] parameters)
+    {
+        endMusicTrig.EndS.setParameterByName("EndingThemeLoop", 1f);
+        Debug.Log("Set EndingLoop to 1");
+    }
 }

@@ -13,6 +13,7 @@ public class MomTrig : MonoBehaviour
 
     public static bool MomDialogue = false;
 
+    public Animator anim;
     
 
     private void Start()
@@ -21,6 +22,7 @@ public class MomTrig : MonoBehaviour
         if (MomDialogue == true)
         {
             MomCouch.SetActive(true);
+            anim.SetBool("sitBool", true);
         }
         if (MomDialogue == false)
         {
